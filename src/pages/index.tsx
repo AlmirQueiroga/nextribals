@@ -30,6 +30,11 @@ export default function Home() {
     setActiveTab('hero'); 
   };
 
+  const handleLoadComps = (heroi: Heroi) => {
+    setActiveTab('hero');
+    loadFromWeb(WebGet.Comps, heroi.id);
+  };
+
   // useEffect(() => {
   //   if (heroiToEdit) {
       
@@ -45,7 +50,6 @@ export default function Home() {
           <Button onClick={loadFromJson}>Carregar JSON</Button>
           <Button onClick={() => loadFromWeb(WebGet.Heroes)}>Carregar Herois da web</Button>
           <Button onClick={() => loadFromWeb(WebGet.Maps)}>Carregar Mapas da web</Button>
-          <Button onClick={() => loadFromWeb(WebGet.Comps)}>Carregar Comps da web</Button>
         </div>
       </Header>
       <Tabs>
@@ -78,7 +82,7 @@ export default function Home() {
         {activeTab === 'hero' && (
           <>
             <AddHeroiForm heroiToEdit={heroiToEdit} setHeroEdit={setHeroiToEdit}/>
-            <HeroiList onEdit={handleEdit}  />
+            <HeroiList onEdit={handleEdit} loadComps={handleLoadComps} />
           </>
         )}
         {activeTab === 'gameMode' && (

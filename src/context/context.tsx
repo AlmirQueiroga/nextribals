@@ -18,7 +18,7 @@ export const GameContext = createContext<{
   addFormacao: (formacao: string) => void;
   saveToJson: () => void;
   loadFromJson: () => void;
-  loadFromWeb: (select : WebGet) => void;
+  loadFromWeb: (select : WebGet, query?: string) => void;
 }>({
   state: defaultState,
   addHeroi: () => {},
@@ -58,6 +58,15 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
     }));
   };
 
+  const editMapa = (updatedMapa: Mapa) => {
+    setState((prevState) => ({
+      ...prevState,
+      mapas: prevState.mapas.map((mapa) =>
+        mapa.id === updatedMapa.id ? updatedMapa : mapa
+      ),
+    }));
+  };
+
   const addTipoJogo = (tipo: string) => {
     setState((prevState) => ({
       ...prevState,
@@ -93,8 +102,8 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         const reader = new FileReader();
         reader.onload = (e) => {
           const content = e.target?.result as string;
-          const loadedState = JSON.parse(content) as AppContextType;
-          setState(loadedState);
+          const loadedState = JSON.parse(content) as Partial<AppContextType>;
+          setState((prev) => ({...prev, ...loadedState}));
         };
         reader.readAsText(file);
       }
@@ -102,7 +111,7 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
     input.click();
   };
 
-  const loadFromWeb = async (select : WebGet) => {
+  const loadFromWeb = async (select: WebGet, query?: string) => {
     switch(select){
       case WebGet.Heroes: {
         await axios.get(`${process.env.NEXT_PUBLIC_LOCAL}/heroes`).then(function (response) {
@@ -129,7 +138,8 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
           }
         }).catch((e) => {
           console.log("Erro ao pegar herois", e);
-        })
+        });
+        break;
       }
       case WebGet.Maps:{
         await axios.get(`${process.env.NEXT_PUBLIC_LOCAL}/maps`).then(function (response) {
@@ -159,35 +169,34 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
           }
         }).catch((e) => {
           console.log("Erro ao pegar mapas", e);
-        })
+        });
+        break;
       }
       case WebGet.Comps:{
-        await axios.get(`${process.env.NEXT_PUBLIC_LOCAL}/comps`).then(function (response) {
+        await axios.get(`${process.env.NEXT_PUBLIC_LOCAL}/comps?heroId=${query}`,).then(function (response) {
           if(response.data){
             
-            response.data.maps.maps.map((m: any) =>{
-              const { id, name, game_mode, full_name, location, images, sub_map } = m;
-    
-              const newMap: Mapa = {
-                    id,
-                    name,
-                    game_mode,
-                    full_name,
-                    location,
-                    images,
-                    sub_map
-                };
-                
-              if(!state.tipoJogo.includes(game_mode)){
-                addTipoJogo(game_mode);
+            Object.keys(response.data.mapsWinHate).map((mW: any) =>{
+
+              const edMap = state.mapas.find((m) => m.id == mW);
+
+              if(edMap && query){
+                edMap.heroes = {
+                  [query]: response.data.mapsWinHate[mW]
+                }
+                editMapa(edMap);
+              } else {
+                console.log("Map not found");
               }
-              addMapa(newMap);
+
             })
           }
         }).catch((e) => {
-          console.log("Erro ao pegar mapas", e);
-        })
+          console.log("Erro ao pegar comps", e);
+        });
+        break;
       }
+
     }
   };
 

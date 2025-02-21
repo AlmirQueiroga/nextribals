@@ -325,7 +325,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
                     <th>Como aliado</th>
                     {state.herois.map((hero) => (
                       gm.heroes && gm.heroes[id] ?
-                      <td>{gm.heroes[id].aliados[hero.id]}</td>
+                      <td>{(gm.heroes[id].aliados[hero.id].partidas*100)/gm.heroes[id].aliados[hero.id].partidas}%</td>
                       :
                       <td> --- </td>
                     ))}
@@ -334,7 +334,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
                     <th>Como Inimigo</th>
                     {state.herois.map((hero) => (
                       gm.heroes && gm.heroes[id] ?
-                      <td>{gm.heroes[id].inimigos[hero.id]}</td>
+                      <td>{(gm.heroes[id].inimigos[hero.id].partidas*100)/gm.heroes[id].inimigos[hero.id].partidas}%</td>
                       :
                       <td> --- </td>
                     ))}

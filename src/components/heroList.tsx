@@ -4,9 +4,10 @@ import { Heroi } from '../types/types';
 
 interface HeroiListProps {
   onEdit: (heroi: Heroi) => void;
+  loadComps: (heroi: Heroi) => void;
 }
 
-export const HeroiList: React.FC<HeroiListProps> = ({ onEdit }) => {
+export const HeroiList: React.FC<HeroiListProps> = ({ onEdit, loadComps }) => {
   const { state } = useContext(GameContext);
 
   return (
@@ -14,7 +15,7 @@ export const HeroiList: React.FC<HeroiListProps> = ({ onEdit }) => {
       <h2>Heróis</h2>
       <ul>
         {state.herois.map((heroi, index) => (
-          <li style={{ margin:"1rem 1rem 1rem 1rem"}} key={index}>{heroi.name} - {heroi.role} <button onClick={() => onEdit(heroi)} >editar</button></li>
+          <li style={{ margin:"1rem 1rem 1rem 1rem"}} key={index}>{heroi.name} - {heroi.role} <button onClick={() => onEdit(heroi)} >editar</button> <button onClick={() => loadComps(heroi)} >carregar comps</button> </li>
         ))}
       </ul>
     </div>

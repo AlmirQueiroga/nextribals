@@ -18,13 +18,19 @@ export interface Mapa {
     name?: string;
   }
 
-  type HeroID = string; 
+  export type HeroID = string; 
+
+  export type Percentage = {
+    partidas: number;
+    vitorias: number;
+  };
 
   export type Relacao = {
-    [key: HeroID]: string;
+    [key: HeroID]: Percentage
   };
 
   export type HeroInMap = {
+    general: Percentage
     aliados: Relacao;
     inimigos: Relacao;
   };

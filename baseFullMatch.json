@@ -1,0 +1,611 @@
+{
+    "match_uid": "6713334_1739469005_90_11001_50",
+    "game_mode_id": 1,
+    "replay_id": "50529812279",
+    "mvp_uid": 1025019131,
+    "mvp_hero_id": 1047,
+    "svp_uid": 2019734984,
+    "svp_hero_id": 1027,
+    "dynamic_fields": {},
+    "match_players": [
+        {
+            "player_uid": 1946826708,
+            "nick_name": "KindKade",
+            "player_icon": 31024202,
+            "camp": 1,
+            "cur_hero_id": 1041,
+            "is_win": 0,
+            "k": 6,
+            "d": 3,
+            "a": 1,
+            "total_hero_damage": 3228.52640914917,
+            "total_hero_heal": 1486.9376068115234,
+            "total_damage_taken": 1475.1307663917542,
+            "dynamic_fields": {
+                "level": 1.0,
+                "new_level": 1.0
+            },
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1016,
+                    "play_time": 314.3629974462092,
+                    "k": 5,
+                    "d": 3,
+                    "a": 1,
+                    "session_hit_rate": 0.3208955223880597
+                },
+                {
+                    "hero_id": 1041,
+                    "play_time": 55.0890473164618,
+                    "k": 1,
+                    "d": 0,
+                    "a": 0,
+                    "session_hit_rate": 0.6666666666666666
+                }
+            ]
+        },
+        {
+            "player_uid": 1352524225,
+            "nick_name": "RALII",
+            "player_icon": 31022203,
+            "camp": 1,
+            "cur_hero_id": 1018,
+            "is_win": 0,
+            "k": 2,
+            "d": 1,
+            "a": 0,
+            "total_hero_damage": 1663.6946907043457,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 2899.1995344161987,
+            "dynamic_fields": {
+                "level": 1.0,
+                "new_level": 1.0
+            },
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1018,
+                    "play_time": 184.56990590505302,
+                    "k": 2,
+                    "d": 1,
+                    "a": 0,
+                    "session_hit_rate": 0.35807860262008734
+                }
+            ]
+        },
+        {
+            "player_uid": 560787084,
+            "nick_name": "Velou",
+            "player_icon": 31043202,
+            "camp": 1,
+            "cur_hero_id": 0,
+            "is_win": 0,
+            "k": 0,
+            "d": 0,
+            "a": 0,
+            "total_hero_damage": 0.0,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 0.0,
+            "dynamic_fields": {
+                "level": 1.0,
+                "new_level": 1.0
+            },
+            "badge_ids": null,
+            "player_heroes": null
+        },
+        {
+            "player_uid": 891095982,
+            "nick_name": "aydo.",
+            "player_icon": 31020201,
+            "camp": 1,
+            "cur_hero_id": 1048,
+            "is_win": 0,
+            "k": 0,
+            "d": 0,
+            "a": 0,
+            "total_hero_damage": 0.0,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 0.0,
+            "dynamic_fields": {
+                "new_level": 1.0,
+                "level": 1.0
+            },
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1048,
+                    "play_time": 369.452044762671,
+                    "k": 0,
+                    "d": 0,
+                    "a": 0,
+                    "session_hit_rate": 0.0
+                }
+            ]
+        },
+        {
+            "player_uid": 803174852,
+            "nick_name": "The Mothman",
+            "player_icon": 31051001,
+            "camp": 1,
+            "cur_hero_id": 1036,
+            "is_win": 0,
+            "k": 0,
+            "d": 2,
+            "a": 0,
+            "total_hero_damage": 0.0,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 706.3232202529907,
+            "dynamic_fields": {
+                "level": 1.0,
+                "new_level": 1.0
+            },
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1036,
+                    "play_time": 179.7439969368279,
+                    "k": 0,
+                    "d": 2,
+                    "a": 0,
+                    "session_hit_rate": 0.0
+                }
+            ]
+        },
+        {
+            "player_uid": 1472369479,
+            "nick_name": "-KON",
+            "player_icon": 30000001,
+            "camp": 1,
+            "cur_hero_id": 1052,
+            "is_win": 0,
+            "k": 3,
+            "d": 2,
+            "a": 0,
+            "total_hero_damage": 852.7780532836914,
+            "total_hero_heal": 140.0,
+            "total_damage_taken": 794.1999979019165,
+            "dynamic_fields": {
+                "level": 1.0,
+                "new_level": 1.0
+            },
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1052,
+                    "play_time": 369.452044762671,
+                    "k": 3,
+                    "d": 2,
+                    "a": 0,
+                    "session_hit_rate": 0.2631578947368421
+                }
+            ]
+        },
+        {
+            "player_uid": 1194581767,
+            "nick_name": "ihave2dads",
+            "player_icon": 31050001,
+            "camp": 0,
+            "cur_hero_id": 0,
+            "is_win": 0,
+            "k": 0,
+            "d": 0,
+            "a": 0,
+            "total_hero_damage": 0.0,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 0.0,
+            "dynamic_fields": {
+                "level": 1.0,
+                "new_level": 1.0
+            },
+            "badge_ids": null,
+            "player_heroes": null
+        },
+        {
+            "player_uid": 837365225,
+            "nick_name": "Endlss",
+            "player_icon": 31031202,
+            "camp": 0,
+            "cur_hero_id": 0,
+            "is_win": 0,
+            "k": 0,
+            "d": 0,
+            "a": 0,
+            "total_hero_damage": 0.0,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 0.0,
+            "dynamic_fields": {
+                "level": 1.0,
+                "new_level": 1.0
+            },
+            "badge_ids": null,
+            "player_heroes": null
+        },
+        {
+            "player_uid": 154561657,
+            "nick_name": "Fokuuh",
+            "player_icon": 31023201,
+            "camp": 0,
+            "cur_hero_id": 1016,
+            "is_win": 1,
+            "k": 6,
+            "d": 1,
+            "a": 0,
+            "total_hero_damage": 1294.368646621704,
+            "total_hero_heal": 1898.8614654541016,
+            "total_damage_taken": 829.1345977783203,
+            "dynamic_fields": {
+                "level": 1.0,
+                "new_level": 1.0
+            },
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1016,
+                    "play_time": 369.452044762671,
+                    "k": 6,
+                    "d": 1,
+                    "a": 0,
+                    "session_hit_rate": 0.39263803680981596
+                }
+            ]
+        },
+        {
+            "player_uid": 117794175,
+            "nick_name": "ItsGriM-",
+            "player_icon": 31017001,
+            "camp": 0,
+            "cur_hero_id": 1036,
+            "is_win": 0,
+            "k": 0,
+            "d": 1,
+            "a": 0,
+            "total_hero_damage": 87.3624382019043,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 250.0,
+            "dynamic_fields": {
+                "level": 1.0,
+                "new_level": 1.0
+            },
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1036,
+                    "play_time": 178.1192864254117,
+                    "k": 0,
+                    "d": 1,
+                    "a": 0,
+                    "session_hit_rate": 0.0
+                }
+            ]
+        },
+        {
+            "player_uid": 1348938508,
+            "nick_name": "BlitzBlades",
+            "player_icon": 31052001,
+            "camp": 0,
+            "cur_hero_id": 1026,
+            "is_win": 1,
+            "k": 8,
+            "d": 3,
+            "a": 0,
+            "total_hero_damage": 4798.704190254211,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 2268.1386528015137,
+            "dynamic_fields": {
+                "level": 1.0,
+                "new_level": 1.0
+            },
+            "badge_ids": [
+                {
+                    "id": 11,
+                    "count": 1
+                }
+            ],
+            "player_heroes": [
+                {
+                    "hero_id": 1026,
+                    "play_time": 369.452044762671,
+                    "k": 8,
+                    "d": 3,
+                    "a": 0,
+                    "session_hit_rate": 0.16129032258064516
+                }
+            ]
+        },
+        {
+            "player_uid": 2137647341,
+            "nick_name": "XΣПӨM",
+            "player_icon": 31035001,
+            "camp": 0,
+            "cur_hero_id": 1035,
+            "is_win": 0,
+            "k": 3,
+            "d": 2,
+            "a": 0,
+            "total_hero_damage": 764.0,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 2346.0,
+            "dynamic_fields": {
+                "level": 1.0,
+                "new_level": 1.0
+            },
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1035,
+                    "play_time": 181.55438568256795,
+                    "k": 3,
+                    "d": 2,
+                    "a": 0,
+                    "session_hit_rate": 0.2857142857142857
+                }
+            ]
+        },
+        {
+            "player_uid": 2111498507,
+            "nick_name": "kinqwavex",
+            "player_icon": 0,
+            "camp": 0,
+            "cur_hero_id": 1018,
+            "is_win": 1,
+            "k": 8,
+            "d": 2,
+            "a": 0,
+            "total_hero_damage": 3314.1519899368286,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 2422.4612941741943,
+            "dynamic_fields": {},
+            "badge_ids": [
+                {
+                    "id": 6,
+                    "count": 1
+                },
+                {
+                    "id": 11,
+                    "count": 1
+                }
+            ],
+            "player_heroes": [
+                {
+                    "hero_id": 1018,
+                    "play_time": 369.452044762671,
+                    "k": 8,
+                    "d": 2,
+                    "a": 0,
+                    "session_hit_rate": 0.5656565656565656
+                }
+            ]
+        },
+        {
+            "player_uid": 1025019131,
+            "nick_name": "BrEeZy Papi",
+            "player_icon": 0,
+            "camp": 0,
+            "cur_hero_id": 1047,
+            "is_win": 1,
+            "k": 8,
+            "d": 4,
+            "a": 1,
+            "total_hero_damage": 5740.230021476746,
+            "total_hero_heal": 1475.1754455566406,
+            "total_damage_taken": 1552.7809753417969,
+            "dynamic_fields": {},
+            "badge_ids": [
+                {
+                    "id": 11,
+                    "count": 1
+                },
+                {
+                    "id": 9,
+                    "count": 1
+                },
+                {
+                    "id": 1,
+                    "count": 1
+                }
+            ],
+            "player_heroes": [
+                {
+                    "hero_id": 1047,
+                    "play_time": 368.9996103104204,
+                    "k": 8,
+                    "d": 4,
+                    "a": 1,
+                    "session_hit_rate": 0.6838235294117647
+                }
+            ]
+        },
+        {
+            "player_uid": 93579202,
+            "nick_name": "Acid Kitty",
+            "player_icon": 0,
+            "camp": 1,
+            "cur_hero_id": 1023,
+            "is_win": 0,
+            "k": 0,
+            "d": 1,
+            "a": 3,
+            "total_hero_damage": 0.0,
+            "total_hero_heal": 4754.334520339966,
+            "total_damage_taken": 2171.2000370025635,
+            "dynamic_fields": {},
+            "badge_ids": [
+                {
+                    "id": 8,
+                    "count": 1
+                },
+                {
+                    "id": 12,
+                    "count": 1
+                }
+            ],
+            "player_heroes": [
+                {
+                    "hero_id": 1023,
+                    "play_time": 337.6867384444922,
+                    "k": 0,
+                    "d": 1,
+                    "a": 3,
+                    "session_hit_rate": 0.0
+                }
+            ]
+        },
+        {
+            "player_uid": 2019734984,
+            "nick_name": "erikkrsz",
+            "player_icon": 0,
+            "camp": 1,
+            "cur_hero_id": 1027,
+            "is_win": 0,
+            "k": 4,
+            "d": 4,
+            "a": 0,
+            "total_hero_damage": 2974.99715423584,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 12348.850840568542,
+            "dynamic_fields": {},
+            "badge_ids": [
+                {
+                    "id": 7,
+                    "count": 1
+                },
+                {
+                    "id": 2,
+                    "count": 1
+                }
+            ],
+            "player_heroes": [
+                {
+                    "hero_id": 1027,
+                    "play_time": 327.31814904883504,
+                    "k": 4,
+                    "d": 4,
+                    "a": 0,
+                    "session_hit_rate": 0.3181818181818182
+                }
+            ]
+        },
+        {
+            "player_uid": 546333050,
+            "nick_name": "-Zenith-",
+            "player_icon": 0,
+            "camp": 1,
+            "cur_hero_id": 1025,
+            "is_win": 0,
+            "k": 1,
+            "d": 2,
+            "a": 0,
+            "total_hero_damage": 15.0,
+            "total_hero_heal": 3118.2312483787537,
+            "total_damage_taken": 1452.0,
+            "dynamic_fields": {},
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1025,
+                    "play_time": 163.05111824907362,
+                    "k": 1,
+                    "d": 2,
+                    "a": 0,
+                    "session_hit_rate": 0.9767441860465116
+                }
+            ]
+        },
+        {
+            "player_uid": 1861121770,
+            "nick_name": "Yokuky",
+            "player_icon": 0,
+            "camp": 0,
+            "cur_hero_id": 1045,
+            "is_win": 1,
+            "k": 4,
+            "d": 0,
+            "a": 0,
+            "total_hero_damage": 3616.875677585602,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 516.917064666748,
+            "dynamic_fields": {},
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1045,
+                    "play_time": 108.67906560748816,
+                    "k": 4,
+                    "d": 0,
+                    "a": 0,
+                    "session_hit_rate": 0.4827586206896552
+                }
+            ]
+        },
+        {
+            "player_uid": 1891147841,
+            "nick_name": "yogurtswallowe",
+            "player_icon": 0,
+            "camp": 0,
+            "cur_hero_id": 0,
+            "is_win": 0,
+            "k": 0,
+            "d": 0,
+            "a": 0,
+            "total_hero_damage": 0.0,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 0.0,
+            "dynamic_fields": {},
+            "badge_ids": null,
+            "player_heroes": null
+        },
+        {
+            "player_uid": 1064880204,
+            "nick_name": "Wheatyy",
+            "player_icon": 0,
+            "camp": 1,
+            "cur_hero_id": 1011,
+            "is_win": 0,
+            "k": 2,
+            "d": 2,
+            "a": 0,
+            "total_hero_damage": 1028.0,
+            "total_hero_heal": 0.0,
+            "total_damage_taken": 2983.5427265167236,
+            "dynamic_fields": {},
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1011,
+                    "play_time": 158.05863524973392,
+                    "k": 2,
+                    "d": 2,
+                    "a": 0,
+                    "session_hit_rate": 0.4307692307692308
+                }
+            ]
+        },
+        {
+            "player_uid": 1998592331,
+            "nick_name": "Reiram",
+            "player_icon": 0,
+            "camp": 0,
+            "cur_hero_id": 1031,
+            "is_win": 1,
+            "k": 2,
+            "d": 0,
+            "a": 0,
+            "total_hero_damage": 310.0,
+            "total_hero_heal": 135.02518844604492,
+            "total_damage_taken": 195.02509689331055,
+            "dynamic_fields": {},
+            "badge_ids": null,
+            "player_heroes": [
+                {
+                    "hero_id": 1031,
+                    "play_time": 51.35139312967658,
+                    "k": 2,
+                    "d": 0,
+                    "a": 0,
+                    "session_hit_rate": 0.07142857142857142
+                }
+            ]
+        }
+    ]
+}

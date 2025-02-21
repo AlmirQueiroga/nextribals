@@ -1,0 +1,1764 @@
+{
+    "mapsWinHate": {
+        "rank_history": [
+            {
+                "match_time_stamp": 1737741952,
+                "rank": {
+                    "add_score": 15.77787260700643,
+                    "level": 21,
+                    "new_level": 22,
+                    "new_score": 5112.018315106949
+                }
+            },
+            {
+                "match_time_stamp": 1737736462,
+                "rank": {
+                    "add_score": -22.37053891677715,
+                    "level": 23,
+                    "new_level": 21,
+                    "new_score": 5061.709854741972
+                }
+            },
+            {
+                "match_time_stamp": 1737484580,
+                "rank": {
+                    "add_score": 16.426453544046126,
+                    "level": 21,
+                    "new_level": 22,
+                    "new_score": 5115.152577050157
+                }
+            },
+            {
+                "match_time_stamp": 1737477185,
+                "rank": {
+                    "add_score": -21.97184102203937,
+                    "level": 22,
+                    "new_level": 21,
+                    "new_score": 5051.211490893392
+                }
+            },
+            {
+                "match_time_stamp": 1737377531,
+                "rank": {
+                    "add_score": 15.160992594179334,
+                    "level": 21,
+                    "new_level": 22,
+                    "new_score": 5114.559506481636
+                }
+            },
+            {
+                "match_time_stamp": 1737295866,
+                "rank": {
+                    "add_score": 17.29076214905217,
+                    "level": 20,
+                    "new_level": 21,
+                    "new_score": 5006.9732939239375
+                }
+            },
+            {
+                "match_time_stamp": 1737205219,
+                "rank": {
+                    "add_score": -25.07112845354186,
+                    "level": 21,
+                    "new_level": 20,
+                    "new_score": 4956.076438262008
+                }
+            },
+            {
+                "match_time_stamp": 1737130199,
+                "rank": {
+                    "add_score": 10.184322303085537,
+                    "level": 20,
+                    "new_level": 21,
+                    "new_score": 5003.237569965514
+                }
+            },
+            {
+                "match_time_stamp": 1737044169,
+                "rank": {
+                    "add_score": 13.759842913191278,
+                    "level": 19,
+                    "new_level": 20,
+                    "new_score": 4902.129168428517
+                }
+            },
+            {
+                "match_time_stamp": 1736869206,
+                "rank": {
+                    "add_score": 17.57616108379716,
+                    "level": 18,
+                    "new_level": 19,
+                    "new_score": 4814.707841821864
+                }
+            },
+            {
+                "match_time_stamp": 1736859155,
+                "rank": {
+                    "add_score": 19.25226473263865,
+                    "level": 17,
+                    "new_level": 18,
+                    "new_score": 4711.23042093388
+                }
+            },
+            {
+                "match_time_stamp": 1736704022,
+                "rank": {
+                    "add_score": 17.22641651498816,
+                    "level": 16,
+                    "new_level": 17,
+                    "new_score": 4604.676428870374
+                }
+            },
+            {
+                "match_time_stamp": 1736678883,
+                "rank": {
+                    "add_score": -23.43340649590027,
+                    "level": 17,
+                    "new_level": 16,
+                    "new_score": 4567.7779620939
+                }
+            },
+            {
+                "match_time_stamp": 1736660486,
+                "rank": {
+                    "add_score": 14.97960280789357,
+                    "level": 16,
+                    "new_level": 17,
+                    "new_score": 4610.930354518996
+                }
+            },
+            {
+                "match_time_stamp": 1736605209,
+                "rank": {
+                    "add_score": 29.552449263330345,
+                    "level": 15,
+                    "new_level": 16,
+                    "new_score": 4500.342853845804
+                }
+            },
+            {
+                "match_time_stamp": 1736596498,
+                "rank": {
+                    "add_score": 25.18345868312099,
+                    "level": 14,
+                    "new_level": 15,
+                    "new_score": 4402.7692595559465
+                }
+            },
+            {
+                "match_time_stamp": 1736564133,
+                "rank": {
+                    "add_score": 30.075074829706864,
+                    "level": 13,
+                    "new_level": 14,
+                    "new_score": 4328.575267685251
+                }
+            },
+            {
+                "match_time_stamp": 1736518562,
+                "rank": {
+                    "add_score": 27.877431033893117,
+                    "level": 12,
+                    "new_level": 13,
+                    "new_score": 4222.63273663639
+                }
+            }
+        ],
+        "matchups": [
+            {
+                "matches": 72,
+                "wins": 14,
+                "hero_id": 1024
+            },
+            {
+                "matches": 19,
+                "wins": 3,
+                "hero_id": 1021
+            },
+            {
+                "matches": 17,
+                "wins": 6,
+                "hero_id": 1026
+            },
+            {
+                "matches": 30,
+                "wins": 11,
+                "hero_id": 1027
+            },
+            {
+                "matches": 41,
+                "wins": 9,
+                "hero_id": 1030
+            },
+            {
+                "matches": 186,
+                "wins": 54,
+                "hero_id": 1025
+            },
+            {
+                "matches": 189,
+                "wins": 57,
+                "hero_id": 1031
+            },
+            {
+                "matches": 13,
+                "wins": 2,
+                "hero_id": 1036
+            },
+            {
+                "matches": 86,
+                "wins": 31,
+                "hero_id": 1020
+            },
+            {
+                "matches": 38,
+                "wins": 12,
+                "hero_id": 1011
+            },
+            {
+                "matches": 177,
+                "wins": 56,
+                "hero_id": 1037
+            },
+            {
+                "matches": 8,
+                "wins": 1,
+                "hero_id": 1033
+            },
+            {
+                "matches": 10,
+                "wins": 4,
+                "hero_id": 1047
+            },
+            {
+                "matches": 5,
+                "wins": 2,
+                "hero_id": 1040
+            },
+            {
+                "matches": 14,
+                "wins": 3,
+                "hero_id": 1046
+            },
+            {
+                "matches": 40,
+                "wins": 7,
+                "hero_id": 1023
+            },
+            {
+                "matches": 10,
+                "wins": 0,
+                "hero_id": 1022
+            },
+            {
+                "matches": 27,
+                "wins": 6,
+                "hero_id": 1014
+            },
+            {
+                "matches": 31,
+                "wins": 11,
+                "hero_id": 1043
+            },
+            {
+                "matches": 212,
+                "wins": 62,
+                "hero_id": 1018
+            },
+            {
+                "matches": 139,
+                "wins": 47,
+                "hero_id": 1050
+            },
+            {
+                "matches": 59,
+                "wins": 19,
+                "hero_id": 1015
+            },
+            {
+                "matches": 19,
+                "wins": 1,
+                "hero_id": 1032
+            },
+            {
+                "matches": 19,
+                "wins": 6,
+                "hero_id": 1029
+            },
+            {
+                "matches": 38,
+                "wins": 16,
+                "hero_id": 1049
+            },
+            {
+                "matches": 5,
+                "wins": 1,
+                "hero_id": 1042
+            },
+            {
+                "matches": 68,
+                "wins": 18,
+                "hero_id": 1041
+            },
+            {
+                "matches": 25,
+                "wins": 7,
+                "hero_id": 1035
+            },
+            {
+                "matches": 53,
+                "wins": 18,
+                "hero_id": 1048
+            },
+            {
+                "matches": 6,
+                "wins": 4,
+                "hero_id": 1052
+            },
+            {
+                "matches": 89,
+                "wins": 27,
+                "hero_id": 1016
+            },
+            {
+                "matches": 9,
+                "wins": 0,
+                "hero_id": 1034
+            },
+            {
+                "matches": 82,
+                "wins": 28,
+                "hero_id": 1045
+            },
+            {
+                "matches": 36,
+                "wins": 15,
+                "hero_id": 1039
+            }
+        ],
+        "teammates": [
+            {
+                "matches": 111,
+                "win": 79,
+                "info": {
+                    "nick_name": "Healis_TTV",
+                    "player_icon": 30000017,
+                    "player_uid": 726053674
+                }
+            },
+            {
+                "matches": 95,
+                "win": 75,
+                "info": {
+                    "nick_name": "Lindstrom",
+                    "player_icon": 30000012,
+                    "player_uid": 487945060
+                }
+            },
+            {
+                "matches": 80,
+                "win": 67,
+                "info": {
+                    "nick_name": "SparkR",
+                    "player_icon": 30000017,
+                    "player_uid": 1308558579
+                }
+            },
+            {
+                "matches": 78,
+                "win": 64,
+                "info": {
+                    "nick_name": "Sypeh",
+                    "player_icon": 30000012,
+                    "player_uid": 670067075
+                }
+            },
+            {
+                "matches": 63,
+                "win": 39,
+                "info": {
+                    "nick_name": "Nevix",
+                    "player_icon": 30000017,
+                    "player_uid": 341638461
+                }
+            },
+            {
+                "matches": 57,
+                "win": 44,
+                "info": {
+                    "nick_name": "phi.",
+                    "player_icon": 31051001,
+                    "player_uid": 1963769392
+                }
+            },
+            {
+                "matches": 41,
+                "win": 32,
+                "info": {
+                    "nick_name": "Nevix2",
+                    "player_icon": 30000001,
+                    "player_uid": 946097288
+                }
+            },
+            {
+                "matches": 40,
+                "win": 30,
+                "info": {
+                    "nick_name": "Екатерина",
+                    "player_icon": 31048001,
+                    "player_uid": 1367110328
+                }
+            },
+            {
+                "matches": 38,
+                "win": 28,
+                "info": {
+                    "nick_name": "KSAA.",
+                    "player_icon": 30000012,
+                    "player_uid": 332151224
+                }
+            },
+            {
+                "matches": 36,
+                "win": 24,
+                "info": {
+                    "nick_name": "dridro",
+                    "player_icon": 31051001,
+                    "player_uid": 2794990
+                }
+            }
+        ],
+        "stats": {
+            "total_matches": 322,
+            "total_wins": 224,
+            "ranked_matches": 312,
+            "ranked_matches_wins": 219,
+            "unranked_matches": 4,
+            "unranked_matches_wins": 0,
+            "unranked": {
+                "total_kills": 23,
+                "total_assists": 21,
+                "total_deaths": 24,
+                "total_time_played": 2686.4365527629852
+            },
+            "ranked": {
+                "total_kills": 6145,
+                "total_assists": 335,
+                "total_deaths": 1334,
+                "total_time_played": 214473.63637161255
+            }
+        },
+        "player": {
+            "_id": 1819251256,
+            "info_update_time": 1734877994,
+            "info": {
+                "aid": "1819251256",
+                "championship_logo": "1",
+                "club_team_id": "116_238",
+                "club_team_last_name_editor": "1819251256",
+                "club_team_mini_name": "ODMLMD",
+                "club_team_type": "0",
+                "completed_achievement_num": "70",
+                "cur_head_icon_id": "30000017",
+                "level": "43",
+                "local_host_name": "",
+                "login_os": "1",
+                "name": "DogeBiceps",
+                "rank_game_1001001": {
+                    "rank_game": {
+                        "max_level": 23,
+                        "rank_score": 5073.6583028922,
+                        "update_time": 1736483522,
+                        "protect_score": 0,
+                        "diff_score": -25.479161987202,
+                        "rank_game_id": 1,
+                        "win_count": 160,
+                        "level": 23,
+                        "max_rank_score": 5130.3291785254
+                    }
+                },
+                "rank_game_1001002": "{\"rank_game\":{\"max_level\":23,\"rank_score\":5462.8160505151,\"update_time\":1739923202,\"protect_score\":0,\"diff_score\":13.876944280835,\"rank_game_id\":2,\"max_rank_score\":5482.8160505151,\"level\":23,\"win_count\":219}}",
+                "rank_game_season": {
+                    "1001001": "{\"rank_game_id\": 1, \"level\": 23, \"rank_score\": 5073.65830289223, \"max_level\": 23, \"max_rank_score\": 5130.329178525441, \"update_time\": 1736483522, \"win_count\": 160, \"protect_score\": 0, \"diff_score\": -25.479161987202133}",
+                    "1001002": "{\"rank_game_id\": 2, \"level\": 23, \"rank_score\": 5462.816050515084, \"max_level\": 23, \"max_rank_score\": 5482.816050515084, \"update_time\": 1739923202, \"win_count\": 219, \"protect_score\": 0, \"diff_score\": 13.876944280835232}"
+                }
+            },
+            "last_history_update": 1739300922,
+            "last_inserted_match": "6711565_1739297881_545_11001_50",
+            "last_update_request": 1739987778,
+            "details": {
+                "config_server": {
+                    "career_settings": {
+                        "CareerOverviewIsVisibleToOther": 0,
+                        "CareerHeroDataIsVisibleToOther": 0,
+                        "BattleHistoryIsVisibleToOther": 0
+                    },
+                    "login_channel": "steam",
+                    "is_cross_os_match": "1",
+                    "createtime": "1733495241"
+                },
+                "region": "AS"
+            }
+        },
+        "match_history": [
+            {
+                "match_map_id": 1290,
+                "match_play_duration": 728.1338818073273,
+                "match_season": "2",
+                "match_uid": "6711565_1739297881_545_11001_50",
+                "match_winner_side": 0,
+                "mvp_uid": 726053674,
+                "svp_uid": 455662175,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 3,
+                        "1": 1
+                    }
+                },
+                "match_time_stamp": 1739298865,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 21,
+                    "d": 4,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 0,
+                    "dynamic_fields": {
+                        "add_score": 13.876944280835232,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5482.816050515084
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1291,
+                "match_play_duration": 597.9656934738159,
+                "match_season": "2",
+                "match_uid": "6711320_1739290707_519_11001_50",
+                "match_winner_side": 1,
+                "mvp_uid": 670067075,
+                "svp_uid": 1709697649,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 1,
+                        "1": 2
+                    }
+                },
+                "match_time_stamp": 1739291568,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 21,
+                    "d": 3,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 1,
+                    "dynamic_fields": {
+                        "add_score": 14.378782566415794,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5468.939106234248
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1267,
+                "match_play_duration": 1131.0992238521576,
+                "match_season": "2",
+                "match_uid": "5665016_1739215197_92_11001_50",
+                "match_winner_side": 0,
+                "mvp_uid": 1782773424,
+                "svp_uid": 726053674,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 4,
+                        "1": 3
+                    }
+                },
+                "match_time_stamp": 1739216764,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 32,
+                    "d": 7,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 0,
+                    "dynamic_fields": {
+                        "add_score": 14.70264780213438,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5454.560323667832
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1231,
+                "match_play_duration": 331.35028100013733,
+                "match_season": "2",
+                "match_uid": "6711727_1739213649_339_11001_50",
+                "match_winner_side": 1,
+                "mvp_uid": 1387564419,
+                "svp_uid": 2794990,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 0,
+                        "1": 1
+                    }
+                },
+                "match_time_stamp": 1739214235,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 19,
+                    "d": 1,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 1,
+                    "dynamic_fields": {
+                        "add_score": 15.379502281059104,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5439.857675865697
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1272,
+                "match_play_duration": 469.566490650177,
+                "match_season": "2",
+                "match_uid": "5664879_1739209080_117_11001_50",
+                "match_winner_side": 1,
+                "mvp_uid": 1819251256,
+                "svp_uid": 1926403234,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 0,
+                        "1": 2
+                    }
+                },
+                "match_time_stamp": 1739209779,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 19,
+                    "d": 1,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 1,
+                    "dynamic_fields": {
+                        "add_score": 15.530433549061854,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5424.478173584638
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1236,
+                "match_play_duration": 552.7508127689362,
+                "match_season": "2",
+                "match_uid": "6713841_1739204244_1297_11001_10",
+                "match_winner_side": 0,
+                "mvp_uid": 346966595,
+                "svp_uid": 1819251256,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 2,
+                        "1": 0
+                    }
+                },
+                "match_time_stamp": 1739205022,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 7,
+                    "d": 4,
+                    "is_win": 0,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 1,
+                    "dynamic_fields": {
+                        "add_score": -26.925602436333065,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5408.947740035576
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1245,
+                "match_play_duration": 763.6340801715851,
+                "match_season": "2",
+                "match_uid": "6711649_1739120990_297_11001_50",
+                "match_winner_side": 1,
+                "mvp_uid": 1308558579,
+                "svp_uid": 1211771172,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 1,
+                        "1": 2
+                    }
+                },
+                "match_time_stamp": 1739122026,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 17,
+                    "d": 3,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 1,
+                    "dynamic_fields": {
+                        "add_score": 14.265513150367042,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5435.873342471909
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1291,
+                "match_play_duration": 732.2852663993835,
+                "match_season": "2",
+                "match_uid": "6714206_1739053795_67_11001_10",
+                "match_winner_side": 0,
+                "mvp_uid": 11715191,
+                "svp_uid": 1838367060,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 3,
+                        "1": 0
+                    }
+                },
+                "match_time_stamp": 1739054789,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 25,
+                    "d": 4,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 0,
+                    "dynamic_fields": {
+                        "add_score": 15.257642051999937,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5421.607829321542
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1230,
+                "match_play_duration": 790.3988263607025,
+                "match_season": "2",
+                "match_uid": "6711572_1739052408_107_11001_50",
+                "match_winner_side": 1,
+                "mvp_uid": 11715191,
+                "svp_uid": 7307269,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 2,
+                        "1": 3
+                    }
+                },
+                "match_time_stamp": 1739053459,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 22,
+                    "d": 4,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 1,
+                    "dynamic_fields": {
+                        "add_score": 14.866179312557506,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5406.350187269542
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1236,
+                "match_play_duration": 817.7396249771118,
+                "match_season": "2",
+                "match_uid": "5664933_1739048457_159_11001_50",
+                "match_winner_side": 1,
+                "mvp_uid": 1480075724,
+                "svp_uid": 1819251256,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 1,
+                        "1": 2
+                    }
+                },
+                "match_time_stamp": 1739049561,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 23,
+                    "d": 6,
+                    "is_win": 0,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 0,
+                    "dynamic_fields": {
+                        "add_score": -25.77792015401792,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5391.484007956985
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1288,
+                "match_play_duration": 497.27717757225037,
+                "match_season": "2",
+                "match_uid": "6711407_1739042246_78_11001_50",
+                "match_winner_side": 0,
+                "mvp_uid": 1308558579,
+                "svp_uid": 1750876014,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 2,
+                        "1": 0
+                    }
+                },
+                "match_time_stamp": 1739042967,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 1,
+                    "k": 16,
+                    "d": 2,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 0,
+                    "dynamic_fields": {
+                        "add_score": 14.775419220442927,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5417.261928111003
+                    },
+                    "player_hero": {
+                        "hero_id": 1035
+                    }
+                }
+            },
+            {
+                "match_map_id": 1245,
+                "match_play_duration": 737.8707761764526,
+                "match_season": "2",
+                "match_uid": "6713655_1739040287_200_11001_10",
+                "match_winner_side": 0,
+                "mvp_uid": 1308558579,
+                "svp_uid": 680173547,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 2,
+                        "1": 0
+                    }
+                },
+                "match_time_stamp": 1739041313,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 12,
+                    "d": 4,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 0,
+                    "dynamic_fields": {
+                        "add_score": 12.516231849012001,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5402.48650889056
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1231,
+                "match_play_duration": 611.7435691356659,
+                "match_season": "2",
+                "match_uid": "5664848_1739031794_37_11001_50",
+                "match_winner_side": 1,
+                "mvp_uid": 1678847637,
+                "svp_uid": 670067075,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 1,
+                        "1": 2
+                    }
+                },
+                "match_time_stamp": 1739032661,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 3,
+                    "k": 9,
+                    "d": 6,
+                    "is_win": 0,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 0,
+                    "dynamic_fields": {
+                        "add_score": -25.741707146381486,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5389.970277041548
+                    },
+                    "player_hero": {
+                        "hero_id": 1037
+                    }
+                }
+            },
+            {
+                "match_map_id": 1245,
+                "match_play_duration": 308.38606357574463,
+                "match_season": "2",
+                "match_uid": "6711375_1738968882_149_11001_50",
+                "match_winner_side": 1,
+                "mvp_uid": 1819251256,
+                "svp_uid": 1626846043,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 0,
+                        "1": 1
+                    }
+                },
+                "match_time_stamp": 1738969453,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 10,
+                    "d": 0,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 1,
+                    "dynamic_fields": {
+                        "add_score": 13.633857778178935,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5415.711984187929
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1288,
+                "match_play_duration": 497.7222332954407,
+                "match_season": "2",
+                "match_uid": "5664848_1738965243_49_11001_50",
+                "match_winner_side": 0,
+                "mvp_uid": 1387564419,
+                "svp_uid": 1685734177,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 2,
+                        "1": 0
+                    }
+                },
+                "match_time_stamp": 1738965968,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 21,
+                    "d": 2,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 0,
+                    "dynamic_fields": {
+                        "add_score": 13.783695066179462,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5402.07812640975
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1236,
+                "match_play_duration": 329.1745321750641,
+                "match_season": "2",
+                "match_uid": "6711907_1738962398_161_11001_50",
+                "match_winner_side": 1,
+                "mvp_uid": 1782773424,
+                "svp_uid": 1931189542,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 0,
+                        "1": 2
+                    }
+                },
+                "match_time_stamp": 1738962958,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 14,
+                    "d": 0,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 1,
+                    "dynamic_fields": {
+                        "add_score": 12.636832648880954,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5388.294431343571
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1290,
+                "match_play_duration": 292.2385308742523,
+                "match_season": "2",
+                "match_uid": "5665230_1738961553_19_11001_50",
+                "match_winner_side": 1,
+                "mvp_uid": 1782773424,
+                "svp_uid": 1931189542,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 0,
+                        "1": 1
+                    }
+                },
+                "match_time_stamp": 1738962103,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 10,
+                    "d": 0,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 1,
+                    "dynamic_fields": {
+                        "add_score": 13.128459028478574,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5375.65759869469
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1288,
+                "match_play_duration": 900.2428278923035,
+                "match_season": "2",
+                "match_uid": "6711677_1738960086_466_11001_50",
+                "match_winner_side": 0,
+                "mvp_uid": 1819251256,
+                "svp_uid": 309129283,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 2,
+                        "1": 1
+                    }
+                },
+                "match_time_stamp": 1738961272,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 37,
+                    "d": 8,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 0,
+                    "dynamic_fields": {
+                        "add_score": 13.89259172157199,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5362.529139666211
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1267,
+                "match_play_duration": 923.8624575138092,
+                "match_season": "2",
+                "match_uid": "6711566_1738956520_726_11001_50",
+                "match_winner_side": 0,
+                "mvp_uid": 1387564419,
+                "svp_uid": 626477995,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 3,
+                        "1": 1
+                    }
+                },
+                "match_time_stamp": 1738957728,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 27,
+                    "d": 5,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 0,
+                    "dynamic_fields": {
+                        "add_score": 14.12519898541359,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5348.6365479446395
+                    },
+                    "player_hero": {
+                        "hero_id": 1018
+                    }
+                }
+            },
+            {
+                "match_map_id": 1291,
+                "match_play_duration": 359.7078104019165,
+                "match_season": "2",
+                "match_uid": "5665223_1738952535_993_11001_50",
+                "match_winner_side": 1,
+                "mvp_uid": 1819251256,
+                "svp_uid": 42990081,
+                "dynamic_fields": {
+                    "score_info": {
+                        "0": 0,
+                        "1": 1
+                    }
+                },
+                "match_time_stamp": 1738953154,
+                "play_mode_id": 0,
+                "game_mode_id": 2,
+                "match_player": {
+                    "a": 0,
+                    "k": 10,
+                    "d": 1,
+                    "is_win": 1,
+                    "has_escaped": false,
+                    "player_uid": 1819251256,
+                    "camp": 1,
+                    "dynamic_fields": {
+                        "add_score": 15.38964787837358,
+                        "level": 23,
+                        "new_level": 23,
+                        "new_score": 5334.511348959226
+                    },
+                    "player_hero": {
+                        "hero_id": 1037
+                    }
+                }
+            }
+        ],
+        "heroes_ranked": {
+            "1011": {
+                "matches": 2,
+                "win": 0,
+                "mvp": 0,
+                "svp": 0,
+                "kills": 4,
+                "deaths": 6,
+                "assists": 3,
+                "play_time": 769.8116174340248,
+                "damage": 15082.345012187958,
+                "heal": 0,
+                "damage_taken": 49132.7704679966,
+                "main_attack_cnt": 769,
+                "main_attack_hit": 215
+            },
+            "1014": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 55.55463419854641
+            },
+            "1015": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 8.816029865294695
+            },
+            "1018": {
+                "matches": 180,
+                "win": 129,
+                "mvp": 57,
+                "svp": 24,
+                "kills": 3674,
+                "deaths": 696,
+                "assists": 16,
+                "play_time": 115890.68878288567,
+                "damage": 3509264.0968437195,
+                "heal": 0,
+                "damage_taken": 7253225.893952012,
+                "main_attack_cnt": 314795,
+                "main_attack_hit": 119145
+            },
+            "1020": {
+                "matches": 2,
+                "win": 1,
+                "mvp": 0,
+                "svp": 0,
+                "kills": 19,
+                "deaths": 14,
+                "assists": 38,
+                "play_time": 1166.7641302067786,
+                "damage": 18944.33488559723,
+                "heal": 39077.891954422,
+                "damage_taken": 18500.72015118599,
+                "main_attack_cnt": 1157,
+                "main_attack_hit": 340
+            },
+            "1021": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 195.64695334993303
+            },
+            "1022": {
+                "matches": 10,
+                "win": 7,
+                "kills": 165,
+                "deaths": 42,
+                "assists": 18,
+                "damage": 156009.7493979931,
+                "heal": 717.4999904632568,
+                "mvp": 2,
+                "svp": 1,
+                "damage_taken": 324830.5433139801,
+                "main_attack_cnt": 4276,
+                "main_attack_hit": 1950,
+                "play_time": 7580.774569893256
+            },
+            "1023": {
+                "matches": 2,
+                "win": 0,
+                "mvp": 0,
+                "svp": 0,
+                "kills": 6,
+                "deaths": 7,
+                "assists": 16,
+                "play_time": 757.6708784531802,
+                "damage": 2733.2082934379578,
+                "heal": 19759.761275291443,
+                "damage_taken": 4785.571786880493,
+                "main_attack_cnt": 951,
+                "main_attack_hit": 191
+            },
+            "1025": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 0
+            },
+            "1027": {
+                "matches": 2,
+                "win": 0,
+                "mvp": 0,
+                "svp": 0,
+                "kills": 34,
+                "deaths": 10,
+                "assists": 0,
+                "play_time": 1769.5054320637137,
+                "damage": 42664.53555583954,
+                "heal": 0,
+                "damage_taken": 142266.72554183006,
+                "main_attack_cnt": 978,
+                "main_attack_hit": 309
+            },
+            "1030": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 130.55895413830876
+            },
+            "1034": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 360.7392809521407
+            },
+            "1035": {
+                "matches": 15,
+                "win": 10,
+                "mvp": 0,
+                "svp": 4,
+                "kills": 237,
+                "deaths": 49,
+                "assists": 13,
+                "play_time": 9387.317142264917,
+                "damage": 234608.90388584137,
+                "heal": 0,
+                "damage_taken": 461148.3014538288,
+                "main_attack_cnt": 18943,
+                "main_attack_hit": 5823
+            },
+            "1036": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 44.899426616728306
+            },
+            "1037": {
+                "matches": 98,
+                "win": 72,
+                "kills": 1698,
+                "deaths": 342,
+                "assists": 199,
+                "damage": 1708232.963962555,
+                "heal": 0,
+                "mvp": 22,
+                "svp": 8,
+                "damage_taken": 3630631.5426412225,
+                "main_attack_cnt": 43475,
+                "main_attack_hit": 20622,
+                "play_time": 65839.0921208486
+            },
+            "1039": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 439.2765808105469,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 2709.615816116333,
+                "main_attack_cnt": 17,
+                "main_attack_hit": 2,
+                "play_time": 160.2865372095257
+            },
+            "1042": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 0
+            },
+            "1045": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 135.6344111878425
+            },
+            "1050": {
+                "matches": 1,
+                "win": 0,
+                "kills": 1,
+                "deaths": 4,
+                "assists": 3,
+                "damage": 1666.5,
+                "heal": 10549.643688201904,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 4456.082911491394,
+                "main_attack_cnt": 401,
+                "main_attack_hit": 160,
+                "play_time": 609.189597889781
+            }
+        },
+        "heroes_unranked": {
+            "1011": {
+                "matches": 2,
+                "win": 0,
+                "mvp": 0,
+                "svp": 0,
+                "kills": 0,
+                "deaths": 3,
+                "assists": 3,
+                "play_time": 883.7824017629027,
+                "damage": 1294.6000003814697,
+                "heal": 0,
+                "damage_taken": 5410.17628133297,
+                "main_attack_cnt": 56,
+                "main_attack_hit": 20
+            },
+            "1018": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 5,
+                "main_attack_hit": 0,
+                "play_time": 65.07342135347426
+            },
+            "1020": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 163.298306748271
+            },
+            "1023": {
+                "matches": 1,
+                "win": 0,
+                "mvp": 0,
+                "svp": 0,
+                "kills": 6,
+                "deaths": 5,
+                "assists": 9,
+                "play_time": 430.89293727837503,
+                "damage": 980.2851071357727,
+                "heal": 12922.840787172318,
+                "damage_taken": 3840.4204919338226,
+                "main_attack_cnt": 385,
+                "main_attack_hit": 67
+            },
+            "1027": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 193.51195773296058
+            },
+            "1031": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 179.92893118038774
+            },
+            "1033": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 1.5755070503801107
+            },
+            "1047": {
+                "matches": 0,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "damage": 0,
+                "heal": 0,
+                "mvp": 0,
+                "svp": 0,
+                "damage_taken": 0,
+                "main_attack_cnt": 0,
+                "main_attack_hit": 0,
+                "play_time": 197.2423581685871
+            },
+            "1049": {
+                "matches": 1,
+                "win": 0,
+                "mvp": 0,
+                "svp": 0,
+                "kills": 3,
+                "deaths": 6,
+                "assists": 0,
+                "play_time": 251.34493452124298,
+                "damage": 3484.932445526123,
+                "heal": 32.39999008178711,
+                "damage_taken": 5331.325404167175,
+                "main_attack_cnt": 53,
+                "main_attack_hit": 22
+            }
+        },
+        "maps": {
+            "1032": {
+                "matches": 1,
+                "win": 0,
+                "kills": 0,
+                "deaths": 3,
+                "assists": 3,
+                "play_time": 202.78810455277562
+            },
+            "1230": {
+                "matches": 34,
+                "win": 28,
+                "kills": 711,
+                "deaths": 136,
+                "assists": 34,
+                "play_time": 25577.741799596697
+            },
+            "1231": {
+                "matches": 38,
+                "win": 29,
+                "kills": 817,
+                "deaths": 160,
+                "assists": 29,
+                "play_time": 27556.335247144103
+            },
+            "1235": {
+                "matches": 1,
+                "win": 0,
+                "kills": 0,
+                "deaths": 0,
+                "assists": 0,
+                "play_time": 680.9942972101271
+            },
+            "1236": {
+                "matches": 34,
+                "win": 23,
+                "kills": 598,
+                "deaths": 137,
+                "assists": 28,
+                "play_time": 14277.407115567476
+            },
+            "1240": {
+                "matches": 1,
+                "win": 0,
+                "kills": 7,
+                "deaths": 7,
+                "assists": 13,
+                "play_time": 638.8449076656252
+            },
+            "1245": {
+                "matches": 35,
+                "win": 20,
+                "kills": 558,
+                "deaths": 161,
+                "assists": 33,
+                "play_time": 24010.58312711306
+            },
+            "1267": {
+                "matches": 29,
+                "win": 22,
+                "kills": 640,
+                "deaths": 126,
+                "assists": 20,
+                "play_time": 23890.845056062564
+            },
+            "1272": {
+                "matches": 33,
+                "win": 26,
+                "kills": 583,
+                "deaths": 113,
+                "assists": 50,
+                "play_time": 14358.529024679214
+            },
+            "1287": {
+                "matches": 1,
+                "win": 0,
+                "kills": 16,
+                "deaths": 14,
+                "assists": 5,
+                "play_time": 844.0234463680536
+            },
+            "1288": {
+                "matches": 39,
+                "win": 24,
+                "kills": 762,
+                "deaths": 191,
+                "assists": 50,
+                "play_time": 21033.96576238051
+            },
+            "1289": {
+                "matches": 1,
+                "win": 0,
+                "kills": 0,
+                "deaths": 1,
+                "assists": 3,
+                "play_time": 172.08349367417395
+            },
+            "1290": {
+                "matches": 41,
+                "win": 26,
+                "kills": 753,
+                "deaths": 193,
+                "assists": 72,
+                "play_time": 31092.667080380023
+            },
+            "1291": {
+                "matches": 34,
+                "win": 26,
+                "kills": 840,
+                "deaths": 153,
+                "assists": 31,
+                "play_time": 26351.436518890783
+            }
+        }
+    }
+}
