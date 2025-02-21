@@ -1,13 +1,10 @@
+import { Heroi } from "@/types/types";
 import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-type Data = {
-  heroes: any;
-};
-
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>,
+  res: NextApiResponse<{heroes: Heroi[]}|{ erro: string}>,
 ) {
   
   switch(req.method){
@@ -19,11 +16,11 @@ export default async function handler(
       }).then(function (response) {
         res.status(200).json({ heroes: response.data });
       }).catch((e) => {
-        res.status(400).json({ heroes: `erro ao chamar api ${e}` });
+        res.status(400).json({ erro: `erro ao chamar api ${e}` });
       })
     }
     default: {
-      res.status(404).json({ heroes: "erro hero" });
+      res.status(404).json({ erro: "erro hero" });
     }
   }
 }

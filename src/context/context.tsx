@@ -1,6 +1,7 @@
 import React, { createContext, useState, ReactNode } from 'react';
 import { AppContextType, Heroi, Mapa, WebGet } from '../types/types';
 import axios from 'axios';
+import { MapsDict } from '@/types/apiTypes';
 
 const defaultState: AppContextType = {
   herois: [],
@@ -36,10 +37,17 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
   const [state, setState] = useState<AppContextType>(defaultState);
 
   const addHeroi = (heroi: Heroi) => {
-    setState((prevState) => ({
-      ...prevState,
-      herois: [...prevState.herois, heroi],
-    }));
+    setState((prevState) => {
+      const heroiExiste = prevState.herois.some((e) => e.name === heroi.name && e.id === heroi.id);
+      if (!heroiExiste) {
+        return {
+          ...prevState,
+          herois: [...prevState.herois, heroi],
+        };
+      }
+
+      return prevState;
+    });
   };
 
   const editHeroi = (updatedHeroi: Heroi) => {
@@ -52,10 +60,17 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const addMapa = (mapa: Mapa) => {
-    setState((prevState) => ({
-      ...prevState,
-      mapas: [...prevState.mapas, mapa],
-    }));
+    setState((prevState) => {
+      const mapaExiste = prevState.mapas.some((e) => e.name === mapa.name && e.id === mapa.id);
+      if (!mapaExiste) {
+        return {
+          ...prevState,
+          mapas: [...prevState.mapas, mapa],
+        };
+      }
+
+      return prevState;
+    });
   };
 
   const editMapa = (updatedMapa: Mapa) => {
@@ -68,17 +83,31 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const addTipoJogo = (tipo: string) => {
-    setState((prevState) => ({
-      ...prevState,
-      tipoJogo: [...prevState.tipoJogo, tipo],
-    }));
+    setState((prevState) => {
+      const tipoExiste = prevState.tipoJogo.includes(tipo);
+      if (!tipoExiste) {
+        return {
+          ...prevState,
+          tipoJogo: [...prevState.tipoJogo, tipo],
+        };
+      }
+
+      return prevState;
+    });
   };
 
   const addFormacao = (formacao: string) => {
-    setState((prevState) => ({
-      ...prevState,
-      formacao: [...prevState.formacao, formacao],
-    }));
+    setState((prevState) => {
+      const formExiste = prevState.tipoJogo.includes(formacao);
+      if (!formExiste) {
+        return {
+          ...prevState,
+          formacao: [...prevState.formacao, formacao],
+        };
+      }
+
+      return prevState;
+    });
   };
 
   const saveToJson = () => {
@@ -114,13 +143,9 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
   const loadFromWeb = async (select: WebGet, query?: string) => {
     switch(select){
       case WebGet.Heroes: {
-        await axios.get(`${process.env.NEXT_PUBLIC_LOCAL}/heroes`).then(function (response) {
-          if(response.data){
-            setState((prevState) => ({
-              ...prevState,
-              herois: [],
-            }));
-            response.data.heroes.map((h: any) =>{
+        await axios.get<{heroes: Heroi[]}>(`${process.env.NEXT_PUBLIC_LOCAL}/heroes`).then((response) => {
+          if(response.data && response.data.heroes){
+            for(const h of response.data.heroes){
               const { id, name, imageUrl, role, attack_type, team, difficulty } = h;
     
               const newHeroi: Heroi = {
@@ -134,7 +159,7 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
                 };
     
               addHeroi(newHeroi);
-            })
+            }
           }
         }).catch((e) => {
           console.log("Erro ao pegar herois", e);
@@ -142,30 +167,25 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         break;
       }
       case WebGet.Maps:{
-        await axios.get(`${process.env.NEXT_PUBLIC_LOCAL}/maps`).then(function (response) {
-          if(response.data){
-            setState((prevState) => ({
-              ...prevState,
-              maps: [],
-            }));
-            response.data.maps.maps.map((m: any) =>{
-              const { id, name, game_mode, full_name, location, images, sub_map } = m;
+        await axios.get<{maps: Mapa[]}>(`${process.env.NEXT_PUBLIC_LOCAL}/maps`).then(function (response) {
+          if(response.data && response.data.maps){
+            for( const m of response.data.maps){
+              const { id, name, game_mode, is_competitve ,full_name, location, images, sub_map } = m;
     
               const newMap: Mapa = {
                     id,
                     name,
                     game_mode,
+                    is_competitve,
                     full_name,
                     location,
                     images,
-                    sub_map
+                    sub_map,
                 };
                 
-              if(!state.tipoJogo.includes(game_mode)){
-                addTipoJogo(game_mode);
-              }
+              addTipoJogo(game_mode);
               addMapa(newMap);
-            })
+            }
           }
         }).catch((e) => {
           console.log("Erro ao pegar mapas", e);
@@ -173,27 +193,25 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         break;
       }
       case WebGet.Comps:{
-        await axios.get(`${process.env.NEXT_PUBLIC_LOCAL}/comps?heroId=${query}`,).then(function (response) {
-          if(response.data){
+          const mapsMap = await axios.get<{mapsWinHate: MapsDict}>(`${process.env.NEXT_PUBLIC_LOCAL}/comps?heroId=${query}`,)
+
+          if(mapsMap.data && mapsMap.data.mapsWinHate){
             
-            Object.keys(response.data.mapsWinHate).map((mW: any) =>{
+            for(const mW of Object.keys(mapsMap.data.mapsWinHate)){
 
               const edMap = state.mapas.find((m) => m.id == mW);
-
+              
               if(edMap && query){
-                edMap.heroes = {
-                  [query]: response.data.mapsWinHate[mW]
-                }
+                if(!edMap.stats) edMap.stats = {heroes: {}}
+                edMap.stats.heroes[query] = mapsMap.data.mapsWinHate[mW].heroes[query]
                 editMapa(edMap);
               } else {
                 console.log("Map not found");
               }
 
-            })
+            }
           }
-        }).catch((e) => {
-          console.log("Erro ao pegar comps", e);
-        });
+        
         break;
       }
 

@@ -16,6 +16,7 @@ export const AddMapaForm: React.FC = () => {
       id,
       name: nome,
       game_mode: tipo,
+      is_competitve: true
       // posicao: posicao ? posicao.split(',') : undefined,
       // submapa: submapa ? submapa.split(',') : undefined,
     };

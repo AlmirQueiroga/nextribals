@@ -3,14 +3,19 @@ export interface Mapa {
     id: string;
     name: string;
     game_mode: string;
+    is_competitve: boolean;
     full_name?: string;
     location?: string;
     images?: string[];
-    heroes?:{
-        [key: HeroID]: HeroInMap;
-    }
+    stats?: HeroDict;
     posicao?: string[];
     sub_map?: submap[];
+  }
+
+  export type HeroDict = {
+    heroes:{
+      [key: HeroID]: HeroInMap;
+    }
   }
 
   type submap = {

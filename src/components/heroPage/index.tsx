@@ -21,9 +21,6 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
   const [countered, setCountered] = useState<Heroi[]>([]);
   const [counterFilter, setCounterFilter] = useState('');
   const [counteredFilter, setCounteredFilter] = useState('');
-
-  const [maps, setMaps] = useState<Mapa[]>([]);
-
   const [tipo, setTipo] = useState<string>('');
   const [mapa, setMapa] = useState<Mapa>();
   const [sub, setSub] = useState<string>('');
@@ -32,18 +29,6 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
   const [aliadosFilter, setAliadosFilter] = useState<string>('');
   const [inimigos, setInimigos] = useState<Heroi[]>([]);
   const [inimigosFilter, setInimigosFilter] = useState<string>('');
-
-  // useEffect(() => {
-  //   if (heroiToEdit) {
-  //     setName(heroiToEdit.name);
-  //     setClasse(heroiToEdit.role);
-  //     setCounters(heroiToEdit.counters || []);
-  //     setCountered(heroiToEdit.countered || []);
-  //     setIsEditing(true);
-
-  //     if(ref.current) ref.current.focus();
-  //   }
-  // }, [heroiToEdit]);
 
   const ref = useRef<HTMLInputElement>(null);
 
@@ -57,8 +42,6 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
       role: classe,
       ...(counters && { counters: counters }),
       ...(countered && { countered: countered }),
-      // counters: counters.length > 0 ? counters : undefined,
-      // countera: countera.length > 0 ? countera : undefined,
     };
 
     if(isEditing){
@@ -115,7 +98,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
   const handleInimigosSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedOptions = Array.from(e.target.selectedOptions).map(
       (option) => state.herois.find((h) => h.name === option.value)!
-    ).filter((heroi) => !counters.some((h) => h.name === heroi.name));;
+    ).filter((heroi) => !counters.some((h) => h.name === heroi.name));
     
     setInimigos((prev) => (selectedOptions.concat(prev)));
   };
@@ -123,7 +106,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
   const handleCounterSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedOptions = Array.from(e.target.selectedOptions).map(
       (option) => state.herois.find((h) => h.name === option.value)!
-    ).filter((heroi) => !countered.some((h) => h.name === heroi.name));;
+    ).filter((heroi) => !countered.some((h) => h.name === heroi.name));
     
     setCounters((prev) => (selectedOptions.concat(prev)));
   };
@@ -131,7 +114,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
   const handleCounteredSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedOptions = Array.from(e.target.selectedOptions).map(
       (option) => state.herois.find((h) => h.name === option.value)!
-    ).filter((heroi) => !countered.some((h) => h.name === heroi.name));;
+    ).filter((heroi) => !countered.some((h) => h.name === heroi.name));
     
     setCountered((prev) => (selectedOptions.concat(prev)));
   };
@@ -139,7 +122,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
   const handleAllySelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedOptions = Array.from(e.target.selectedOptions).map(
       (option) => state.herois.find((h) => h.name === option.value)!
-    ).filter((heroi) => !aliados.some((h) => h.name === heroi.name));;
+    ).filter((heroi) => !aliados.some((h) => h.name === heroi.name));
     
     setAliados((prev) => (selectedOptions.concat(prev)));
   };
@@ -309,12 +292,13 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
       <div>
           <h3>Mapas</h3>
           {state.mapas && state.mapas.map((gm, i) => (
+            gm.is_competitve &&
             <>
               <p>{gm.name}</p>
               <GameStatusTable>
                 <thead> 
                   <tr>
-                    <th>{name ? name : ''}</th>
+                    <th>{id ? `${id}` : ''}  {name ? `-${name}` : ''}</th>
                     {state.herois.map((hero) => (
                       <th>{hero.name}</th>
                     ))}
@@ -324,8 +308,8 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
                   <tr>
                     <th>Como aliado</th>
                     {state.herois.map((hero) => (
-                      gm.heroes && gm.heroes[id] ?
-                      <td>{(gm.heroes[id].aliados[hero.id].partidas*100)/gm.heroes[id].aliados[hero.id].partidas}%</td>
+                      gm.stats && gm.stats.heroes[id] ?
+                      <td>{(gm.stats.heroes[id].aliados[hero.id].partidas*100)/gm.stats.heroes[id].aliados[hero.id].partidas}%</td>
                       :
                       <td> --- </td>
                     ))}
@@ -333,8 +317,8 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
                   <tr>
                     <th>Como Inimigo</th>
                     {state.herois.map((hero) => (
-                      gm.heroes && gm.heroes[id] ?
-                      <td>{(gm.heroes[id].inimigos[hero.id].partidas*100)/gm.heroes[id].inimigos[hero.id].partidas}%</td>
+                      gm.stats && gm.stats.heroes[id] ?
+                      <td>{(gm.stats.heroes[id].inimigos[hero.id].partidas*100)/gm.stats.heroes[id].inimigos[hero.id].partidas}%</td>
                       :
                       <td> --- </td>
                     ))}

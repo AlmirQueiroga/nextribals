@@ -35,12 +35,6 @@ export default function Home() {
     loadFromWeb(WebGet.Comps, heroi.id);
   };
 
-  // useEffect(() => {
-  //   if (heroiToEdit) {
-      
-  //   }
-  // }, [heroiToEdit]);
-
   return (
     <Container>
       <Header>

@@ -22,6 +22,7 @@ export const GameStatusTable = styled.table`
   border: 1px solid #000;
   border-radius: 4px;
   background-color: white;
+  overflow-x: auto;
 
   tr {
     margin: 4rem;

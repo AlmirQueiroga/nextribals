@@ -1,13 +1,10 @@
+import { Mapa } from "@/types/types";
 import axios from "axios";
 import type { NextApiRequest, NextApiResponse } from "next";
 
-type Data = {
-  maps: any;
-};
-
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>,
+  res: NextApiResponse<{maps: Mapa[] }|{ erro: string}>,
 ) {
   
   switch(req.method){
@@ -17,13 +14,13 @@ export default async function handler(
           'X-Api-Key': process.env.NEXT_PUBLIC_XAPI,
         }
       }).then(function (response) {
-        res.status(200).json({ maps: response.data });
+        res.status(200).json({ maps: response.data.maps });
       }).catch((e) => {
-        res.status(400).json({ maps: `erro ao chamar api ${e}` });
+        res.status(400).json({ erro: `erro ao chamar api ${e}` });
       })
     }
     default: {
-      res.status(404).json({ maps: "erro mapa" });
+      res.status(404).json({ erro: "erro mapa" });
     }
   }
 }
