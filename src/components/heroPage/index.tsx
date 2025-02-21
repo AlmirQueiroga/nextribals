@@ -2,17 +2,15 @@ import React, { useState, useContext, useEffect, useRef } from 'react';
 import { GameContext } from '../../context/context';
 import { Heroi, Classe, Mapa } from '../../types/types';
 import { SelectedItemsContainer, SelectedItem, RemoveButton, SelectMulti, FilterInput, AddButton, GameStatusTable } from './style';
+import { calcularPorcentagemVitoria } from '@/utils';
 
 interface AddHeroiFormProps {
-  heroiToEdit?: Heroi;
+  heroiToEdit?: Heroi | undefined;
   setHeroEdit?: React.Dispatch<React.SetStateAction<Heroi | undefined>>
 }
 
 export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHeroEdit }) => {
   const { state, addHeroi, editHeroi } = useContext(GameContext);
-
-  const [isEditing, setIsEditing] = useState(!!heroiToEdit);
-  const [editingMap, setEditingMap] = useState<number>(-1);
   
   const [name, setName] = useState('');
   const [id, setId] = useState('');
@@ -32,6 +30,15 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
 
   const ref = useRef<HTMLInputElement>(null);
 
+  useEffect(() =>{
+    if(heroiToEdit){
+      setName(heroiToEdit.name);
+      setId(heroiToEdit.id);
+      setClasse(heroiToEdit.role);
+      setCounters(heroiToEdit.counters || [])
+      setCountered(heroiToEdit.countered || [])
+    }
+  },[heroiToEdit])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -44,7 +51,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
       ...(countered && { countered: countered }),
     };
 
-    if(isEditing){
+    if(heroiToEdit){
       editHeroi(newHeroi);
     } else {
       addHeroi(newHeroi);
@@ -138,10 +145,9 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
   // }
 
   const handleCancelEditMaps = (e: React.FormEvent) => {
-    e.preventDefault();
+    // e.preventDefault();
 
-    setEditingMap(-1);
-    resetMapsForm();
+    // resetMapsForm();
   };
 
   const handleSubmitMapsEdit = (e: React.FormEvent) => {
@@ -308,8 +314,8 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
                   <tr>
                     <th>Como aliado</th>
                     {state.herois.map((hero) => (
-                      gm.stats && gm.stats.heroes[id] ?
-                      <td>{(gm.stats.heroes[id].aliados[hero.id].partidas*100)/gm.stats.heroes[id].aliados[hero.id].partidas}%</td>
+                      (gm.stats && gm.stats.heroes[id] && gm.stats.heroes[id].aliados[hero.id]) ?
+                      <td>{calcularPorcentagemVitoria(gm.stats.heroes[id].aliados[hero.id]).toFixed(2)}%</td>
                       :
                       <td> --- </td>
                     ))}
@@ -317,8 +323,8 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
                   <tr>
                     <th>Como Inimigo</th>
                     {state.herois.map((hero) => (
-                      gm.stats && gm.stats.heroes[id] ?
-                      <td>{(gm.stats.heroes[id].inimigos[hero.id].partidas*100)/gm.stats.heroes[id].inimigos[hero.id].partidas}%</td>
+                      (gm.stats && gm.stats.heroes[id] && gm.stats.heroes[id].inimigos[hero.id]) ?
+                      <td>{calcularPorcentagemVitoria(gm.stats.heroes[id].inimigos[hero.id]).toFixed(2)}%</td>
                       :
                       <td> --- </td>
                     ))}
@@ -457,7 +463,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
               </SelectedItemsContainer>
             </div>
           </div>
-          {editingMap == -1 ?
+          {id == undefined ?
             (
               <AddButton type="button" onClick={() => handleAddMaps()}>
                 +

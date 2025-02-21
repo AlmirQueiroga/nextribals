@@ -32,9 +32,9 @@ async function insideHeroLeaderboard(leaderboard: MatchPlayer[], currHeroId: str
     let updatedMaps = {};
   
     for (const [index, p] of leaderboard.entries()) {
-      if (index > 5) break;
+      if (index > 4) break;
   
-      for (let j = 0; j < 7; j++) {
+      for (let j = 0; j < 4; j++) {
         try {
           console.log(`Fetching player profile for ${p.player_uid}, skip=${j * 20}`);
           const playerProfile = await axios.get<Match[]>(`${process.env.NEXT_PUBLIC_MR_META}/player-match-history/${p.player_uid}?skip=${j * 20}&game_mode_id=2&hero_id=${currHeroId}&season=2`);

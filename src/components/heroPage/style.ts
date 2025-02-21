@@ -18,17 +18,28 @@ export const SelectButton = styled.button`
 
 export const GameStatusTable = styled.table`
   width: 100%;
-  padding: 8px;
+  padding: 20px;
   border: 1px solid #000;
   border-radius: 4px;
   background-color: white;
+
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
   overflow-x: auto;
+  white-space: nowrap;
 
   tr {
-    margin: 4rem;
     width: 100%;
     td{
       text-align: center;
+      padding-bottom: 3em;
+      padding-left: 3em;
+    }
+    th{
+      padding-bottom: 3em;
+      padding-left: 3em;
     }
   }
 `;
