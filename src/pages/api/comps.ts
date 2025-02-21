@@ -161,7 +161,6 @@ async function insideHeroLeaderboard(leaderboard: TopPlayers, currHeroId: string
         }
       }
   
-      // Retorna o objeto atualizado
       return updatedMaps;
     } catch (e) {
       console.error(`Erro ao fazer cálculo de mapa: ${e}`);
@@ -171,22 +170,19 @@ async function insideHeroLeaderboard(leaderboard: TopPlayers, currHeroId: string
   
   async function validMatchCalc(matchDet: FullMatch, curMaps: Maps, mapId: string, heroId: string, mainPlayerId: string): Promise<Maps> {
     try {
-      // Cria uma cópia do objeto curMaps para evitar mutação direta
       let updatedMaps = { ...curMaps };
   
-      // Incrementa o número de partidas jogadas
       updatedMaps[mapId].heroes[heroId].general.partidas += 1;
       console.log(`Partida geral + 1. Total: ${updatedMaps[mapId].heroes[heroId].general.partidas}`);
   
-      // Verifica se o jogador principal venceu a partida
       const isWin = matchDet.data.match_players.find((elp) => elp.player_uid === mainPlayerId)?.is_win;
   
       if (isWin) {
         updatedMaps[mapId].heroes[heroId].general.vitorias += 1;
         console.log(`Vitória geral + 1. Total: ${updatedMaps[mapId].heroes[heroId].general.vitorias}`);
       }
+      updatedMaps = await calcOtherMatchPlayers(matchDet.data.match_players, !!isWin, mainPlayerId, updatedMaps, mapId, heroId);
   
-      // Retorna o objeto atualizado
       return updatedMaps;
     } catch (e) {
       console.error(`Erro ao calcular partida válida: ${e}`);
@@ -194,126 +190,44 @@ async function insideHeroLeaderboard(leaderboard: TopPlayers, currHeroId: string
     }
   }
 
-// await axios.get(`${process.env.NEXT_PUBLIC_MR_META}/hero-leaderboard/${req.query.heroId}?device=1`, {
-// }).then(async function (lb : TopPlayers) {
-//   const {players} = lb.data;
-//   let playerData = {};
-//   let privProfiles = 0
+  async function calcOtherMatchPlayers( playerList : FullMatchPlayer[], win: boolean, mPlayerId: string, mapsObj: Maps, matchMapId: string, mainHeroId: string): Promise<Maps> {
+    try {
+        let mapsList = { ...mapsObj };
 
-//   for(let i = 0; i < (5 + privProfiles); i++){
-//   console.log(`entrando no perfil do jogador ${i}`)
-//       const playerId = players[i].player_uid
-//       for(let j = 0; j < 10; j++){
-//           console.log(`entrando em ?skip=${j*20}`)
-//           await axios.get(`${process.env.NEXT_PUBLIC_MR_META}/player/${playerId}?skip=${j*20}&game_mode_id=2&hero_id=${req.query.heroId}&season=2`, {
-//           }).then(async function (hj : PlayerHistoryProfile){
-//               if(!hj.data.match_history){
-//                   privProfiles++;
-//                   console.log(`perfil do jogador ${i} é privado, indo até o ${(5 + privProfiles)}`)
-//                   j = 10;
-//               } else if(hj.data.match_history.length > 0){
-//                   console.log(`encontrou historico do jogador ${i}`)
-//                   let heroId = req.query.heroId as string;
-//                   await makeMapCalculations(hj.data.match_history, playerId, heroId, playerData).then((mapsCalc : Maps)=>{
-//                       playerData = {...mapsCalc};
-//                   }).catch((e) => {
-//                       res.status(400).json({ erro: `erro ao chamar api ka ${e}` });
-//                   });
-//               } else {
-//                   j=10;
-//               }
-//           }).catch((e) => {
-//               res.status(400).json({ erro: `erro ao chamar api 2 ${e}` });
-//           })
-//       }
-//   }
-//   res.status(200).json({ mapsWinHate: playerData });
+        for(const pl of playerList){
+            if (pl.player_uid !== mPlayerId) {
 
-// }).catch((e) => {
-//   res.status(400).json({ erro: `erro ao chamar api 3 ${e}` });
-// })
+                if(pl.is_win == win){
+                    for( const heros of pl.player_heroes){
+                        mapsList[matchMapId].heroes[mainHeroId].aliados
 
-// async function makeMapCalculations(history: Match[], playerId: string, heroId: string, maps: Maps): Promise<Maps> {
-//     let dodgeCount = 0;
-//     let mapAux = { ...maps };
+                        mapsList[matchMapId].heroes[mainHeroId].aliados[heros.hero_id].partidas += 1;
+                        console.log(`Partidas com aliado ${heros.hero_id} + 1. Total: ${mapsList[matchMapId].heroes[mainHeroId].aliados[heros.hero_id].partidas}`);
+                    
+                        if (win) {
+                            mapsList[matchMapId].heroes[mainHeroId].aliados[heros.hero_id].vitorias += 1;
+                            console.log(`Vitória com aliado ${heros.hero_id} + 1. Total: ${mapsList[matchMapId].heroes[mainHeroId].aliados[heros.hero_id].vitorias}`);
+                        }
+                    }
+                } else {
+                    for( const heros of pl.player_heroes){
+                        mapsList[matchMapId].heroes[mainHeroId].inimigos
 
-//     for (let k = 0; k < history.length; k++) {
-//         console.log(`entrando na partida ${k}`);
-//         const match = history[k];
-//         const mapId = match.match_map_id;
-//         const isWin = match.match_player.is_win;
-
-//         if (!mapAux[mapId]) {
-//             console.log(`criando mapa ${mapId} pela primeira vez`);
-//             mapAux[mapId] = {
-//                 heroes: {},
-//             };
-//         }
-
-//         if (!mapAux[mapId].heroes[heroId]) {
-//             console.log(`criando heroi atual pela primeira vez`);
-//             mapAux[mapId].heroes[heroId] = {
-//                 general: {
-//                     partidas: 0,
-//                     vitorias: 0,
-//                 },
-//                 inimigos: {},
-//                 aliados: {},
-//             };
-//         }
-
-//         try {
-//             const fmResponse = await axios.get(`${process.env.NEXT_PUBLIC_MR_META}/matches/${match.match_uid}`);
-//             const fm = fmResponse.data;
-
-//             const hasInvalidPlayer = fm.match_players.some((pl: FullMatchPlayer) =>
-//                 pl.player_heroes == null ||
-//                 pl.player_heroes == undefined ||
-//                 pl.player_heroes.length < 1
-//             );
-
-//             if (hasInvalidPlayer) {
-//                 console.log(`Partida teve Dodge, indo até ${(20 + dodgeCount)}`);
-//                 dodgeCount++;
-//                 continue; // Pula para a próxima partida
-//             }
-
-//             // Atualiza contagem geral
-//             mapAux[mapId].heroes[heroId].general.partidas += 1;
-//             console.log(`partida geral + 1. Total: ${mapAux[mapId].heroes[heroId].general.partidas}`);
-//             if (isWin) {
-//                 mapAux[mapId].heroes[heroId].general.vitorias += 1;
-//                 console.log(`vitoria geral + 1. Total: ${mapAux[mapId].heroes[heroId].general.vitorias}`);
-//             }
-
-//             // Processa aliados e inimigos
-//             for (const pl of fm.match_players) {
-//                 if (pl.player_uid !== playerId) {
-//                     const isAlly = pl.is_win === isWin;
-//                     const target = isAlly ? mapAux[mapId].heroes[heroId].aliados : mapAux[mapId].heroes[heroId].inimigos;
-
-//                     for (const h of pl.player_heroes) {
-//                         if (!target[h.hero_id]) {
-//                             console.log(`criando heroi ${h.hero_id} pela primeira vez`);
-//                             target[h.hero_id] = {
-//                                 partidas: 0,
-//                                 vitorias: 0,
-//                             };
-//                         }
-
-//                         target[h.hero_id].partidas += 1;
-//                         console.log(`partidas com ${h.hero_id} de ${isAlly ? 'aliado' : 'inimigo'} +1. Total: ${target[h.hero_id].partidas}`);
-//                         if (isWin) {
-//                             target[h.hero_id].vitorias += 1;
-//                             console.log(`vitorias com ${h.hero_id} de ${isAlly ? 'aliado' : 'inimigo'} +1. Total: ${target[h.hero_id].vitorias}`);
-//                         }
-//                     }
-//                 }
-//             }
-//         } catch (e) {
-//             console.log(`erro ao chamar api kaka ${e}`);
-//         }
-//     }
-
-//     return mapAux;
-// }
+                        mapsList[matchMapId].heroes[mainHeroId].inimigos[heros.hero_id].partidas += 1;
+                        console.log(`Partidas com inimigo ${heros.hero_id} + 1. Total: ${mapsList[matchMapId].heroes[mainHeroId].inimigos[heros.hero_id].partidas}`);
+                    
+                        if (pl.is_win) {
+                            mapsList[matchMapId].heroes[mainHeroId].inimigos[heros.hero_id].vitorias += 1;
+                            console.log(`Vitória contra inimigo ${heros.hero_id} + 1. Total: ${mapsList[matchMapId].heroes[mainHeroId].inimigos[heros.hero_id].vitorias}`);
+                        }
+                    }
+                }
+                
+            }
+        }
+        return mapsList;
+    } catch (e) {
+        console.error(`Erro ao calcular aliados e inimigos: ${e}`);
+        return mapsObj;
+    }
+  }
