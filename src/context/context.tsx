@@ -1,5 +1,5 @@
 import React, { createContext, useState, ReactNode } from 'react';
-import { AppContextType, Heroi, Mapa, WebGet } from '../types/types';
+import { AppContextType, CounterGroups, Heroi, Mapa, WebGet } from '../types/types';
 import axios from 'axios';
 import { MapsDict } from '@/types/apiTypes';
 
@@ -8,6 +8,7 @@ const defaultState: AppContextType = {
   mapas: [],
   tipoJogo: [],
   formacao: [],
+  counterGroups: []
 };
 
 export const GameContext = createContext<{
@@ -18,6 +19,7 @@ export const GameContext = createContext<{
   editMapa: (mapa: Mapa) => void;
   addTipoJogo: (tipo: string) => void;
   addFormacao: (formacao: string) => void;
+  addCounterGroup: (group: CounterGroups) => void;
   saveToJson: () => void;
   loadFromJson: () => void;
   loadFromWeb: (select : WebGet, query?: string) => void;
@@ -29,6 +31,7 @@ export const GameContext = createContext<{
   editMapa: () => {},
   addTipoJogo: () => {},
   addFormacao: () => {},
+  addCounterGroup: () => {},
   saveToJson: () => {},
   loadFromJson: () => {},
   loadFromWeb: () => {}
@@ -105,6 +108,20 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         return {
           ...prevState,
           formacao: [...prevState.formacao, formacao],
+        };
+      }
+
+      return prevState;
+    });
+  };
+
+  const addCounterGroup = (group: CounterGroups) => {
+    setState((prevState) => {
+      const formExiste = prevState.counterGroups.includes(group);
+      if (!formExiste) {
+        return {
+          ...prevState,
+          counterGroups: [...prevState.counterGroups, group],
         };
       }
 
@@ -196,8 +213,8 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         break;
       }
       case WebGet.Comps:{
-          const mapsMap = await axios.get<{mapsWinHate: MapsDict}>(`${process.env.NEXT_PUBLIC_LOCAL}/comps?heroId=${query}`,)
 
+          const mapsMap = await axios.get<{mapsWinHate: MapsDict}>(`${process.env.NEXT_PUBLIC_LOCAL}/comps?heroId=${query}`,)
           if(mapsMap.data && mapsMap.data.mapsWinHate){
             
             for(const mW of Object.keys(mapsMap.data.mapsWinHate)){
@@ -217,6 +234,9 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         
         break;
       }
+      case WebGet.Teamups: {
+        break;
+      }
 
     }
   };
@@ -231,6 +251,7 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         editMapa,
         addTipoJogo,
         addFormacao,
+        addCounterGroup,
         saveToJson,
         loadFromJson,
         loadFromWeb

@@ -9,6 +9,7 @@ import { AddFormacaoForm } from "@/components/formacaoForm";
 import { AddGameModeForm } from "@/components/gameModeForm";
 import { AddHeroiForm } from "@/components/heroPage";
 import { AddMapaForm } from "@/components/mapaForm";
+import { CountersGroupForm } from "@/components/countersGroupForm";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +22,7 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<'hero' | 'gameMode' | 'mapa' | 'form'>('hero');
+  const [activeTab, setActiveTab] = useState<'hero' | 'gameMode' | 'mapa' | 'form' | 'count'>('hero');
   const { saveToJson, loadFromJson, loadFromWeb } = useContext(GameContext);
   const [heroiToEdit, setHeroiToEdit] = useState<Heroi | undefined>(undefined);
 
@@ -71,6 +72,12 @@ export default function Home() {
         >
           Add Formação
         </TabButton>
+        <TabButton
+          active={activeTab === 'count'}
+          onClick={() => setActiveTab('count')}
+        >
+          Add Counter Groups
+        </TabButton>
       </Tabs>
       <TabContent>
         {activeTab === 'hero' && (
@@ -92,6 +99,11 @@ export default function Home() {
         {activeTab === 'form' && (
           <>
             <AddFormacaoForm />
+          </>
+        )}
+        {activeTab === 'count' && (
+          <>
+            <CountersGroupForm/>
           </>
         )}
       </TabContent>

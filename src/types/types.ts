@@ -18,6 +18,11 @@ export interface Mapa {
     }
   }
 
+  export type CounterGroups = {
+    groupName: string;
+    heroes: Heroi[];
+  }
+
   type submap = {
     id: string;
     name?: string;
@@ -63,6 +68,7 @@ export interface Mapa {
     Heroes = 'Heroes',
     Maps = 'Maps',
     Comps = 'Comps',
+    Teamups = 'Teamups',
   }
   
   export interface CompList {
@@ -81,4 +87,5 @@ export interface Mapa {
     mapas: Mapa[];
     tipoJogo: string[];
     formacao: string[];
+    counterGroups: CounterGroups[]
   }

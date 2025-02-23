@@ -1,8 +1,9 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { GameContext } from '../../context/context';
 import { Heroi, Classe, Mapa, Relacao, Percentage } from '../../types/types';
-import { SelectedItemsContainer, SelectedItem, RemoveButton, SelectMulti, FilterInput, AddButton, GameStatusTable, SelectedRelacItem, Divider } from './style';
+import { GameStatusTable, SelectedRelacItem, Divider } from './style';
 import { calcularPorcentagemVitoria } from '@/utils';
+import { FilterInput, SelectMulti, SelectedItemsContainer, SelectedItem, RemoveButton, AddButton } from '@/styles';
 
 interface AddHeroiFormProps {
   heroiToEdit?: Heroi | undefined;
@@ -142,7 +143,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
   const handleCounterSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedOptions = Array.from(e.target.selectedOptions).map(
       (option) => state.herois.find((h) => h.name === option.value)!
-    ).filter((heroi) => !countered.some((h) => h.name === heroi.name));
+    ).filter((heroi) => !counters.some((h) => h.name === heroi.name));
     
     setCounters((prev) => (selectedOptions.concat(prev)));
   };
@@ -179,16 +180,6 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
       }
     )
   };
-
-  // const handleEditMap = (index: number, mapEdit: Mapa) => {
-  //   setEditingMap(index)
-
-  //   setTipo(mapEdit.game_mode);
-  //   setPos(mapEdit.posicao || '');
-  //   setSub(mapEdit.sub_map || '');
-  //   setAliados(mapEdit.heroes. || []);
-  //   setInimigos(mapEdit.inimigos || []);
-  // }
 
   const removeCounter = (heroi: Heroi) => {
     setCounters(counters.filter((h) => h.name !== heroi.name));
