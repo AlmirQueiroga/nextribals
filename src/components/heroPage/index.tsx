@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { GameContext } from '../../context/context';
-import { Heroi, Classe, Mapa } from '../../types/types';
-import { SelectedItemsContainer, SelectedItem, RemoveButton, SelectMulti, FilterInput, AddButton, GameStatusTable } from './style';
+import { Heroi, Classe, Mapa, Relacao, Percentage } from '../../types/types';
+import { SelectedItemsContainer, SelectedItem, RemoveButton, SelectMulti, FilterInput, AddButton, GameStatusTable, SelectedRelacItem, Divider } from './style';
 import { calcularPorcentagemVitoria } from '@/utils';
 
 interface AddHeroiFormProps {
@@ -10,7 +10,7 @@ interface AddHeroiFormProps {
 }
 
 export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHeroEdit }) => {
-  const { state, addHeroi, editHeroi } = useContext(GameContext);
+  const { state, addHeroi, editHeroi, editMapa } = useContext(GameContext);
   
   const [name, setName] = useState('');
   const [id, setId] = useState('');
@@ -21,11 +21,14 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
   const [counteredFilter, setCounteredFilter] = useState('');
   const [tipo, setTipo] = useState<string>('');
   const [mapa, setMapa] = useState<Mapa>();
+  const [mapsAddInfo, setMapsAddInfo] = useState<Mapa[]>([]);
   const [sub, setSub] = useState<string>('');
   const [pos, setPos] = useState<string>('');
-  const [aliados, setAliados] = useState<Heroi[]>([]);
+  const [aliados, setAliados] = useState<Relacao>({});
+  const [aliadosSelected, setAliadosSelected] = useState<Heroi[]>([]);
   const [aliadosFilter, setAliadosFilter] = useState<string>('');
-  const [inimigos, setInimigos] = useState<Heroi[]>([]);
+  const [inimigos, setInimigos] = useState<Relacao>({});
+  const [inimigosSelected, setInimigosSelected] = useState<Heroi[]>([]);
   const [inimigosFilter, setInimigosFilter] = useState<string>('');
 
   const ref = useRef<HTMLInputElement>(null);
@@ -78,36 +81,62 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
     setTipo('')
     setPos('')
     setSub('')
-    setAliados([]);
+    setAliados({});
     setAliadosFilter('');
-    setInimigos([]);
+    setInimigos({});
     setCounterFilter('');
   };
 
 
   const handleAddMaps = () => {
-    // if(!tipo || !mapa || (!pos && !sub)) return
+    if(!tipo || !mapa ) return
 
-    // const gameStatus = {
-    //   tipo: tipo,
-    //   mapa: mapa,
-    //   ...(pos && { posicao: pos }),
-    //   ...(sub && { submapa: sub }),
-    //   ...(aliados && { aliados: aliados }),
-    //   ...(inimigos && { inimigos: inimigos }),
-    // }
+    const newMap: Mapa = {
+      ...mapa,
+      stats:{
+        heroes:{
+          [id]: {
+            general:{
+              partidas: 0,
+              vitorias:0
+            },
+            aliados,
+            inimigos
+          }
+        }
+      }
+      // ...(aliados && { aliados: aliados }),
+      // ...(inimigos && { inimigos: inimigos }),
+    }
 
-    // setMaps((prev) => (prev.concat(gameStatus)))
+    setMapsAddInfo((prev) => (prev.concat(newMap)));
 
-    // resetMapsForm();
+    resetMapsForm();
   }
 
   const handleInimigosSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedOptions = Array.from(e.target.selectedOptions).map(
-      (option) => state.herois.find((h) => h.name === option.value)!
-    ).filter((heroi) => !counters.some((h) => h.name === heroi.name));
+      (option) => state.herois.find((h) => h.id == option.value)!
+    ).filter((heroi) => !inimigosSelected.some((h) => h.id == heroi.id));
     
-    setInimigos((prev) => (selectedOptions.concat(prev)));
+    let inimigosMult = inimigosSelected.concat(selectedOptions);
+
+    setInimigosSelected(inimigosMult);
+
+    let inimigosRel :Percentage = {
+      partidas: 0,
+      vitorias: 0
+    }
+
+    selectedOptions.map((her) => {
+        if(mapa && mapa.stats && mapa.stats.heroes[id] && mapa.stats.heroes[id].inimigos[her.id]){
+          inimigosRel.partidas = mapa.stats.heroes[id].inimigos[her.id].partidas
+          inimigosRel.vitorias = mapa.stats.heroes[id].inimigos[her.id].vitorias
+        }
+
+        setInimigos((prev) => ({...prev, [her.id]: inimigosRel}))
+      }
+    )
   };
 
   const handleCounterSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -128,10 +157,27 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
 
   const handleAllySelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedOptions = Array.from(e.target.selectedOptions).map(
-      (option) => state.herois.find((h) => h.name === option.value)!
-    ).filter((heroi) => !aliados.some((h) => h.name === heroi.name));
+      (option) => state.herois.find((h) => h.id == option.value)!
+    ).filter((heroi) => !aliadosSelected.some((h) => h.id == heroi.id));
     
-    setAliados((prev) => (selectedOptions.concat(prev)));
+    let aliadosMult = aliadosSelected.concat(selectedOptions);
+
+    setAliadosSelected(aliadosMult);
+
+    let aliadosRel :Percentage = {
+      partidas: 0,
+      vitorias: 0
+    }
+
+    selectedOptions.map((her) => {
+        if(mapa && mapa.stats && mapa.stats.heroes[id] && mapa.stats.heroes[id].aliados[her.id]){
+          aliadosRel.partidas = mapa.stats.heroes[id].aliados[her.id].partidas
+          aliadosRel.vitorias = mapa.stats.heroes[id].aliados[her.id].vitorias
+        }
+
+        setAliados((prev) => ({...prev, [her.id]: aliadosRel}))
+      }
+    )
   };
 
   // const handleEditMap = (index: number, mapEdit: Mapa) => {
@@ -144,24 +190,6 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
   //   setInimigos(mapEdit.inimigos || []);
   // }
 
-  const handleCancelEditMaps = (e: React.FormEvent) => {
-    // e.preventDefault();
-
-    // resetMapsForm();
-  };
-
-  const handleSubmitMapsEdit = (e: React.FormEvent) => {
-    // e.preventDefault();
-
-    // if(editingMap == -1) return
-    // handleAddMaps();
-
-    // const row = maps;
-    // row.splice(editingMap, 1);
-    // setEditingMap(-1);
-    // setMaps(row);
-  };
-
   const removeCounter = (heroi: Heroi) => {
     setCounters(counters.filter((h) => h.name !== heroi.name));
   };
@@ -170,13 +198,31 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
     setCountered(countered.filter((h) => h.name !== heroi.name));
   };
 
-  const removeAlly = (heroi: Heroi) => {
-    setAliados(aliados.filter((h) => h.name !== heroi.name));
+  const removeAlly = (heroid: string) => {
+
+    setAliadosSelected(aliadosSelected.filter((h) => h.id !== heroid));
+  
+    let aliadosAux = {...aliados}
+    delete aliadosAux[heroid]
+    setAliados(aliadosAux);
   };
 
-  const removeInimigo = (heroi: Heroi) => {
-    setInimigos(inimigos.filter((h) => h.name !== heroi.name));
+  const removeInimigo = (heroid: string) => {
+    setInimigosSelected(inimigosSelected.filter((h) => h.id !== heroid));
+
+    let inimigosAux = {...inimigos}
+    delete inimigosAux[heroid]
+    setInimigos(inimigosAux);
   };
+
+  const handleIdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    let findExist = state.herois.find((h) => h.id == e.target.value)
+    if(findExist){
+      setHeroEdit && setHeroEdit(findExist)
+    }
+
+    setId(e.target.value)
+  }
 
   const filteredCounters = state.herois.filter((heroi) =>
     heroi.name.toLowerCase().includes(counterFilter.toLowerCase())
@@ -202,7 +248,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
           <input
             type="text"
             value={id}
-            onChange={(e) => setId(e.target.value)}
+            onChange={handleIdChange}
             ref={ref}
             required
           />
@@ -333,6 +379,43 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
               </GameStatusTable>
             </>
           ))}
+          <Divider/>
+          {mapsAddInfo.length > 0 && mapsAddInfo.map((gm, i) => (
+            <>
+              <p>{gm.name}</p>
+              <GameStatusTable>
+                <thead> 
+                  <tr>
+                    <th>{id ? `${id}` : ''}  {name ? `-${name}` : ''}</th>
+                    {state.herois.map((hero) => (
+                      <th>{hero.name}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>Como aliado</th>
+                    {state.herois.map((hero) => (
+                      (gm.stats && gm.stats.heroes[id] && gm.stats.heroes[id].aliados[hero.id]) ?
+                      <td>{calcularPorcentagemVitoria(gm.stats.heroes[id].aliados[hero.id]).toFixed(2)}%</td>
+                      :
+                      <td> --- </td>
+                    ))}
+                  </tr>
+                  <tr>
+                    <th>Como Inimigo</th>
+                    {state.herois.map((hero) => (
+                      (gm.stats && gm.stats.heroes[id] && gm.stats.heroes[id].inimigos[hero.id]) ?
+                      <td>{calcularPorcentagemVitoria(gm.stats.heroes[id].inimigos[hero.id]).toFixed(2)}%</td>
+                      :
+                      <td> --- </td>
+                    ))}
+                  </tr>
+                </tbody>
+              </GameStatusTable>
+            </>
+          ))}
+
           <select
             value={tipo}
             onChange={(e) => {setTipo(e.target.value); setPos(''); setSub('');}}
@@ -353,7 +436,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
               required
             >
               <option value="">Selecione um mapa</option>
-              {state.mapas.filter((mapa) => mapa.game_mode == tipo).map((mapa, index) => (
+              {state.mapas.filter((mapa) => (mapa.game_mode == tipo && !mapsAddInfo.includes(mapa))).map((mapa, index) => (
                 <option key={index} value={mapa.name}>
                   {mapa.name}
                 </option>
@@ -411,23 +494,44 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
               />
               <SelectMulti
                 multiple
-                value={aliados.map((ali) => ali.name)}
+                value={aliadosSelected.map((ali) => ali.name)}
                 onChange={handleAllySelect}
               >
                 {filteredAllys.map((heroi) => (
-                  <option key={heroi.name} value={heroi.name}>
+                  <option key={heroi.id} value={heroi.id}>
                     {heroi.name}
+                    {mapa && mapa.stats && mapa.stats.heroes[id] &&  mapa.stats.heroes[id].aliados[heroi.id].partidas > 0 &&
+                      <p>✔</p>
+                    }
                   </option>
                 ))}
               </SelectMulti>
               <SelectedItemsContainer>
-                {aliados.map((heroi) => (
-                  <SelectedItem key={heroi.name}>
-                    {heroi.name}
-                    <RemoveButton type="button" onClick={() => removeAlly(heroi)}>
-                      X
-                    </RemoveButton>
-                  </SelectedItem>
+                {aliadosSelected.map((heroi) => (
+                  <SelectedRelacItem key={heroi.id}>
+                    <div>
+                      <RemoveButton type="button" onClick={() => removeAlly(heroi.id)}>
+                        X
+                      </RemoveButton>
+                      <p>{heroi.name}</p>
+                    </div>
+                    <div className='inputs'>
+                      <input
+                        type="number"
+                        value={aliados[heroi.id].partidas}
+                        onChange={(e) => setAliados((prev) => ({...prev, [heroi.id]: {...aliados[heroi.id], partidas: parseInt(e.target.value) }}))}
+                        placeholder='Partidas'
+                        required
+                      />
+                      <input
+                        type="number"
+                        value={aliados[heroi.id].vitorias}
+                        onChange={(e) => setAliados((prev) => ({...prev, [heroi.id]: {...aliados[heroi.id], vitorias: parseInt(e.target.value) }}))}
+                        placeholder='Vitórias'
+                        required
+                      />
+                    </div>
+                  </SelectedRelacItem>
                 ))}
               </SelectedItemsContainer>
             </div>
@@ -442,55 +546,68 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
               />
               <SelectMulti
                 multiple
-                value={inimigos.map((ali) => ali.name)}
+                value={inimigosSelected.map((ali) => ali.name)}
                 onChange={handleInimigosSelect}
               >
                 {filteredInimigos.map((heroi) => (
-                  <option key={heroi.name} value={heroi.name}>
+                  <option key={heroi.id} value={heroi.id}>
                     {heroi.name}
+                    {mapa && mapa.stats && mapa.stats.heroes[id] &&  mapa.stats.heroes[id].inimigos[heroi.id].partidas > 0 &&
+                      <p>✔</p>
+                    }
                   </option>
                 ))}
               </SelectMulti>
               <SelectedItemsContainer>
-                {inimigos.map((heroi) => (
+                {inimigosSelected.map((heroi) => (
                   <SelectedItem key={heroi.name}>
-                    {heroi.name}
-                    <RemoveButton type="button" onClick={() => removeInimigo(heroi)}>
+                    <div>
+                    <RemoveButton type="button" onClick={() => removeInimigo(heroi.id)}>
                       X
                     </RemoveButton>
+                    <p>{heroi.name}</p>
+                    </div>
+                    <div className='inputs'>
+                      <input
+                        type="number"
+                        value={inimigos[heroi.id].partidas}
+                        onChange={(e) => setInimigos((prev) => ({...prev, [heroi.id]: {...inimigos[heroi.id], partidas: parseInt(e.target.value) }}))}
+                        placeholder='Partidas'
+                        required
+                      />
+                      <input
+                        type="number"
+                        value={inimigos[heroi.id].vitorias}
+                        onChange={(e) => setInimigos((prev) => ({...prev, [heroi.id]: {...inimigos[heroi.id], vitorias: parseInt(e.target.value) }}))}
+                        placeholder='Vitórias'
+                        required
+                      />
+                    </div>
                   </SelectedItem>
                 ))}
               </SelectedItemsContainer>
             </div>
           </div>
-          {id == undefined ?
-            (
-              <AddButton type="button" onClick={() => handleAddMaps()}>
+          <AddButton type="button" onClick={handleAddMaps}>
                 +
+          </AddButton>
+
+          {/* {state.herois.find((h) => h.id == id) && 
+            <>
+              <AddButton type="button" onClick={handleSubmitMaps}>
+                ✔
               </AddButton>
-            ) :
-            (
-              <>
-                <AddButton type="button" onClick={(e) => handleSubmitMapsEdit(e)}>
-                  ✔
-                </AddButton>
-                <AddButton type="button" onClick={(e) => handleCancelEditMaps(e)}>
-                  X
-                </AddButton>
-              </>
-            )
-          }
-          
+              <AddButton type="button" onClick={resetMapsForm}>
+                X
+              </AddButton>
+            </>
+          } */}
           
       </div>
-      {heroiToEdit ? (
-        <>  
-          <button style={{ margin:"5rem 5rem 5rem 5rem", background:'#1fff'}} type="submit">Editar Herói</button>
-          <button style={{ margin:"5rem 5rem 5rem 5rem", background:'#f11f'}} onClick={() => {handleCancelEdit()}}>Cancelar edição</button>
-        </>
-      ) : (
-        <button style={{ margin:"5rem 5rem 5rem 5rem", background:'#1fff'}} type="submit">Adicionar Herói</button>
-      )}
+       
+          <button style={{ margin:"5rem 5rem 5rem 5rem", background:'#1fff'}} type="submit">{heroiToEdit ? "Editar Herói" : "Adicionar Herói"}</button>
+          {heroiToEdit && <button style={{ margin:"5rem 5rem 5rem 5rem", background:'#f11f'}} onClick={() => {handleCancelEdit()}}>Cancelar edição</button>}
+        
       
     </form>
   );

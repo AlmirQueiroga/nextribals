@@ -69,6 +69,11 @@ export const OptionItem = styled.li`
   }
 `;
 
+export const Divider = styled.div`
+  margin: 5rem 0px;
+  border: 5px solid gray;
+`
+
 export const SelectedItemsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -79,12 +84,33 @@ export const SelectedItemsContainer = styled.div`
 
 export const SelectedItem = styled.div`
   display: flex;
-  align-items: center;
   padding: 4px 8px;
   background-color: #e0e0e0;
   border-radius: 4px;
   font-size: 14px;
 `;
+
+export const SelectedRelacItem = styled(SelectedItem)`
+  min-width: 100%;
+  justify-content: space-between;
+  .inputs{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    
+    input {
+      max-height: 2rem;
+      margin-left: 1rem;
+    }
+  }
+`
+
+
 
 export const SelectMulti = styled.select`
   display: flex;
@@ -106,7 +132,6 @@ export const FilterInput = styled.input`
 `;
 
 export const RemoveButton = styled.button`
-  margin-left: 8px;
   background: none;
   border: none;
   color: red;

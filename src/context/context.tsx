@@ -15,6 +15,7 @@ export const GameContext = createContext<{
   addHeroi: (heroi: Heroi) => void;
   editHeroi: (heroi: Heroi) => void;
   addMapa: (mapa: Mapa) => void;
+  editMapa: (mapa: Mapa) => void;
   addTipoJogo: (tipo: string) => void;
   addFormacao: (formacao: string) => void;
   saveToJson: () => void;
@@ -25,6 +26,7 @@ export const GameContext = createContext<{
   addHeroi: () => {},
   editHeroi: () => {},
   addMapa: () => {},
+  editMapa: () => {},
   addTipoJogo: () => {},
   addFormacao: () => {},
   saveToJson: () => {},
@@ -182,8 +184,9 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
                     images,
                     sub_map,
                 };
-                
-              addTipoJogo(game_mode);
+              
+              if(newMap.is_competitve) addTipoJogo(game_mode);
+
               addMapa(newMap);
             }
           }
@@ -225,6 +228,7 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         addHeroi,
         editHeroi,
         addMapa,
+        editMapa,
         addTipoJogo,
         addFormacao,
         saveToJson,
