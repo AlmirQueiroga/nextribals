@@ -44,6 +44,13 @@ export interface Mapa {
     aliados: Relacao;
     inimigos: Relacao;
   };
+
+  export type Teamups = {
+    teamName: string;
+    id:string;
+    captain: HeroID;
+    members: Heroi[];
+  };
   
   export interface Heroi {
     id: HeroID;
@@ -72,14 +79,15 @@ export interface Mapa {
   }
   
   export interface CompList {
-    herois: Heroi[];
+    herois: string[];
     tipo: string;
     mapa: Mapa;
+    pontuacao:number;
     posicao?: string;
     submapa?: string;
     formacao?: string;
-    sinergia: number;
-    eficacia: number;
+    sinergia?: number;
+    eficacia?: number;
   }
   
   export interface AppContextType {
@@ -87,5 +95,7 @@ export interface Mapa {
     mapas: Mapa[];
     tipoJogo: string[];
     formacao: string[];
-    counterGroups: CounterGroups[]
+    counterGroups: CounterGroups[];
+    teamups: Teamups[];
+    comps: CompList[];
   }

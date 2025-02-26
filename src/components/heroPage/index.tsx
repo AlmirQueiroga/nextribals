@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect, useRef } from 'react';
 import { GameContext } from '../../context/context';
-import { Heroi, Classe, Mapa, Relacao, Percentage } from '../../types/types';
-import { GameStatusTable, SelectedRelacItem, Divider } from './style';
+import { Heroi, Classe, Mapa, Relacao, Percentage, CounterGroups } from '../../types/types';
+import { SelectedRelacItem } from './style';
 import { calcularPorcentagemVitoria } from '@/utils';
-import { FilterInput, SelectMulti, SelectedItemsContainer, SelectedItem, RemoveButton, AddButton } from '@/styles';
+import { FilterInput, SelectMulti, SelectedItemsContainer, SelectedItem, RemoveButton, AddButton, PillContainer, Divider, GameStatusTable } from '@/styles';
 
 interface AddHeroiFormProps {
   heroiToEdit?: Heroi | undefined;
@@ -31,6 +31,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
   const [inimigos, setInimigos] = useState<Relacao>({});
   const [inimigosSelected, setInimigosSelected] = useState<Heroi[]>([]);
   const [inimigosFilter, setInimigosFilter] = useState<string>('');
+  const [currentCounterGroups, setCurrentCounterGroups] = useState<CounterGroups[]>([]);
 
   const ref = useRef<HTMLInputElement>(null);
 
@@ -142,16 +143,16 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
 
   const handleCounterSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedOptions = Array.from(e.target.selectedOptions).map(
-      (option) => state.herois.find((h) => h.name === option.value)!
-    ).filter((heroi) => !counters.some((h) => h.name === heroi.name));
+      (option) => state.herois.find((h) => h.id === option.value)!
+    ).filter((heroi) => !counters.some((h) => h.id === heroi.id));
     
     setCounters((prev) => (selectedOptions.concat(prev)));
   };
 
   const handleCounteredSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedOptions = Array.from(e.target.selectedOptions).map(
-      (option) => state.herois.find((h) => h.name === option.value)!
-    ).filter((heroi) => !countered.some((h) => h.name === heroi.name));
+      (option) => state.herois.find((h) => h.id === option.value)!
+    ).filter((heroi) => !countered.some((h) => h.id === heroi.id));
     
     setCountered((prev) => (selectedOptions.concat(prev)));
   };
@@ -181,6 +182,15 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
     )
   };
 
+  const handleSelectGroup = (cg: CounterGroups) => {
+
+    if(!currentCounterGroups.includes(cg)) setCurrentCounterGroups((prev) => prev.concat(cg))
+
+      cg.heroes.map((c) => {
+        if(!counters.includes(c)) setCounters((prev) => prev.concat(c))
+      })
+  }
+
   const removeCounter = (heroi: Heroi) => {
     setCounters(counters.filter((h) => h.name !== heroi.name));
   };
@@ -205,6 +215,10 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
     delete inimigosAux[heroid]
     setInimigos(inimigosAux);
   };
+
+  const removeCurrentCounterGroups = (group: CounterGroups) => {
+    setCurrentCounterGroups(currentCounterGroups.filter((cg) => cg.groupName !== group.groupName));
+  }
 
   const handleIdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let findExist = state.herois.find((h) => h.id == e.target.value)
@@ -270,68 +284,99 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
           </select>
         </label>
       </div>
-      <div style={{display:"flex", flexDirection:"row", justifyContent:"space-evenly"}}>
-        <div style={{minWidth: "20rem"}} >
-          <h3>Counter de:</h3>
-          <FilterInput
-            type="text"
-            value={counterFilter}
-            onChange={(e) => setCounterFilter(e.target.value)}
-            placeholder="Hero"
-          />
-          <SelectMulti
-            multiple
-            value={counters.map((counter) => counter.name)}
-            onChange={handleCounterSelect}
-          >
-            {filteredCounters.map((heroi) => (
-              <option key={heroi.name} value={heroi.name}>
-                {heroi.name}
-              </option>
-            ))}
-          </SelectMulti>
-          <SelectedItemsContainer>
-            {counters.map((heroi) => (
-              <SelectedItem key={heroi.name}>
-                {heroi.name}
-                <RemoveButton type="button" onClick={() => removeCounter(heroi)}>
-                  X
-                </RemoveButton>
-              </SelectedItem>
-            ))}
-          </SelectedItemsContainer>
+      <div style={{ display: 'flex', flexDirection: 'row', justifyContent:'space-evenly'}}>
+        <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem'}}>
+          <div style={{ marginTop: '4rem', overflowY: 'scroll'}}>
+            {state.counterGroups.map((cg) =>
+              <PillContainer bg={currentCounterGroups.includes(cg) ? 'blue' : 'gray'} onClick={() => {handleSelectGroup(cg)}}>
+                {cg.groupName}
+                { currentCounterGroups.includes(cg) &&
+                  <RemoveButton type="button" onClick={() => removeCurrentCounterGroups(cg)}>
+                    X
+                  </RemoveButton>
+                }
+              </PillContainer>
+            )}
+          </div>
+          <div style={{minWidth: "20rem"}} >
+            <h3>Counter de:</h3>
+            <FilterInput
+              type="text"
+              value={counterFilter}
+              onChange={(e) => setCounterFilter(e.target.value)}
+              placeholder="Hero"
+            />
+            <SelectMulti
+              multiple
+              value={counters.map((counter) => counter.id)}
+              onChange={handleCounterSelect}
+            >
+              {filteredCounters.map((heroi) => (
+                <option key={heroi.id} value={heroi.id}>
+                  {heroi.name}
+                </option>
+              ))}
+            </SelectMulti>
+            <SelectedItemsContainer>
+              {counters.map((heroi) => (
+                <SelectedItem key={heroi.id}>
+                  {heroi.name}
+                  { !currentCounterGroups.some((cg) => cg.heroes.includes(heroi)) &&
+                    <RemoveButton type="button" onClick={() => removeCounter(heroi)}>
+                      X
+                    </RemoveButton>
+                  }
+                </SelectedItem>
+              ))}
+            </SelectedItemsContainer>
+          </div>
         </div>
-        <div style={{minWidth: "20rem"}}>
-          <h3>Counterado por:</h3>
-          <FilterInput
-            type="text"
-            value={counteredFilter}
-            onChange={(e) => setCounteredFilter(e.target.value)}
-            placeholder="Hero"
-          />
-          <SelectMulti
-            multiple
-            value={countered.map((counter) => counter.name)}
-            onChange={handleCounteredSelect}
-          >
-            {filteredCountered.map((heroi) => (
-              <option key={heroi.name} value={heroi.name}>
-                {heroi.name}
-              </option>
-            ))}
-          </SelectMulti>
-          <SelectedItemsContainer>
-            {countered.map((heroi) => (
-              <SelectedItem key={heroi.name}>
-                {heroi.name}
-                <RemoveButton type="button" onClick={() => removeCountered(heroi)}>
-                  X
-                </RemoveButton>
-              </SelectedItem>
-            ))}
-          </SelectedItemsContainer>
+        <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem'}}>
+          <div style={{ marginTop: '4rem', overflowY: 'scroll'}}>
+            {state.counterGroups.map((cg) =>
+              <PillContainer bg={currentCounterGroups.includes(cg) ? 'blue' : 'gray'} onClick={() => {handleSelectGroup(cg)}}>
+                {cg.groupName}
+                { currentCounterGroups.includes(cg) &&
+                  <RemoveButton type="button" onClick={() => removeCurrentCounterGroups(cg)}>
+                    X
+                  </RemoveButton>
+                }
+              </PillContainer>
+            )}
+          </div>
+          <div style={{minWidth: "20rem"}}>
+            <h3>Counterado por:</h3>
+            <FilterInput
+              type="text"
+              value={counteredFilter}
+              onChange={(e) => setCounteredFilter(e.target.value)}
+              placeholder="Hero"
+            />
+            <SelectMulti
+              multiple
+              value={countered.map((counter) => counter.id)}
+              onChange={handleCounteredSelect}
+            >
+              {filteredCountered.map((heroi) => (
+                <option key={heroi.id} value={heroi.id}>
+                  {heroi.name}
+                </option>
+              ))}
+            </SelectMulti>
+            <SelectedItemsContainer>
+              {countered.map((heroi) => (
+                <SelectedItem key={heroi.id}>
+                  {heroi.name}
+                  <RemoveButton type="button" onClick={() => removeCountered(heroi)}>
+                    X
+                  </RemoveButton>
+                </SelectedItem>
+              ))}
+            </SelectedItemsContainer>
+          </div>
         </div>
       </div>
+      
       <div>
           <h3>Mapas</h3>
           {state.mapas && state.mapas.map((gm, i) => (
@@ -427,7 +472,7 @@ export const AddHeroiForm: React.FC<AddHeroiFormProps> = ({ heroiToEdit, setHero
               required
             >
               <option value="">Selecione um mapa</option>
-              {state.mapas.filter((mapa) => (mapa.game_mode == tipo && !mapsAddInfo.includes(mapa))).map((mapa, index) => (
+              {state.mapas.filter((mapa) => (mapa.game_mode == tipo && mapa.is_competitve && !mapsAddInfo.includes(mapa))).map((mapa, index) => (
                 <option key={index} value={mapa.name}>
                   {mapa.name}
                 </option>

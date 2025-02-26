@@ -10,6 +10,8 @@ import { AddGameModeForm } from "@/components/gameModeForm";
 import { AddHeroiForm } from "@/components/heroPage";
 import { AddMapaForm } from "@/components/mapaForm";
 import { CountersGroupForm } from "@/components/countersGroupForm";
+import { TeamUpForm } from "@/components/teamUpForm";
+import { useRouter } from "next/router";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,9 +24,10 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState<'hero' | 'gameMode' | 'mapa' | 'form' | 'count'>('hero');
-  const { saveToJson, loadFromJson, loadFromWeb } = useContext(GameContext);
+  const [activeTab, setActiveTab] = useState<'hero' | 'gameMode' | 'mapa' | 'form' | 'count' | 'teams'>('hero');
+  const { saveToJson, loadFromJson, loadFromWeb, loadAllPercentages } = useContext(GameContext);
   const [heroiToEdit, setHeroiToEdit] = useState<Heroi | undefined>(undefined);
+  const router = useRouter();
 
   const handleEdit = (heroi: Heroi) => {
     setHeroiToEdit(heroi); 
@@ -36,6 +39,11 @@ export default function Home() {
     loadFromWeb(WebGet.Comps, heroi.id);
   };
 
+  const handleSeeComps = (e : React.MouseEvent) => {
+    e.preventDefault()
+    router.push('/compsPage');
+  }
+
   return (
     <Container>
       <Header>
@@ -45,6 +53,9 @@ export default function Home() {
           <Button onClick={loadFromJson}>Carregar JSON</Button>
           <Button onClick={() => loadFromWeb(WebGet.Heroes)}>Carregar Herois da web</Button>
           <Button onClick={() => loadFromWeb(WebGet.Maps)}>Carregar Mapas da web</Button>
+          <Button onClick={() => loadAllPercentages()}>Carregar todas as comps</Button>
+
+          <Button onClick={handleSeeComps}>É agora</Button>
         </div>
       </Header>
       <Tabs>
@@ -52,31 +63,37 @@ export default function Home() {
           active={activeTab === 'hero'}
           onClick={() => setActiveTab('hero')}
         >
-          Add Heroi
+          Herois
         </TabButton>
         <TabButton
           active={activeTab === 'gameMode'}
           onClick={() => setActiveTab('gameMode')}
         >
-          Add GameMode
+          GameMode
         </TabButton>
         <TabButton
           active={activeTab === 'mapa'}
           onClick={() => setActiveTab('mapa')}
         >
-          Add Mapa
+          Mapas
         </TabButton>
         <TabButton
           active={activeTab === 'form'}
           onClick={() => setActiveTab('form')}
         >
-          Add Formação
+          Formações
         </TabButton>
         <TabButton
           active={activeTab === 'count'}
           onClick={() => setActiveTab('count')}
         >
-          Add Counter Groups
+          Counter Groups
+        </TabButton>
+        <TabButton
+          active={activeTab === 'teams'}
+          onClick={() => setActiveTab('teams')}
+        >
+          Teamups
         </TabButton>
       </Tabs>
       <TabContent>
@@ -104,6 +121,11 @@ export default function Home() {
         {activeTab === 'count' && (
           <>
             <CountersGroupForm/>
+          </>
+        )}
+        {activeTab === 'teams' && (
+          <>
+            <TeamUpForm/>
           </>
         )}
       </TabContent>

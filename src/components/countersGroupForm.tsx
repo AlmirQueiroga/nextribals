@@ -1,13 +1,11 @@
 import React, { useState, useContext, useRef } from 'react';
 import { GameContext } from '../context/context';
-import { Heroi, Classe, Relacao, CounterGroups } from '../types/types';
-import { calcularPorcentagemVitoria } from '@/utils';
-import { FilterInput, SelectMulti, SelectedItemsContainer, SelectedItem, RemoveButton, AddButton, PillContainer } from '@/styles';
-import { Divider } from './heroPage/style';
+import { Heroi, CounterGroups } from '../types/types';
+import { FilterInput, SelectMulti, SelectedItemsContainer, SelectedItem, RemoveButton, AddButton, PillContainer, Divider } from '@/styles';
 
 
 export const CountersGroupForm: React.FC = () => {
-  const { state, addCounterGroup } = useContext(GameContext);
+  const { state, addCounterGroup, editCounterGroup } = useContext(GameContext);
   
   const [editing, setEditing] = useState<boolean>(false);
   const [name, setName] = useState<string>('');
@@ -43,11 +41,15 @@ export const CountersGroupForm: React.FC = () => {
     if(!name || (state.counterGroups.some((cg) => cg.groupName == name) && !editing)) return;
 
     if(editing){
-
-        addCounterGroup({
-            groupName: name,
-            heroes: counters
-        })
+      editCounterGroup({
+        groupName: name,
+        heroes: counters
+    })
+    } else {
+      addCounterGroup({
+          groupName: name,
+          heroes: counters
+      })
     }
 
     resetForm()
@@ -64,17 +66,17 @@ export const CountersGroupForm: React.FC = () => {
         <form onSubmit={handleSubmit}>
             
             <div>
-                <label>
-                    {editing  ? "Editando " : "Nome do "}
-                    grupo:
-                <input
-                    type="text"
-                    value={name}
-                    disabled={editing}
-                    onChange={(e) => setName(e.target.value)}
-                    required
-                />
-                </label>
+              <label>
+                  {editing  ? "Editando " : "Nome do "}
+                  grupo:
+              <input
+                  type="text"
+                  value={name}
+                  disabled={editing}
+                  onChange={(e) => setName(e.target.value)}
+                  required
+              />
+              </label>
             </div>
 
             <div style={{display:"flex", flexDirection:"row", justifyContent:"space-evenly"}}>
@@ -118,11 +120,13 @@ export const CountersGroupForm: React.FC = () => {
                    
         </form>
         <Divider/>
-        {state.counterGroups.map((group) => (
+        <div style={{ display: 'flex', flexDirection: 'row', overflowX: 'scroll', gap: '1rem'}}>
+          {state.counterGroups.map((group) => (
             <PillContainer onClick={() => {editGroup(group)}}>
-                {group.groupName}
+              {group.groupName}
             </PillContainer>
-        ))}
+          ))}
+        </div>
     </>
   );
 };

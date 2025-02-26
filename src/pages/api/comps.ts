@@ -32,20 +32,25 @@ async function insideHeroLeaderboard(leaderboard: MatchPlayer[], currHeroId: str
     let updatedMaps = {};
   
     for (const [index, p] of leaderboard.entries()) {
-      if (index > 4) break;
-  
-      for (let j = 0; j < 4; j++) {
+      if (index > 99) break;
+
+      let j = 0;
+      let hasMoreData = true;
+      
+      while(hasMoreData) {
         try {
           console.log(`Fetching player profile for ${p.player_uid}, skip=${j * 20}`);
-          const playerProfile = await axios.get<Match[]>(`${process.env.NEXT_PUBLIC_MR_META}/player-match-history/${p.player_uid}?skip=${j * 20}&game_mode_id=2&hero_id=${currHeroId}&season=2`);
+          const playerProfile = await axios.get<Match[]>(`${process.env.NEXT_PUBLIC_MR_META}/player-match-history/${p.player_uid}?skip=${j * 20}&game_mode_id=2&hero_id=${currHeroId}&season=3`);
   
           if (playerProfile.data && playerProfile.data.length > 0) {
             updatedMaps = await makeMapCalculations(playerProfile.data, p.player_uid, currHeroId, updatedMaps);
             console.log("Mapa retornado do makeMapCalculations:", updatedMaps);
           } else {
-            console.log("Perfil privado");
+            hasMoreData = false;
+            console.log("Perfil privado ou tem data faltando");
             break;
           }
+          j++;
         } catch (error) {
           console.error(`Error fetching player profile for ${p.player_uid}:`, error);
         }
@@ -138,7 +143,7 @@ async function insideHeroLeaderboard(leaderboard: MatchPlayer[], currHeroId: str
 
               if(pl.is_win == win){
                   for( const heros of pl.player_heroes){
-                      if(heros.play_time > (matchPlayTime/3.5)){
+                      if((heros.play_time > (matchPlayTime/3.5)) && heros.hero_id != mainHeroId){
                         if (!mapsList[matchMapId].heroes[mainHeroId].aliados[heros.hero_id]) {
                           console.log(`Criando herói ${heros.hero_id} como aliado de ${mainHeroId} pela primeira vez no mapa ${matchMapId}`);
                           mapsList[matchMapId].heroes[mainHeroId].aliados[heros.hero_id] = {

@@ -17,34 +17,6 @@ export const SelectButton = styled.button`
   text-align: left;
 `;
 
-export const GameStatusTable = styled.table`
-  width: 100%;
-  padding: 20px;
-  border: 1px solid #000;
-  border-radius: 4px;
-  background-color: white;
-
-  display: block;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  margin: 0 auto;
-  overflow-x: auto;
-  white-space: nowrap;
-
-  tr {
-    width: 100%;
-    td{
-      text-align: center;
-      padding-bottom: 3em;
-      padding-left: 3em;
-    }
-    th{
-      padding-bottom: 3em;
-      padding-left: 3em;
-    }
-  }
-`;
-
 export const OptionsList = styled.ul`
   position: absolute;
   top: 100%;
@@ -69,11 +41,6 @@ export const OptionItem = styled.li`
     background-color: #f0f0f0;
   }
 `;
-
-export const Divider = styled.div`
-  margin: 5rem 0px;
-  border: 5px solid gray;
-`
 
 export const SelectedRelacItem = styled(SelectedItem)`
   min-width: 100%;

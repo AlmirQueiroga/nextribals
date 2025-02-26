@@ -1,5 +1,5 @@
 import React, { createContext, useState, ReactNode } from 'react';
-import { AppContextType, CounterGroups, Heroi, Mapa, WebGet } from '../types/types';
+import { AppContextType, CompList, CounterGroups, Heroi, Mapa, Teamups, WebGet } from '../types/types';
 import axios from 'axios';
 import { MapsDict } from '@/types/apiTypes';
 
@@ -8,7 +8,9 @@ const defaultState: AppContextType = {
   mapas: [],
   tipoJogo: [],
   formacao: [],
-  counterGroups: []
+  counterGroups: [],
+  teamups: [],
+  comps: []
 };
 
 export const GameContext = createContext<{
@@ -20,9 +22,16 @@ export const GameContext = createContext<{
   addTipoJogo: (tipo: string) => void;
   addFormacao: (formacao: string) => void;
   addCounterGroup: (group: CounterGroups) => void;
+  editCounterGroup: (group: CounterGroups) => void;
+  addTeamup: (team: Teamups) => void;
+  editTeamup: (team: Teamups) => void;
+  calcTeams:(mapa: Mapa, numeroDeHeroisNoTime: number) => void;
+  addComps:(comp: CompList) => void;
   saveToJson: () => void;
   loadFromJson: () => void;
   loadFromWeb: (select : WebGet, query?: string) => void;
+  loadAllPercentages: () => void;
+  
 }>({
   state: defaultState,
   addHeroi: () => {},
@@ -32,9 +41,15 @@ export const GameContext = createContext<{
   addTipoJogo: () => {},
   addFormacao: () => {},
   addCounterGroup: () => {},
+  editCounterGroup: () => {},
+  addTeamup: () => {},
+  editTeamup: () => {},
+  calcTeams:() => {},
+  addComps:() => {},
   saveToJson: () => {},
   loadFromJson: () => {},
-  loadFromWeb: () => {}
+  loadFromWeb: () => {},
+  loadAllPercentages: () => {},
 });
 
 
@@ -122,6 +137,52 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         return {
           ...prevState,
           counterGroups: [...prevState.counterGroups, group],
+        };
+      }
+
+      return prevState;
+    });
+  };
+
+  const editCounterGroup = (group: CounterGroups) => {
+    setState((prevState) => ({
+      ...prevState,
+      counterGroups: prevState.counterGroups.map((gr) =>
+        gr.groupName === group.groupName ? group : gr
+      ),
+    }));
+  };
+
+  const addTeamup = (team: Teamups) => {
+    setState((prevState) => {
+      const formExiste = prevState.teamups.includes(team);
+      if (!formExiste) {
+        return {
+          ...prevState,
+          teamups: [...prevState.teamups, team],
+        };
+      }
+
+      return prevState;
+    });
+  };
+
+  const editTeamup = (team: Teamups) => {
+    setState((prevState) => ({
+      ...prevState,
+      teamups: prevState.teamups.map((t) =>
+        t.teamName === team.teamName ? team : t
+      ),
+    }));
+  };
+
+  const addComps = (comp: CompList) => {
+    setState((prevState) => {
+      const formExiste = prevState.comps.includes(comp);
+      if (!formExiste) {
+        return {
+          ...prevState,
+          comps: [...prevState.comps, comp],
         };
       }
 
@@ -241,6 +302,68 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
     }
   };
 
+  const loadAllPercentages = () => {
+    let allHeroes = state.herois;
+    Promise.all(allHeroes.map( heroi => axios.get<{mapsWinHate: MapsDict}>(`${process.env.NEXT_PUBLIC_LOCAL}/comps?heroId=${heroi.id}`))).then((results) => {
+      for( const [index, heroi] of allHeroes.entries()){
+        if(results[index].data && results[index].data.mapsWinHate){
+              
+          for(const mW of Object.keys(results[index].data.mapsWinHate)){
+  
+            const edMap = state.mapas.find((m) => m.id == mW);
+            
+            if(edMap){
+              if(!edMap.stats) edMap.stats = {heroes: {}}
+              edMap.stats.heroes[heroi.id] = results[index].data.mapsWinHate[mW].heroes[heroi.id];
+              editMapa(edMap);
+            } else {
+              console.log("Map not found");
+            }
+  
+          }
+        }
+      }
+    }).catch((e) => {
+      console.log("Promise all erro maps");
+    })
+  }
+
+  const calcTeams = async (mapa: Mapa, numeroDeHeroisNoTime: number) => {
+    const response = await fetch('/api/teamsCalc', {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ mapa, numeroDeHeroisNoTime }),
+    });
+
+    const reader = response.body?.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+
+    if (reader) {
+      while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+
+          const partes = buffer.split('\n');
+          for (const parte of partes.slice(0, -1)) {
+              try {
+                  const resultado: CompList = JSON.parse(parte);
+                  console.log('Dado recebido:', resultado);
+                  addComps(resultado);
+                  // setComps((prevComps) => [...prevComps, resultado]);
+              } catch (error) {
+                  console.error('Erro ao processar dados:', error);
+              }
+          }
+          buffer = partes[partes.length - 1];
+      }
+    }
+  }
+
   return (
     <GameContext.Provider
       value={{
@@ -252,9 +375,15 @@ export const GameProvider = ({ children }: { children: ReactNode }) => {
         addTipoJogo,
         addFormacao,
         addCounterGroup,
+        editCounterGroup,
+        addTeamup,
+        editTeamup,
+        calcTeams,
+        addComps,
         saveToJson,
         loadFromJson,
-        loadFromWeb
+        loadFromWeb,
+        loadAllPercentages
       }}
     >
       {children}

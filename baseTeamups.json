@@ -1,0 +1,5546 @@
+{
+    "_id": 1,
+    "bans": [
+        {
+            "rank": "7",
+            "bans": [
+                {
+                    "hero_id": 1043.0,
+                    "bans": 96
+                },
+                {
+                    "hero_id": 1034.0,
+                    "bans": 2
+                },
+                {
+                    "hero_id": 1042.0,
+                    "bans": 18
+                },
+                {
+                    "hero_id": 1049.0,
+                    "bans": 2453
+                },
+                {
+                    "hero_id": 1016.0,
+                    "bans": 361
+                },
+                {
+                    "hero_id": 1027.0,
+                    "bans": 157
+                },
+                {
+                    "hero_id": 1047.0,
+                    "bans": 78
+                },
+                {
+                    "hero_id": 1022.0,
+                    "bans": 46
+                },
+                {
+                    "hero_id": 1033.0,
+                    "bans": 51
+                },
+                {
+                    "hero_id": 1051.0,
+                    "bans": 47
+                },
+                {
+                    "hero_id": 1052.0,
+                    "bans": 125
+                },
+                {
+                    "hero_id": 1046.0,
+                    "bans": 34
+                },
+                {
+                    "hero_id": 1040.0,
+                    "bans": 25
+                },
+                {
+                    "hero_id": 1048.0,
+                    "bans": 158
+                },
+                {
+                    "hero_id": 1031.0,
+                    "bans": 689
+                },
+                {
+                    "hero_id": 1021.0,
+                    "bans": 42
+                },
+                {
+                    "hero_id": 1032.0,
+                    "bans": 28
+                },
+                {
+                    "hero_id": 1030.0,
+                    "bans": 8
+                },
+                {
+                    "hero_id": 1038.0,
+                    "bans": 5
+                },
+                {
+                    "hero_id": 1023.0,
+                    "bans": 43
+                },
+                {
+                    "hero_id": 1015.0,
+                    "bans": 1942
+                },
+                {
+                    "hero_id": 1014.0,
+                    "bans": 25
+                },
+                {
+                    "hero_id": 1029.0,
+                    "bans": 393
+                },
+                {
+                    "hero_id": 1041.0,
+                    "bans": 347
+                },
+                {
+                    "hero_id": 1039.0,
+                    "bans": 27
+                },
+                {
+                    "hero_id": 1024.0,
+                    "bans": 537
+                },
+                {
+                    "hero_id": 1011.0,
+                    "bans": 1239
+                },
+                {
+                    "hero_id": 1036.0,
+                    "bans": 173
+                },
+                {
+                    "hero_id": 1050.0,
+                    "bans": 59
+                },
+                {
+                    "hero_id": 1017.0,
+                    "bans": 37
+                },
+                {
+                    "hero_id": 1035.0,
+                    "bans": 87
+                },
+                {
+                    "hero_id": 1018.0,
+                    "bans": 285
+                },
+                {
+                    "hero_id": 1026.0,
+                    "bans": 127
+                },
+                {
+                    "hero_id": 1037.0,
+                    "bans": 140
+                },
+                {
+                    "hero_id": 1025.0,
+                    "bans": 316
+                },
+                {
+                    "hero_id": 1045.0,
+                    "bans": 762
+                },
+                {
+                    "hero_id": 0.0,
+                    "bans": 65
+                },
+                {
+                    "hero_id": 1020.0,
+                    "bans": 9
+                }
+            ]
+        },
+        {
+            "rank": "9",
+            "bans": [
+                {
+                    "hero_id": 1047.0,
+                    "bans": 584
+                },
+                {
+                    "hero_id": 1020.0,
+                    "bans": 54
+                },
+                {
+                    "hero_id": 1026.0,
+                    "bans": 1643
+                },
+                {
+                    "hero_id": 1048.0,
+                    "bans": 503
+                },
+                {
+                    "hero_id": 1018.0,
+                    "bans": 2670
+                },
+                {
+                    "hero_id": 1011.0,
+                    "bans": 20257
+                },
+                {
+                    "hero_id": 1034.0,
+                    "bans": 80
+                },
+                {
+                    "hero_id": 0.0,
+                    "bans": 746
+                },
+                {
+                    "hero_id": 1050.0,
+                    "bans": 588
+                },
+                {
+                    "hero_id": 1032.0,
+                    "bans": 81
+                },
+                {
+                    "hero_id": 1046.0,
+                    "bans": 62
+                },
+                {
+                    "hero_id": 1043.0,
+                    "bans": 448
+                },
+                {
+                    "hero_id": 1021.0,
+                    "bans": 296
+                },
+                {
+                    "hero_id": 1027.0,
+                    "bans": 555
+                },
+                {
+                    "hero_id": 1038.0,
+                    "bans": 101
+                },
+                {
+                    "hero_id": 1025.0,
+                    "bans": 6940
+                },
+                {
+                    "hero_id": 1031.0,
+                    "bans": 10284
+                },
+                {
+                    "hero_id": 1023.0,
+                    "bans": 530
+                },
+                {
+                    "hero_id": 1039.0,
+                    "bans": 218
+                },
+                {
+                    "hero_id": 1014.0,
+                    "bans": 250
+                },
+                {
+                    "hero_id": 1024.0,
+                    "bans": 1399
+                },
+                {
+                    "hero_id": 1033.0,
+                    "bans": 269
+                },
+                {
+                    "hero_id": 1041.0,
+                    "bans": 3005
+                },
+                {
+                    "hero_id": 1040.0,
+                    "bans": 146
+                },
+                {
+                    "hero_id": 1029.0,
+                    "bans": 2892
+                },
+                {
+                    "hero_id": 1030.0,
+                    "bans": 92
+                },
+                {
+                    "hero_id": 1015.0,
+                    "bans": 24552
+                },
+                {
+                    "hero_id": 1042.0,
+                    "bans": 159
+                },
+                {
+                    "hero_id": 1052.0,
+                    "bans": 1336
+                },
+                {
+                    "hero_id": 1045.0,
+                    "bans": 7267
+                },
+                {
+                    "hero_id": 1051.0,
+                    "bans": 422
+                },
+                {
+                    "hero_id": 1049.0,
+                    "bans": 30179
+                },
+                {
+                    "hero_id": 1036.0,
+                    "bans": 1530
+                },
+                {
+                    "hero_id": 1017.0,
+                    "bans": 426
+                },
+                {
+                    "hero_id": 1016.0,
+                    "bans": 1930
+                },
+                {
+                    "hero_id": 1035.0,
+                    "bans": 466
+                },
+                {
+                    "hero_id": 1037.0,
+                    "bans": 1210
+                },
+                {
+                    "hero_id": 1022.0,
+                    "bans": 258
+                }
+            ]
+        },
+        {
+            "rank": "8",
+            "bans": [
+                {
+                    "hero_id": 1024.0,
+                    "bans": 10
+                },
+                {
+                    "hero_id": 1037.0,
+                    "bans": 4
+                },
+                {
+                    "hero_id": 1043.0,
+                    "bans": 4
+                },
+                {
+                    "hero_id": 1046.0,
+                    "bans": 2
+                },
+                {
+                    "hero_id": 1031.0,
+                    "bans": 8
+                },
+                {
+                    "hero_id": 1048.0,
+                    "bans": 7
+                },
+                {
+                    "hero_id": 1017.0,
+                    "bans": 1
+                },
+                {
+                    "hero_id": 1015.0,
+                    "bans": 29
+                },
+                {
+                    "hero_id": 1049.0,
+                    "bans": 34
+                },
+                {
+                    "hero_id": 1016.0,
+                    "bans": 6
+                },
+                {
+                    "hero_id": 1041.0,
+                    "bans": 10
+                },
+                {
+                    "hero_id": 1052.0,
+                    "bans": 6
+                },
+                {
+                    "hero_id": 1011.0,
+                    "bans": 24
+                },
+                {
+                    "hero_id": 1025.0,
+                    "bans": 1
+                },
+                {
+                    "hero_id": 1022.0,
+                    "bans": 3
+                },
+                {
+                    "hero_id": 1032.0,
+                    "bans": 1
+                },
+                {
+                    "hero_id": 1020.0,
+                    "bans": 4
+                },
+                {
+                    "hero_id": 1047.0,
+                    "bans": 2
+                },
+                {
+                    "hero_id": 1045.0,
+                    "bans": 19
+                },
+                {
+                    "hero_id": 1051.0,
+                    "bans": 1
+                },
+                {
+                    "hero_id": 1027.0,
+                    "bans": 2
+                },
+                {
+                    "hero_id": 1018.0,
+                    "bans": 14
+                },
+                {
+                    "hero_id": 0.0,
+                    "bans": 1
+                },
+                {
+                    "hero_id": 1021.0,
+                    "bans": 1
+                },
+                {
+                    "hero_id": 1035.0,
+                    "bans": 3
+                },
+                {
+                    "hero_id": 1029.0,
+                    "bans": 15
+                },
+                {
+                    "hero_id": 1036.0,
+                    "bans": 5
+                },
+                {
+                    "hero_id": 1026.0,
+                    "bans": 3
+                }
+            ]
+        },
+        {
+            "rank": "5",
+            "bans": [
+                {
+                    "hero_id": 1021.0,
+                    "bans": 439
+                },
+                {
+                    "hero_id": 1014.0,
+                    "bans": 1122
+                },
+                {
+                    "hero_id": 1041.0,
+                    "bans": 6597
+                },
+                {
+                    "hero_id": 1051.0,
+                    "bans": 1429
+                },
+                {
+                    "hero_id": 1042.0,
+                    "bans": 1882
+                },
+                {
+                    "hero_id": 0.0,
+                    "bans": 624
+                },
+                {
+                    "hero_id": 1045.0,
+                    "bans": 30154
+                },
+                {
+                    "hero_id": 1037.0,
+                    "bans": 3043
+                },
+                {
+                    "hero_id": 1036.0,
+                    "bans": 11285
+                },
+                {
+                    "hero_id": 1027.0,
+                    "bans": 3586
+                },
+                {
+                    "hero_id": 1017.0,
+                    "bans": 2678
+                },
+                {
+                    "hero_id": 1038.0,
+                    "bans": 662
+                },
+                {
+                    "hero_id": 1035.0,
+                    "bans": 557
+                },
+                {
+                    "hero_id": 1049.0,
+                    "bans": 137061
+                },
+                {
+                    "hero_id": 1032.0,
+                    "bans": 1304
+                },
+                {
+                    "hero_id": 1046.0,
+                    "bans": 209
+                },
+                {
+                    "hero_id": 1026.0,
+                    "bans": 6477
+                },
+                {
+                    "hero_id": 1018.0,
+                    "bans": 9212
+                },
+                {
+                    "hero_id": 1039.0,
+                    "bans": 830
+                },
+                {
+                    "hero_id": 1040.0,
+                    "bans": 467
+                },
+                {
+                    "hero_id": 1034.0,
+                    "bans": 1112
+                },
+                {
+                    "hero_id": 1047.0,
+                    "bans": 863
+                },
+                {
+                    "hero_id": 1023.0,
+                    "bans": 2039
+                },
+                {
+                    "hero_id": 1015.0,
+                    "bans": 110005
+                },
+                {
+                    "hero_id": 1052.0,
+                    "bans": 1564
+                },
+                {
+                    "hero_id": 1050.0,
+                    "bans": 2664
+                },
+                {
+                    "hero_id": 1031.0,
+                    "bans": 44651
+                },
+                {
+                    "hero_id": 1016.0,
+                    "bans": 1577
+                },
+                {
+                    "hero_id": 1033.0,
+                    "bans": 879
+                },
+                {
+                    "hero_id": 1025.0,
+                    "bans": 35075
+                },
+                {
+                    "hero_id": 1024.0,
+                    "bans": 1303
+                },
+                {
+                    "hero_id": 1022.0,
+                    "bans": 527
+                },
+                {
+                    "hero_id": 1048.0,
+                    "bans": 1190
+                },
+                {
+                    "hero_id": 1043.0,
+                    "bans": 544
+                },
+                {
+                    "hero_id": 1029.0,
+                    "bans": 5594
+                },
+                {
+                    "hero_id": 1020.0,
+                    "bans": 362
+                },
+                {
+                    "hero_id": 1011.0,
+                    "bans": 115124
+                },
+                {
+                    "hero_id": 1030.0,
+                    "bans": 3005
+                }
+            ]
+        },
+        {
+            "rank": "6",
+            "bans": [
+                {
+                    "hero_id": 1041.0,
+                    "bans": 7503
+                },
+                {
+                    "hero_id": 1029.0,
+                    "bans": 7065
+                },
+                {
+                    "hero_id": 1032.0,
+                    "bans": 488
+                },
+                {
+                    "hero_id": 1023.0,
+                    "bans": 1691
+                },
+                {
+                    "hero_id": 1036.0,
+                    "bans": 6433
+                },
+                {
+                    "hero_id": 1043.0,
+                    "bans": 640
+                },
+                {
+                    "hero_id": 1014.0,
+                    "bans": 816
+                },
+                {
+                    "hero_id": 1047.0,
+                    "bans": 815
+                },
+                {
+                    "hero_id": 1046.0,
+                    "bans": 159
+                },
+                {
+                    "hero_id": 1040.0,
+                    "bans": 381
+                },
+                {
+                    "hero_id": 0.0,
+                    "bans": 1920
+                },
+                {
+                    "hero_id": 1052.0,
+                    "bans": 2082
+                },
+                {
+                    "hero_id": 1017.0,
+                    "bans": 2168
+                },
+                {
+                    "hero_id": 1027.0,
+                    "bans": 2232
+                },
+                {
+                    "hero_id": 1034.0,
+                    "bans": 435
+                },
+                {
+                    "hero_id": 1039.0,
+                    "bans": 502
+                },
+                {
+                    "hero_id": 1021.0,
+                    "bans": 427
+                },
+                {
+                    "hero_id": 1020.0,
+                    "bans": 193
+                },
+                {
+                    "hero_id": 1015.0,
+                    "bans": 90340
+                },
+                {
+                    "hero_id": 1042.0,
+                    "bans": 738
+                },
+                {
+                    "hero_id": 1037.0,
+                    "bans": 3065
+                },
+                {
+                    "hero_id": 1011.0,
+                    "bans": 92997
+                },
+                {
+                    "hero_id": 1049.0,
+                    "bans": 110705
+                },
+                {
+                    "hero_id": 1024.0,
+                    "bans": 1595
+                },
+                {
+                    "hero_id": 1045.0,
+                    "bans": 26742
+                },
+                {
+                    "hero_id": 1026.0,
+                    "bans": 6753
+                },
+                {
+                    "hero_id": 1031.0,
+                    "bans": 37147
+                },
+                {
+                    "hero_id": 1033.0,
+                    "bans": 682
+                },
+                {
+                    "hero_id": 1022.0,
+                    "bans": 645
+                },
+                {
+                    "hero_id": 1035.0,
+                    "bans": 568
+                },
+                {
+                    "hero_id": 1038.0,
+                    "bans": 296
+                },
+                {
+                    "hero_id": 1016.0,
+                    "bans": 2281
+                },
+                {
+                    "hero_id": 1030.0,
+                    "bans": 948
+                },
+                {
+                    "hero_id": 1048.0,
+                    "bans": 1007
+                },
+                {
+                    "hero_id": 1051.0,
+                    "bans": 1445
+                },
+                {
+                    "hero_id": 1050.0,
+                    "bans": 2426
+                },
+                {
+                    "hero_id": 1018.0,
+                    "bans": 7908
+                },
+                {
+                    "hero_id": 1025.0,
+                    "bans": 30774
+                }
+            ]
+        }
+    ],
+    "heroes": [
+        {
+            "heroes": [
+                {
+                    "hero_id": 1034,
+                    "matches": 2070,
+                    "wins": 1077
+                },
+                {
+                    "hero_id": 1017,
+                    "matches": 3059,
+                    "wins": 1285
+                },
+                {
+                    "hero_id": 1041,
+                    "matches": 23475,
+                    "wins": 11399
+                },
+                {
+                    "hero_id": 1029,
+                    "matches": 11234,
+                    "wins": 6117
+                },
+                {
+                    "hero_id": 1045,
+                    "matches": 12742,
+                    "wins": 6239
+                },
+                {
+                    "hero_id": 1018,
+                    "matches": 34869,
+                    "wins": 17613
+                },
+                {
+                    "hero_id": 1042,
+                    "matches": 1905,
+                    "wins": 970
+                },
+                {
+                    "hero_id": 1024,
+                    "matches": 10644,
+                    "wins": 5351
+                },
+                {
+                    "hero_id": 1035,
+                    "matches": 5145,
+                    "wins": 2584
+                },
+                {
+                    "hero_id": 1046,
+                    "matches": 3226,
+                    "wins": 1612
+                },
+                {
+                    "hero_id": 1015,
+                    "matches": 7080,
+                    "wins": 3819
+                },
+                {
+                    "hero_id": 1030,
+                    "matches": 4257,
+                    "wins": 1807
+                },
+                {
+                    "hero_id": 1037,
+                    "matches": 28674,
+                    "wins": 13979
+                },
+                {
+                    "hero_id": 1022,
+                    "matches": 2976,
+                    "wins": 1535
+                },
+                {
+                    "hero_id": 1016,
+                    "matches": 18499,
+                    "wins": 9539
+                },
+                {
+                    "hero_id": 1051,
+                    "matches": 7164,
+                    "wins": 3530
+                },
+                {
+                    "hero_id": 1014,
+                    "matches": 6075,
+                    "wins": 2942
+                },
+                {
+                    "hero_id": 1052,
+                    "matches": 3852,
+                    "wins": 2021
+                },
+                {
+                    "hero_id": 1040,
+                    "matches": 3441,
+                    "wins": 1752
+                },
+                {
+                    "hero_id": 1047,
+                    "matches": 4091,
+                    "wins": 2108
+                },
+                {
+                    "hero_id": 1036,
+                    "matches": 5439,
+                    "wins": 2757
+                },
+                {
+                    "matches": 1,
+                    "wins": 0
+                },
+                {
+                    "hero_id": 1026,
+                    "matches": 5541,
+                    "wins": 2834
+                },
+                {
+                    "hero_id": 1032,
+                    "matches": 3069,
+                    "wins": 1347
+                },
+                {
+                    "hero_id": 1025,
+                    "matches": 33627,
+                    "wins": 16183
+                },
+                {
+                    "hero_id": 1033,
+                    "matches": 1218,
+                    "wins": 516
+                },
+                {
+                    "hero_id": 1011,
+                    "matches": 7096,
+                    "wins": 3816
+                },
+                {
+                    "hero_id": 1048,
+                    "matches": 7855,
+                    "wins": 3984
+                },
+                {
+                    "hero_id": 1031,
+                    "matches": 25682,
+                    "wins": 12390
+                },
+                {
+                    "hero_id": 1021,
+                    "matches": 2441,
+                    "wins": 1165
+                },
+                {
+                    "hero_id": 1039,
+                    "matches": 7798,
+                    "wins": 3973
+                },
+                {
+                    "hero_id": 1049,
+                    "matches": 4161,
+                    "wins": 2208
+                },
+                {
+                    "hero_id": 1043,
+                    "matches": 7542,
+                    "wins": 3870
+                },
+                {
+                    "hero_id": 1038,
+                    "matches": 2780,
+                    "wins": 1322
+                },
+                {
+                    "hero_id": 1027,
+                    "matches": 8926,
+                    "wins": 4565
+                },
+                {
+                    "hero_id": 1020,
+                    "matches": 7402,
+                    "wins": 3817
+                },
+                {
+                    "hero_id": 1050,
+                    "matches": 33333,
+                    "wins": 16011
+                },
+                {
+                    "hero_id": 1023,
+                    "matches": 14895,
+                    "wins": 7892
+                }
+            ],
+            "rank": "9"
+        },
+        {
+            "heroes": [
+                {
+                    "hero_id": 1017,
+                    "matches": 300,
+                    "wins": 133
+                },
+                {
+                    "hero_id": 1031,
+                    "matches": 2987,
+                    "wins": 1451
+                },
+                {
+                    "hero_id": 1046,
+                    "matches": 314,
+                    "wins": 160
+                },
+                {
+                    "hero_id": 1032,
+                    "matches": 157,
+                    "wins": 63
+                },
+                {
+                    "hero_id": 1018,
+                    "matches": 3329,
+                    "wins": 1671
+                },
+                {
+                    "hero_id": 1025,
+                    "matches": 2686,
+                    "wins": 1267
+                },
+                {
+                    "hero_id": 1048,
+                    "matches": 679,
+                    "wins": 354
+                },
+                {
+                    "hero_id": 1037,
+                    "matches": 2955,
+                    "wins": 1457
+                },
+                {
+                    "hero_id": 1033,
+                    "matches": 71,
+                    "wins": 28
+                },
+                {
+                    "hero_id": 1043,
+                    "matches": 653,
+                    "wins": 334
+                },
+                {
+                    "hero_id": 1022,
+                    "matches": 187,
+                    "wins": 88
+                },
+                {
+                    "hero_id": 1042,
+                    "matches": 58,
+                    "wins": 27
+                },
+                {
+                    "hero_id": 1040,
+                    "matches": 259,
+                    "wins": 140
+                },
+                {
+                    "hero_id": 1023,
+                    "matches": 702,
+                    "wins": 363
+                },
+                {
+                    "hero_id": 1030,
+                    "matches": 257,
+                    "wins": 105
+                },
+                {
+                    "hero_id": 1027,
+                    "matches": 740,
+                    "wins": 373
+                },
+                {
+                    "hero_id": 1024,
+                    "matches": 1273,
+                    "wins": 622
+                },
+                {
+                    "hero_id": 1034,
+                    "matches": 103,
+                    "wins": 43
+                },
+                {
+                    "hero_id": 1015,
+                    "matches": 729,
+                    "wins": 382
+                },
+                {
+                    "hero_id": 1035,
+                    "matches": 380,
+                    "wins": 181
+                },
+                {
+                    "hero_id": 1038,
+                    "matches": 99,
+                    "wins": 48
+                },
+                {
+                    "hero_id": 1029,
+                    "matches": 923,
+                    "wins": 502
+                },
+                {
+                    "hero_id": 1050,
+                    "matches": 2608,
+                    "wins": 1265
+                },
+                {
+                    "hero_id": 1020,
+                    "matches": 619,
+                    "wins": 330
+                },
+                {
+                    "hero_id": 1041,
+                    "matches": 2058,
+                    "wins": 989
+                },
+                {
+                    "hero_id": 1045,
+                    "matches": 1388,
+                    "wins": 692
+                },
+                {
+                    "hero_id": 1047,
+                    "matches": 267,
+                    "wins": 135
+                },
+                {
+                    "hero_id": 1052,
+                    "matches": 282,
+                    "wins": 144
+                },
+                {
+                    "hero_id": 1039,
+                    "matches": 373,
+                    "wins": 192
+                },
+                {
+                    "hero_id": 1026,
+                    "matches": 282,
+                    "wins": 166
+                },
+                {
+                    "hero_id": 1016,
+                    "matches": 2324,
+                    "wins": 1221
+                },
+                {
+                    "hero_id": 1011,
+                    "matches": 919,
+                    "wins": 493
+                },
+                {
+                    "hero_id": 1036,
+                    "matches": 292,
+                    "wins": 144
+                },
+                {
+                    "hero_id": 1014,
+                    "matches": 277,
+                    "wins": 134
+                },
+                {
+                    "hero_id": 1051,
+                    "matches": 868,
+                    "wins": 433
+                },
+                {
+                    "hero_id": 1049,
+                    "matches": 500,
+                    "wins": 262
+                },
+                {
+                    "hero_id": 1021,
+                    "matches": 210,
+                    "wins": 102
+                }
+            ],
+            "rank": "7"
+        },
+        {
+            "heroes": [
+                {
+                    "hero_id": 1042,
+                    "matches": 33098,
+                    "wins": 17348
+                },
+                {
+                    "hero_id": 1015,
+                    "matches": 22853,
+                    "wins": 12841
+                },
+                {
+                    "hero_id": 1027,
+                    "matches": 35215,
+                    "wins": 17294
+                },
+                {
+                    "hero_id": 1050,
+                    "matches": 62958,
+                    "wins": 30009
+                },
+                {
+                    "hero_id": 1023,
+                    "matches": 54121,
+                    "wins": 29498
+                },
+                {
+                    "hero_id": 1022,
+                    "matches": 13450,
+                    "wins": 6805
+                },
+                {
+                    "hero_id": 1045,
+                    "matches": 33027,
+                    "wins": 15624
+                },
+                {
+                    "hero_id": 1049,
+                    "matches": 14151,
+                    "wins": 7227
+                },
+                {
+                    "hero_id": 1029,
+                    "matches": 15776,
+                    "wins": 8768
+                },
+                {
+                    "hero_id": 1037,
+                    "matches": 41309,
+                    "wins": 19659
+                },
+                {
+                    "hero_id": 1017,
+                    "matches": 8856,
+                    "wins": 4087
+                },
+                {
+                    "matches": 2,
+                    "wins": 0
+                },
+                {
+                    "hero_id": 1048,
+                    "matches": 17600,
+                    "wins": 8884
+                },
+                {
+                    "hero_id": 1032,
+                    "matches": 21919,
+                    "wins": 10191
+                },
+                {
+                    "hero_id": 1043,
+                    "matches": 14389,
+                    "wins": 7203
+                },
+                {
+                    "hero_id": 1039,
+                    "matches": 36078,
+                    "wins": 18720
+                },
+                {
+                    "hero_id": 1051,
+                    "matches": 12247,
+                    "wins": 6018
+                },
+                {
+                    "hero_id": 1011,
+                    "matches": 20361,
+                    "wins": 10366
+                },
+                {
+                    "hero_id": 1040,
+                    "matches": 11077,
+                    "wins": 5764
+                },
+                {
+                    "hero_id": 1041,
+                    "matches": 39481,
+                    "wins": 19901
+                },
+                {
+                    "hero_id": 1020,
+                    "matches": 16142,
+                    "wins": 8368
+                },
+                {
+                    "hero_id": 1026,
+                    "matches": 8999,
+                    "wins": 4801
+                },
+                {
+                    "hero_id": 1035,
+                    "matches": 19914,
+                    "wins": 9384
+                },
+                {
+                    "hero_id": 1014,
+                    "matches": 28198,
+                    "wins": 13641
+                },
+                {
+                    "hero_id": 1052,
+                    "matches": 6644,
+                    "wins": 3379
+                },
+                {
+                    "hero_id": 1033,
+                    "matches": 2568,
+                    "wins": 1108
+                },
+                {
+                    "hero_id": 1018,
+                    "matches": 63677,
+                    "wins": 32447
+                },
+                {
+                    "hero_id": 1038,
+                    "matches": 21600,
+                    "wins": 10520
+                },
+                {
+                    "hero_id": 1021,
+                    "matches": 4454,
+                    "wins": 2078
+                },
+                {
+                    "hero_id": 1036,
+                    "matches": 19072,
+                    "wins": 9662
+                },
+                {
+                    "hero_id": 1024,
+                    "matches": 12420,
+                    "wins": 6318
+                },
+                {
+                    "hero_id": 1025,
+                    "matches": 117595,
+                    "wins": 56968
+                },
+                {
+                    "hero_id": 1034,
+                    "matches": 13697,
+                    "wins": 7049
+                },
+                {
+                    "hero_id": 1030,
+                    "matches": 37825,
+                    "wins": 17678
+                },
+                {
+                    "hero_id": 1031,
+                    "matches": 52911,
+                    "wins": 24731
+                },
+                {
+                    "hero_id": 1016,
+                    "matches": 21203,
+                    "wins": 11031
+                },
+                {
+                    "hero_id": 1046,
+                    "matches": 8675,
+                    "wins": 4378
+                },
+                {
+                    "hero_id": 1047,
+                    "matches": 14570,
+                    "wins": 6518
+                }
+            ],
+            "rank": "4"
+        },
+        {
+            "heroes": [
+                {
+                    "hero_id": 1038,
+                    "matches": 4889,
+                    "wins": 2529
+                },
+                {
+                    "hero_id": 1045,
+                    "matches": 4670,
+                    "wins": 2063
+                },
+                {
+                    "hero_id": 1031,
+                    "matches": 9216,
+                    "wins": 4702
+                },
+                {
+                    "hero_id": 1041,
+                    "matches": 6061,
+                    "wins": 3610
+                },
+                {
+                    "hero_id": 1022,
+                    "matches": 6078,
+                    "wins": 2268
+                },
+                {
+                    "hero_id": 1051,
+                    "matches": 4752,
+                    "wins": 3700
+                },
+                {
+                    "hero_id": 1020,
+                    "matches": 8079,
+                    "wins": 2932
+                },
+                {
+                    "hero_id": 1052,
+                    "matches": 3165,
+                    "wins": 1626
+                },
+                {
+                    "hero_id": 1026,
+                    "matches": 3059,
+                    "wins": 1826
+                },
+                {
+                    "hero_id": 1040,
+                    "matches": 4352,
+                    "wins": 2086
+                },
+                {
+                    "hero_id": 1037,
+                    "matches": 7693,
+                    "wins": 2433
+                },
+                {
+                    "hero_id": 1032,
+                    "matches": 4898,
+                    "wins": 2285
+                },
+                {
+                    "hero_id": 1011,
+                    "matches": 8600,
+                    "wins": 4024
+                },
+                {
+                    "hero_id": 1048,
+                    "matches": 4343,
+                    "wins": 2344
+                },
+                {
+                    "hero_id": 1018,
+                    "matches": 7386,
+                    "wins": 2552
+                },
+                {
+                    "hero_id": 1039,
+                    "matches": 7386,
+                    "wins": 3401
+                },
+                {
+                    "hero_id": 1034,
+                    "matches": 4813,
+                    "wins": 2481
+                },
+                {
+                    "hero_id": 1042,
+                    "matches": 8004,
+                    "wins": 2739
+                },
+                {
+                    "matches": 1475,
+                    "wins": 39
+                },
+                {
+                    "hero_id": 1015,
+                    "matches": 4618,
+                    "wins": 2113
+                },
+                {
+                    "hero_id": 1025,
+                    "matches": 10621,
+                    "wins": 5756
+                },
+                {
+                    "hero_id": 1035,
+                    "matches": 8101,
+                    "wins": 4246
+                },
+                {
+                    "hero_id": 1049,
+                    "matches": 3426,
+                    "wins": 1869
+                },
+                {
+                    "hero_id": 1036,
+                    "matches": 5013,
+                    "wins": 3683
+                },
+                {
+                    "hero_id": 1016,
+                    "matches": 8364,
+                    "wins": 3081
+                },
+                {
+                    "hero_id": 1017,
+                    "matches": 4644,
+                    "wins": 3965
+                },
+                {
+                    "hero_id": 1023,
+                    "matches": 9936,
+                    "wins": 5728
+                },
+                {
+                    "hero_id": 1030,
+                    "matches": 5521,
+                    "wins": 3173
+                },
+                {
+                    "hero_id": 1043,
+                    "matches": 4031,
+                    "wins": 2134
+                },
+                {
+                    "hero_id": 1029,
+                    "matches": 3807,
+                    "wins": 2564
+                },
+                {
+                    "hero_id": 1027,
+                    "matches": 9924,
+                    "wins": 4148
+                },
+                {
+                    "hero_id": 1021,
+                    "matches": 3177,
+                    "wins": 1385
+                },
+                {
+                    "hero_id": 1033,
+                    "matches": 3152,
+                    "wins": 1277
+                },
+                {
+                    "hero_id": 1014,
+                    "matches": 4949,
+                    "wins": 2482
+                },
+                {
+                    "hero_id": 1050,
+                    "matches": 12754,
+                    "wins": 7711
+                },
+                {
+                    "hero_id": 1046,
+                    "matches": 8623,
+                    "wins": 4233
+                },
+                {
+                    "hero_id": 1047,
+                    "matches": 8480,
+                    "wins": 3510
+                },
+                {
+                    "hero_id": 1024,
+                    "matches": 3969,
+                    "wins": 1750
+                }
+            ],
+            "rank": "0"
+        },
+        {
+            "heroes": [
+                {
+                    "hero_id": 1047,
+                    "matches": 115043,
+                    "wins": 48503
+                },
+                {
+                    "hero_id": 1020,
+                    "matches": 93531,
+                    "wins": 50632
+                },
+                {
+                    "hero_id": 1045,
+                    "matches": 84343,
+                    "wins": 40041
+                },
+                {
+                    "hero_id": 1036,
+                    "matches": 141102,
+                    "wins": 66154
+                },
+                {
+                    "hero_id": 1048,
+                    "matches": 77933,
+                    "wins": 37078
+                },
+                {
+                    "hero_id": 1018,
+                    "matches": 94064,
+                    "wins": 47005
+                },
+                {
+                    "hero_id": 1052,
+                    "matches": 61306,
+                    "wins": 28907
+                },
+                {
+                    "hero_id": 1026,
+                    "matches": 71706,
+                    "wins": 33843
+                },
+                {
+                    "hero_id": 1046,
+                    "matches": 93335,
+                    "wins": 47502
+                },
+                {
+                    "hero_id": 1033,
+                    "matches": 39405,
+                    "wins": 15639
+                },
+                {
+                    "hero_id": 1022,
+                    "matches": 70798,
+                    "wins": 36155
+                },
+                {
+                    "hero_id": 1021,
+                    "matches": 37183,
+                    "wins": 15848
+                },
+                {
+                    "hero_id": 1049,
+                    "matches": 64174,
+                    "wins": 29763
+                },
+                {
+                    "hero_id": 1043,
+                    "matches": 76302,
+                    "wins": 36189
+                },
+                {
+                    "hero_id": 1031,
+                    "matches": 133279,
+                    "wins": 63387
+                },
+                {
+                    "hero_id": 1038,
+                    "matches": 86162,
+                    "wins": 41618
+                },
+                {
+                    "hero_id": 1017,
+                    "matches": 140195,
+                    "wins": 67280
+                },
+                {
+                    "hero_id": 1039,
+                    "matches": 89895,
+                    "wins": 47308
+                },
+                {
+                    "hero_id": 1027,
+                    "matches": 63672,
+                    "wins": 30822
+                },
+                {
+                    "hero_id": 1032,
+                    "matches": 79535,
+                    "wins": 37320
+                },
+                {
+                    "hero_id": 1023,
+                    "matches": 152976,
+                    "wins": 83186
+                },
+                {
+                    "hero_id": 1024,
+                    "matches": 50681,
+                    "wins": 24410
+                },
+                {
+                    "hero_id": 1025,
+                    "matches": 223512,
+                    "wins": 109935
+                },
+                {
+                    "hero_id": 1042,
+                    "matches": 79954,
+                    "wins": 42077
+                },
+                {
+                    "hero_id": 1050,
+                    "matches": 259436,
+                    "wins": 127146
+                },
+                {
+                    "hero_id": 1037,
+                    "matches": 95966,
+                    "wins": 46597
+                },
+                {
+                    "hero_id": 1034,
+                    "matches": 67554,
+                    "wins": 31809
+                },
+                {
+                    "hero_id": 1051,
+                    "matches": 146452,
+                    "wins": 71698
+                },
+                {
+                    "hero_id": 1014,
+                    "matches": 83064,
+                    "wins": 37715
+                },
+                {
+                    "hero_id": 1011,
+                    "matches": 63314,
+                    "wins": 31427
+                },
+                {
+                    "hero_id": 1015,
+                    "matches": 86640,
+                    "wins": 46020
+                },
+                {
+                    "hero_id": 1030,
+                    "matches": 104680,
+                    "wins": 47116
+                },
+                {
+                    "hero_id": 1016,
+                    "matches": 104440,
+                    "wins": 52758
+                },
+                {
+                    "hero_id": 1035,
+                    "matches": 77350,
+                    "wins": 37283
+                },
+                {
+                    "hero_id": 1040,
+                    "matches": 88072,
+                    "wins": 45752
+                },
+                {
+                    "matches": 49113,
+                    "wins": 270
+                },
+                {
+                    "hero_id": 1029,
+                    "matches": 94187,
+                    "wins": 47472
+                },
+                {
+                    "hero_id": 1041,
+                    "matches": 137827,
+                    "wins": 66301
+                }
+            ],
+            "rank": "1"
+        },
+        {
+            "heroes": [
+                {
+                    "hero_id": 1045,
+                    "matches": 6220,
+                    "wins": 3067
+                },
+                {
+                    "hero_id": 1023,
+                    "matches": 11733,
+                    "wins": 6362
+                },
+                {
+                    "hero_id": 1033,
+                    "matches": 761,
+                    "wins": 382
+                },
+                {
+                    "hero_id": 1047,
+                    "matches": 7188,
+                    "wins": 3109
+                },
+                {
+                    "hero_id": 1030,
+                    "matches": 10363,
+                    "wins": 4805
+                },
+                {
+                    "hero_id": 1038,
+                    "matches": 7361,
+                    "wins": 3513
+                },
+                {
+                    "hero_id": 1017,
+                    "matches": 2059,
+                    "wins": 1040
+                },
+                {
+                    "hero_id": 1034,
+                    "matches": 4801,
+                    "wins": 2356
+                },
+                {
+                    "hero_id": 1011,
+                    "matches": 4821,
+                    "wins": 2417
+                },
+                {
+                    "hero_id": 1046,
+                    "matches": 3017,
+                    "wins": 1572
+                },
+                {
+                    "hero_id": 1018,
+                    "matches": 10758,
+                    "wins": 5416
+                },
+                {
+                    "hero_id": 1016,
+                    "matches": 4976,
+                    "wins": 2545
+                },
+                {
+                    "hero_id": 1039,
+                    "matches": 7531,
+                    "wins": 3929
+                },
+                {
+                    "hero_id": 1021,
+                    "matches": 1432,
+                    "wins": 719
+                },
+                {
+                    "hero_id": 1052,
+                    "matches": 2114,
+                    "wins": 1072
+                },
+                {
+                    "hero_id": 1042,
+                    "matches": 10087,
+                    "wins": 5160
+                },
+                {
+                    "hero_id": 1032,
+                    "matches": 6733,
+                    "wins": 3134
+                },
+                {
+                    "hero_id": 1049,
+                    "matches": 2290,
+                    "wins": 1160
+                },
+                {
+                    "hero_id": 1020,
+                    "matches": 6002,
+                    "wins": 3116
+                },
+                {
+                    "hero_id": 1022,
+                    "matches": 4026,
+                    "wins": 2074
+                },
+                {
+                    "hero_id": 1036,
+                    "matches": 5119,
+                    "wins": 2702
+                },
+                {
+                    "hero_id": 1026,
+                    "matches": 2241,
+                    "wins": 1250
+                },
+                {
+                    "hero_id": 1043,
+                    "matches": 4869,
+                    "wins": 2333
+                },
+                {
+                    "hero_id": 1024,
+                    "matches": 3110,
+                    "wins": 1601
+                },
+                {
+                    "hero_id": 1037,
+                    "matches": 8336,
+                    "wins": 3965
+                },
+                {
+                    "hero_id": 1051,
+                    "matches": 2501,
+                    "wins": 1267
+                },
+                {
+                    "hero_id": 1035,
+                    "matches": 6653,
+                    "wins": 3233
+                },
+                {
+                    "hero_id": 1027,
+                    "matches": 7335,
+                    "wins": 3563
+                },
+                {
+                    "hero_id": 1048,
+                    "matches": 4748,
+                    "wins": 2367
+                },
+                {
+                    "hero_id": 1040,
+                    "matches": 3202,
+                    "wins": 1680
+                },
+                {
+                    "hero_id": 1025,
+                    "matches": 24553,
+                    "wins": 11949
+                },
+                {
+                    "hero_id": 1050,
+                    "matches": 14291,
+                    "wins": 6947
+                },
+                {
+                    "hero_id": 1029,
+                    "matches": 3979,
+                    "wins": 2240
+                },
+                {
+                    "hero_id": 1015,
+                    "matches": 4072,
+                    "wins": 2347
+                },
+                {
+                    "hero_id": 1041,
+                    "matches": 8399,
+                    "wins": 4246
+                },
+                {
+                    "hero_id": 1014,
+                    "matches": 7866,
+                    "wins": 3715
+                },
+                {
+                    "hero_id": 1031,
+                    "matches": 10673,
+                    "wins": 5211
+                }
+            ],
+            "rank": "2"
+        },
+        {
+            "heroes": [
+                {
+                    "hero_id": 1020,
+                    "matches": 32812,
+                    "wins": 16656
+                },
+                {
+                    "hero_id": 1014,
+                    "matches": 51135,
+                    "wins": 24878
+                },
+                {
+                    "hero_id": 1024,
+                    "matches": 28101,
+                    "wins": 13761
+                },
+                {
+                    "hero_id": 1036,
+                    "matches": 33161,
+                    "wins": 17143
+                },
+                {
+                    "hero_id": 1034,
+                    "matches": 20760,
+                    "wins": 10826
+                },
+                {
+                    "hero_id": 1033,
+                    "matches": 4293,
+                    "wins": 1785
+                },
+                {
+                    "hero_id": 1051,
+                    "matches": 22271,
+                    "wins": 10829
+                },
+                {
+                    "hero_id": 1016,
+                    "matches": 51979,
+                    "wins": 26523
+                },
+                {
+                    "hero_id": 1046,
+                    "matches": 14181,
+                    "wins": 6980
+                },
+                {
+                    "matches": 7,
+                    "wins": 0
+                },
+                {
+                    "hero_id": 1032,
+                    "matches": 35410,
+                    "wins": 16292
+                },
+                {
+                    "hero_id": 1029,
+                    "matches": 39090,
+                    "wins": 21805
+                },
+                {
+                    "hero_id": 1022,
+                    "matches": 22480,
+                    "wins": 11788
+                },
+                {
+                    "hero_id": 1039,
+                    "matches": 67454,
+                    "wins": 34917
+                },
+                {
+                    "hero_id": 1027,
+                    "matches": 67092,
+                    "wins": 33285
+                },
+                {
+                    "hero_id": 1049,
+                    "matches": 17109,
+                    "wins": 9070
+                },
+                {
+                    "hero_id": 1041,
+                    "matches": 94546,
+                    "wins": 47412
+                },
+                {
+                    "hero_id": 1048,
+                    "matches": 35979,
+                    "wins": 18236
+                },
+                {
+                    "hero_id": 1045,
+                    "matches": 59505,
+                    "wins": 28181
+                },
+                {
+                    "hero_id": 1017,
+                    "matches": 12512,
+                    "wins": 5617
+                },
+                {
+                    "hero_id": 1030,
+                    "matches": 62011,
+                    "wins": 28404
+                },
+                {
+                    "hero_id": 1052,
+                    "matches": 12678,
+                    "wins": 6629
+                },
+                {
+                    "hero_id": 1011,
+                    "matches": 26035,
+                    "wins": 13752
+                },
+                {
+                    "hero_id": 1026,
+                    "matches": 23184,
+                    "wins": 12382
+                },
+                {
+                    "hero_id": 1042,
+                    "matches": 41993,
+                    "wins": 22155
+                },
+                {
+                    "hero_id": 1038,
+                    "matches": 31890,
+                    "wins": 15364
+                },
+                {
+                    "hero_id": 1025,
+                    "matches": 190854,
+                    "wins": 92947
+                },
+                {
+                    "hero_id": 1018,
+                    "matches": 147161,
+                    "wins": 74699
+                },
+                {
+                    "hero_id": 1031,
+                    "matches": 104141,
+                    "wins": 49040
+                },
+                {
+                    "hero_id": 1047,
+                    "matches": 20822,
+                    "wins": 9193
+                },
+                {
+                    "hero_id": 1021,
+                    "matches": 9026,
+                    "wins": 4196
+                },
+                {
+                    "hero_id": 1050,
+                    "matches": 154173,
+                    "wins": 73588
+                },
+                {
+                    "hero_id": 1040,
+                    "matches": 20779,
+                    "wins": 10957
+                },
+                {
+                    "hero_id": 1043,
+                    "matches": 27902,
+                    "wins": 13899
+                },
+                {
+                    "hero_id": 1035,
+                    "matches": 31886,
+                    "wins": 15308
+                },
+                {
+                    "hero_id": 1023,
+                    "matches": 105368,
+                    "wins": 57096
+                },
+                {
+                    "hero_id": 1015,
+                    "matches": 30499,
+                    "wins": 17034
+                },
+                {
+                    "hero_id": 1037,
+                    "matches": 99257,
+                    "wins": 47131
+                }
+            ],
+            "rank": "5"
+        },
+        {
+            "heroes": [
+                {
+                    "hero_id": 1035,
+                    "matches": 11,
+                    "wins": 6
+                },
+                {
+                    "hero_id": 1022,
+                    "matches": 3,
+                    "wins": 2
+                },
+                {
+                    "hero_id": 1041,
+                    "matches": 44,
+                    "wins": 22
+                },
+                {
+                    "hero_id": 1042,
+                    "matches": 1,
+                    "wins": 0
+                },
+                {
+                    "hero_id": 1034,
+                    "matches": 2,
+                    "wins": 0
+                },
+                {
+                    "hero_id": 1037,
+                    "matches": 54,
+                    "wins": 27
+                },
+                {
+                    "hero_id": 1036,
+                    "matches": 9,
+                    "wins": 4
+                },
+                {
+                    "hero_id": 1020,
+                    "matches": 20,
+                    "wins": 12
+                },
+                {
+                    "hero_id": 1050,
+                    "matches": 56,
+                    "wins": 24
+                },
+                {
+                    "hero_id": 1015,
+                    "matches": 17,
+                    "wins": 6
+                },
+                {
+                    "hero_id": 1052,
+                    "matches": 4,
+                    "wins": 2
+                },
+                {
+                    "hero_id": 1025,
+                    "matches": 46,
+                    "wins": 18
+                },
+                {
+                    "hero_id": 1027,
+                    "matches": 12,
+                    "wins": 6
+                },
+                {
+                    "hero_id": 1051,
+                    "matches": 15,
+                    "wins": 6
+                },
+                {
+                    "hero_id": 1029,
+                    "matches": 16,
+                    "wins": 10
+                },
+                {
+                    "hero_id": 1049,
+                    "matches": 21,
+                    "wins": 14
+                },
+                {
+                    "hero_id": 1021,
+                    "matches": 1,
+                    "wins": 0
+                },
+                {
+                    "hero_id": 1018,
+                    "matches": 62,
+                    "wins": 34
+                },
+                {
+                    "hero_id": 1033,
+                    "matches": 1,
+                    "wins": 1
+                },
+                {
+                    "hero_id": 1043,
+                    "matches": 21,
+                    "wins": 12
+                },
+                {
+                    "hero_id": 1047,
+                    "matches": 4,
+                    "wins": 3
+                },
+                {
+                    "hero_id": 1048,
+                    "matches": 13,
+                    "wins": 5
+                },
+                {
+                    "hero_id": 1040,
+                    "matches": 4,
+                    "wins": 3
+                },
+                {
+                    "hero_id": 1045,
+                    "matches": 24,
+                    "wins": 10
+                },
+                {
+                    "hero_id": 1032,
+                    "matches": 6,
+                    "wins": 1
+                },
+                {
+                    "hero_id": 1017,
+                    "matches": 2,
+                    "wins": 0
+                },
+                {
+                    "hero_id": 1024,
+                    "matches": 21,
+                    "wins": 13
+                },
+                {
+                    "hero_id": 1031,
+                    "matches": 72,
+                    "wins": 34
+                },
+                {
+                    "hero_id": 1023,
+                    "matches": 14,
+                    "wins": 10
+                },
+                {
+                    "hero_id": 1039,
+                    "matches": 10,
+                    "wins": 3
+                },
+                {
+                    "hero_id": 1011,
+                    "matches": 23,
+                    "wins": 11
+                },
+                {
+                    "hero_id": 1026,
+                    "matches": 5,
+                    "wins": 3
+                },
+                {
+                    "hero_id": 1016,
+                    "matches": 45,
+                    "wins": 28
+                },
+                {
+                    "hero_id": 1046,
+                    "matches": 1,
+                    "wins": 0
+                }
+            ],
+            "rank": "8"
+        },
+        {
+            "heroes": [
+                {
+                    "hero_id": 1023,
+                    "matches": 69185,
+                    "wins": 37213
+                },
+                {
+                    "hero_id": 1048,
+                    "matches": 27034,
+                    "wins": 13665
+                },
+                {
+                    "hero_id": 1015,
+                    "matches": 21824,
+                    "wins": 12073
+                },
+                {
+                    "hero_id": 1041,
+                    "matches": 81823,
+                    "wins": 40523
+                },
+                {
+                    "hero_id": 1047,
+                    "matches": 14290,
+                    "wins": 6733
+                },
+                {
+                    "hero_id": 1014,
+                    "matches": 30907,
+                    "wins": 14852
+                },
+                {
+                    "hero_id": 1033,
+                    "matches": 3847,
+                    "wins": 1664
+                },
+                {
+                    "hero_id": 1045,
+                    "matches": 44003,
+                    "wins": 20778
+                },
+                {
+                    "hero_id": 1051,
+                    "matches": 22760,
+                    "wins": 11188
+                },
+                {
+                    "matches": 3,
+                    "wins": 0
+                },
+                {
+                    "hero_id": 1038,
+                    "matches": 16514,
+                    "wins": 8044
+                },
+                {
+                    "hero_id": 1052,
+                    "matches": 12296,
+                    "wins": 6422
+                },
+                {
+                    "hero_id": 1011,
+                    "matches": 17715,
+                    "wins": 9494
+                },
+                {
+                    "hero_id": 1022,
+                    "matches": 14731,
+                    "wins": 7709
+                },
+                {
+                    "hero_id": 1020,
+                    "matches": 25657,
+                    "wins": 13098
+                },
+                {
+                    "hero_id": 1050,
+                    "matches": 125260,
+                    "wins": 59927
+                },
+                {
+                    "hero_id": 1049,
+                    "matches": 12928,
+                    "wins": 6814
+                },
+                {
+                    "hero_id": 1046,
+                    "matches": 11095,
+                    "wins": 5442
+                },
+                {
+                    "hero_id": 1043,
+                    "matches": 23463,
+                    "wins": 11884
+                },
+                {
+                    "hero_id": 1024,
+                    "matches": 25778,
+                    "wins": 12688
+                },
+                {
+                    "hero_id": 1031,
+                    "matches": 82418,
+                    "wins": 39281
+                },
+                {
+                    "hero_id": 1026,
+                    "matches": 22820,
+                    "wins": 12149
+                },
+                {
+                    "hero_id": 1032,
+                    "matches": 18311,
+                    "wins": 8227
+                },
+                {
+                    "hero_id": 1025,
+                    "matches": 128266,
+                    "wins": 62271
+                },
+                {
+                    "hero_id": 1021,
+                    "matches": 7566,
+                    "wins": 3526
+                },
+                {
+                    "hero_id": 1036,
+                    "matches": 25002,
+                    "wins": 12689
+                },
+                {
+                    "hero_id": 1016,
+                    "matches": 49892,
+                    "wins": 25613
+                },
+                {
+                    "hero_id": 1042,
+                    "matches": 16725,
+                    "wins": 8702
+                },
+                {
+                    "hero_id": 1029,
+                    "matches": 38326,
+                    "wins": 21300
+                },
+                {
+                    "hero_id": 1037,
+                    "matches": 85510,
+                    "wins": 41052
+                },
+                {
+                    "hero_id": 1039,
+                    "matches": 41406,
+                    "wins": 21411
+                },
+                {
+                    "hero_id": 1027,
+                    "matches": 43208,
+                    "wins": 21815
+                },
+                {
+                    "hero_id": 1034,
+                    "matches": 10859,
+                    "wins": 5730
+                },
+                {
+                    "hero_id": 1030,
+                    "matches": 29836,
+                    "wins": 13237
+                },
+                {
+                    "hero_id": 1035,
+                    "matches": 20297,
+                    "wins": 9953
+                },
+                {
+                    "hero_id": 1040,
+                    "matches": 14675,
+                    "wins": 7511
+                },
+                {
+                    "hero_id": 1017,
+                    "matches": 10905,
+                    "wins": 4824
+                },
+                {
+                    "hero_id": 1018,
+                    "matches": 117901,
+                    "wins": 59772
+                }
+            ],
+            "rank": "6"
+        },
+        {
+            "heroes": [
+                {
+                    "hero_id": 1035,
+                    "matches": 9819,
+                    "wins": 4705
+                },
+                {
+                    "hero_id": 1047,
+                    "matches": 8927,
+                    "wins": 3887
+                },
+                {
+                    "hero_id": 1037,
+                    "matches": 14953,
+                    "wins": 7144
+                },
+                {
+                    "hero_id": 1034,
+                    "matches": 6417,
+                    "wins": 3193
+                },
+                {
+                    "hero_id": 1050,
+                    "matches": 24171,
+                    "wins": 11503
+                },
+                {
+                    "hero_id": 1014,
+                    "matches": 12262,
+                    "wins": 5843
+                },
+                {
+                    "hero_id": 1020,
+                    "matches": 8351,
+                    "wins": 4345
+                },
+                {
+                    "hero_id": 1025,
+                    "matches": 43636,
+                    "wins": 21184
+                },
+                {
+                    "hero_id": 1045,
+                    "matches": 11931,
+                    "wins": 5709
+                },
+                {
+                    "hero_id": 1052,
+                    "matches": 3114,
+                    "wins": 1581
+                },
+                {
+                    "hero_id": 1015,
+                    "matches": 7590,
+                    "wins": 4284
+                },
+                {
+                    "hero_id": 1033,
+                    "matches": 1146,
+                    "wins": 541
+                },
+                {
+                    "hero_id": 1024,
+                    "matches": 4815,
+                    "wins": 2547
+                },
+                {
+                    "hero_id": 1026,
+                    "matches": 3653,
+                    "wins": 1967
+                },
+                {
+                    "hero_id": 1030,
+                    "matches": 16903,
+                    "wins": 7822
+                },
+                {
+                    "hero_id": 1043,
+                    "matches": 6810,
+                    "wins": 3343
+                },
+                {
+                    "hero_id": 1018,
+                    "matches": 20669,
+                    "wins": 10446
+                },
+                {
+                    "hero_id": 1038,
+                    "matches": 11028,
+                    "wins": 5290
+                },
+                {
+                    "hero_id": 1049,
+                    "matches": 4217,
+                    "wins": 2107
+                },
+                {
+                    "hero_id": 1011,
+                    "matches": 7845,
+                    "wins": 3997
+                },
+                {
+                    "hero_id": 1021,
+                    "matches": 2092,
+                    "wins": 989
+                },
+                {
+                    "hero_id": 1027,
+                    "matches": 13758,
+                    "wins": 6672
+                },
+                {
+                    "hero_id": 1039,
+                    "matches": 13843,
+                    "wins": 7128
+                },
+                {
+                    "hero_id": 1029,
+                    "matches": 6457,
+                    "wins": 3638
+                },
+                {
+                    "hero_id": 1036,
+                    "matches": 8376,
+                    "wins": 4344
+                },
+                {
+                    "hero_id": 1017,
+                    "matches": 3966,
+                    "wins": 1848
+                },
+                {
+                    "hero_id": 1051,
+                    "matches": 5047,
+                    "wins": 2508
+                },
+                {
+                    "hero_id": 1016,
+                    "matches": 8504,
+                    "wins": 4356
+                },
+                {
+                    "hero_id": 1040,
+                    "matches": 5128,
+                    "wins": 2720
+                },
+                {
+                    "hero_id": 1022,
+                    "matches": 6215,
+                    "wins": 3105
+                },
+                {
+                    "hero_id": 1023,
+                    "matches": 21782,
+                    "wins": 11896
+                },
+                {
+                    "hero_id": 1031,
+                    "matches": 18401,
+                    "wins": 8826
+                },
+                {
+                    "hero_id": 1041,
+                    "matches": 14279,
+                    "wins": 7341
+                },
+                {
+                    "hero_id": 1042,
+                    "matches": 15918,
+                    "wins": 8343
+                },
+                {
+                    "hero_id": 1046,
+                    "matches": 4334,
+                    "wins": 2189
+                },
+                {
+                    "hero_id": 1032,
+                    "matches": 10396,
+                    "wins": 4801
+                },
+                {
+                    "hero_id": 1048,
+                    "matches": 7675,
+                    "wins": 3914
+                }
+            ],
+            "rank": "3"
+        }
+    ],
+    "maps": [
+        {
+            "total_matches": 53078,
+            "maps": [
+                {
+                    "map_id": 1245,
+                    "matches": 5014,
+                    "wins": 2470
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 5108,
+                    "wins": 2527
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 5570,
+                    "wins": 2750
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 6330,
+                    "wins": 3097
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 5475,
+                    "wins": 2689
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 5060,
+                    "wins": 2400
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 5366,
+                    "wins": 2628
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 5195,
+                    "wins": 2577
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 5029,
+                    "wins": 2449
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 4931,
+                    "wins": 2399
+                }
+            ],
+            "hero_id": 1051
+        },
+        {
+            "total_matches": 9430,
+            "maps": [
+                {
+                    "map_id": 1288,
+                    "matches": 814,
+                    "wins": 356
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 208,
+                    "wins": 82
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 1191,
+                    "wins": 478
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 1061,
+                    "wins": 454
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 1211,
+                    "wins": 495
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 940,
+                    "wins": 417
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 933,
+                    "wins": 403
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 1113,
+                    "wins": 468
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 938,
+                    "wins": 416
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 1021,
+                    "wins": 425
+                }
+            ],
+            "hero_id": 1033
+        },
+        {
+            "total_matches": 51788,
+            "maps": [
+                {
+                    "map_id": 1267,
+                    "matches": 5474,
+                    "wins": 2880
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 5930,
+                    "wins": 3158
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 5537,
+                    "wins": 3009
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 889,
+                    "wins": 476
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 5558,
+                    "wins": 2982
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 5883,
+                    "wins": 3156
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 5541,
+                    "wins": 2995
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 5572,
+                    "wins": 2942
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 5415,
+                    "wins": 2831
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 5989,
+                    "wins": 3137
+                }
+            ],
+            "hero_id": 1011
+        },
+        {
+            "total_matches": 40377,
+            "maps": [
+                {
+                    "map_id": 1236,
+                    "matches": 4830,
+                    "wins": 2522
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 4068,
+                    "wins": 2088
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 4224,
+                    "wins": 2152
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 4803,
+                    "wins": 2456
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 4882,
+                    "wins": 2583
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 4168,
+                    "wins": 2224
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 4054,
+                    "wins": 2166
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 963,
+                    "wins": 515
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 4136,
+                    "wins": 2200
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 4249,
+                    "wins": 2216
+                }
+            ],
+            "hero_id": 1022
+        },
+        {
+            "total_matches": 190164,
+            "maps": [
+                {
+                    "map_id": 1272,
+                    "matches": 20721,
+                    "wins": 11250
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 20618,
+                    "wins": 11042
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 20991,
+                    "wins": 11345
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 20104,
+                    "wins": 10757
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 20905,
+                    "wins": 11211
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 20729,
+                    "wins": 11275
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 20263,
+                    "wins": 10900
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 3944,
+                    "wins": 2175
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 20938,
+                    "wins": 11192
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 20951,
+                    "wins": 11427
+                }
+            ],
+            "hero_id": 1023
+        },
+        {
+            "total_matches": 88394,
+            "maps": [
+                {
+                    "map_id": 1292,
+                    "matches": 1887,
+                    "wins": 898
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 10286,
+                    "wins": 4971
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 9021,
+                    "wins": 4420
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 9844,
+                    "wins": 4682
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 9775,
+                    "wins": 4719
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 9029,
+                    "wins": 4247
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 10119,
+                    "wins": 5002
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 9033,
+                    "wins": 4444
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 9465,
+                    "wins": 4677
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 9935,
+                    "wins": 4746
+                }
+            ],
+            "hero_id": 1014
+        },
+        {
+            "total_matches": 60149,
+            "maps": [
+                {
+                    "map_id": 1267,
+                    "matches": 6430,
+                    "wins": 3528
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 6832,
+                    "wins": 3662
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 827,
+                    "wins": 414
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 6390,
+                    "wins": 3488
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 6633,
+                    "wins": 3814
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 6712,
+                    "wins": 3674
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 6850,
+                    "wins": 3840
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 6532,
+                    "wins": 3633
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 6673,
+                    "wins": 3778
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 6270,
+                    "wins": 3483
+                }
+            ],
+            "hero_id": 1015
+        },
+        {
+            "total_matches": 59581,
+            "maps": [
+                {
+                    "map_id": 1272,
+                    "matches": 7143,
+                    "wins": 3649
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 6176,
+                    "wins": 3202
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1461,
+                    "wins": 760
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 6738,
+                    "wins": 3341
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 6376,
+                    "wins": 3226
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 5976,
+                    "wins": 2958
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 5857,
+                    "wins": 2946
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 6278,
+                    "wins": 3127
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 7135,
+                    "wins": 3657
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 6441,
+                    "wins": 3133
+                }
+            ],
+            "hero_id": 1043
+        },
+        {
+            "total_matches": 303322,
+            "maps": [
+                {
+                    "map_id": 1231,
+                    "matches": 33184,
+                    "wins": 16946
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 32791,
+                    "wins": 16807
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 32646,
+                    "wins": 16740
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 5081,
+                    "wins": 2483
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 34053,
+                    "wins": 17014
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 33389,
+                    "wins": 16724
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 33035,
+                    "wins": 16803
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 33048,
+                    "wins": 17045
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 33950,
+                    "wins": 16997
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 32145,
+                    "wins": 16230
+                }
+            ],
+            "hero_id": 1018
+        },
+        {
+            "total_matches": 34719,
+            "maps": [
+                {
+                    "map_id": 1291,
+                    "matches": 3895,
+                    "wins": 2097
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 3779,
+                    "wins": 2046
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 4162,
+                    "wins": 2186
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 692,
+                    "wins": 352
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 3964,
+                    "wins": 2092
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 3587,
+                    "wins": 1915
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 3487,
+                    "wins": 1791
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 3654,
+                    "wins": 1902
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 3447,
+                    "wins": 1808
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 4052,
+                    "wins": 2179
+                }
+            ],
+            "hero_id": 1049
+        },
+        {
+            "total_matches": 56953,
+            "maps": [
+                {
+                    "map_id": 1245,
+                    "matches": 7387,
+                    "wins": 3420
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 8858,
+                    "wins": 4165
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 7642,
+                    "wins": 3550
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 6188,
+                    "wins": 2759
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 4285,
+                    "wins": 1888
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 3858,
+                    "wins": 1672
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1155,
+                    "wins": 520
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 7106,
+                    "wins": 3308
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 5085,
+                    "wins": 2239
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 5389,
+                    "wins": 2409
+                }
+            ],
+            "hero_id": 1032
+        },
+        {
+            "total_matches": 89589,
+            "maps": [
+                {
+                    "map_id": 1245,
+                    "matches": 9433,
+                    "wins": 5388
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 9141,
+                    "wins": 5104
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 9038,
+                    "wins": 5052
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 10971,
+                    "wins": 6078
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 8818,
+                    "wins": 4877
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 9140,
+                    "wins": 4888
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1770,
+                    "wins": 964
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 10998,
+                    "wins": 6076
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 9325,
+                    "wins": 5163
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 10955,
+                    "wins": 6144
+                }
+            ],
+            "hero_id": 1029
+        },
+        {
+            "total_matches": 51283,
+            "maps": [
+                {
+                    "map_id": 1288,
+                    "matches": 5801,
+                    "wins": 2813
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1058,
+                    "wins": 546
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 5315,
+                    "wins": 2571
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 5764,
+                    "wins": 2793
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 5472,
+                    "wins": 2666
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 5574,
+                    "wins": 2660
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 5452,
+                    "wins": 2583
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 5413,
+                    "wins": 2595
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 5886,
+                    "wins": 2823
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 5548,
+                    "wins": 2728
+                }
+            ],
+            "hero_id": 1038
+        },
+        {
+            "total_matches": 315430,
+            "maps": [
+                {
+                    "map_id": 1267,
+                    "matches": 33634,
+                    "wins": 15875
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 34215,
+                    "wins": 16478
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 35005,
+                    "wins": 16863
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 34328,
+                    "wins": 16664
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 34228,
+                    "wins": 16472
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 33567,
+                    "wins": 15648
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 8292,
+                    "wins": 4005
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 33596,
+                    "wins": 16062
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 34181,
+                    "wins": 16132
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 34384,
+                    "wins": 16616
+                }
+            ],
+            "hero_id": 1050
+        },
+        {
+            "total_matches": 122739,
+            "maps": [
+                {
+                    "map_id": 1230,
+                    "matches": 14267,
+                    "wins": 7398
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 13944,
+                    "wins": 7043
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 13571,
+                    "wins": 6874
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 13147,
+                    "wins": 6633
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 12931,
+                    "wins": 6716
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 12713,
+                    "wins": 6694
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 2401,
+                    "wins": 1217
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 13568,
+                    "wins": 6923
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 13597,
+                    "wins": 6983
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 12600,
+                    "wins": 6443
+                }
+            ],
+            "hero_id": 1016
+        },
+        {
+            "total_matches": 57719,
+            "maps": [
+                {
+                    "map_id": 1288,
+                    "matches": 6016,
+                    "wins": 2837
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 6259,
+                    "wins": 3010
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1123,
+                    "wins": 579
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 6465,
+                    "wins": 3181
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 6193,
+                    "wins": 2987
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 6775,
+                    "wins": 3319
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 6644,
+                    "wins": 3195
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 6412,
+                    "wins": 3190
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 5724,
+                    "wins": 2770
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 6108,
+                    "wins": 2964
+                }
+            ],
+            "hero_id": 1035
+        },
+        {
+            "total_matches": 29112,
+            "maps": [
+                {
+                    "map_id": 1291,
+                    "matches": 2815,
+                    "wins": 1491
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 2923,
+                    "wins": 1471
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 3490,
+                    "wins": 1847
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 2856,
+                    "wins": 1460
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 2933,
+                    "wins": 1615
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 3512,
+                    "wins": 1820
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1109,
+                    "wins": 574
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 2836,
+                    "wins": 1448
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 3575,
+                    "wins": 1914
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 3063,
+                    "wins": 1578
+                }
+            ],
+            "hero_id": 1052
+        },
+        {
+            "total_matches": 26778,
+            "maps": [
+                {
+                    "map_id": 1272,
+                    "matches": 2585,
+                    "wins": 1171
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 2590,
+                    "wins": 1155
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 2549,
+                    "wins": 1143
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 2642,
+                    "wins": 1172
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 3407,
+                    "wins": 1544
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 2618,
+                    "wins": 1098
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 2665,
+                    "wins": 1195
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 2575,
+                    "wins": 1125
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 2543,
+                    "wins": 1121
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 2604,
+                    "wins": 1135
+                }
+            ],
+            "hero_id": 1017
+        },
+        {
+            "total_matches": 201946,
+            "maps": [
+                {
+                    "map_id": 1231,
+                    "matches": 22195,
+                    "wins": 11127
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 21988,
+                    "wins": 10955
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 21479,
+                    "wins": 10670
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 4124,
+                    "wins": 2036
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 21479,
+                    "wins": 10650
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 21625,
+                    "wins": 10620
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 22576,
+                    "wins": 11198
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 22136,
+                    "wins": 10939
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 22088,
+                    "wins": 10959
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 22256,
+                    "wins": 11191
+                }
+            ],
+            "hero_id": 1041
+        },
+        {
+            "total_matches": 71560,
+            "maps": [
+                {
+                    "map_id": 1231,
+                    "matches": 7286,
+                    "wins": 3659
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 7591,
+                    "wins": 3802
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1496,
+                    "wins": 779
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 7122,
+                    "wins": 3607
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 8588,
+                    "wins": 4456
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 8795,
+                    "wins": 4454
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 7368,
+                    "wins": 3812
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 8744,
+                    "wins": 4548
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 7085,
+                    "wins": 3460
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 7485,
+                    "wins": 3667
+                }
+            ],
+            "hero_id": 1048
+        },
+        {
+            "total_matches": 60682,
+            "maps": [
+                {
+                    "map_id": 1267,
+                    "matches": 6524,
+                    "wins": 3452
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 6522,
+                    "wins": 3413
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 7279,
+                    "wins": 3986
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 6149,
+                    "wins": 3245
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 6602,
+                    "wins": 3368
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 5637,
+                    "wins": 2852
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 7414,
+                    "wins": 4027
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 7035,
+                    "wins": 3766
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 789,
+                    "wins": 396
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 6731,
+                    "wins": 3349
+                }
+            ],
+            "hero_id": 1042
+        },
+        {
+            "total_matches": 19244,
+            "maps": [
+                {
+                    "map_id": 1267,
+                    "matches": 2226,
+                    "wins": 1060
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 1859,
+                    "wins": 844
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 2301,
+                    "wins": 1016
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 2155,
+                    "wins": 1020
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 484,
+                    "wins": 244
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 2336,
+                    "wins": 1141
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 1727,
+                    "wins": 781
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 1691,
+                    "wins": 763
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 2178,
+                    "wins": 1056
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 2287,
+                    "wins": 1064
+                }
+            ],
+            "hero_id": 1021
+        },
+        {
+            "total_matches": 117041,
+            "maps": [
+                {
+                    "map_id": 1292,
+                    "matches": 2086,
+                    "wins": 1099
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 11802,
+                    "wins": 6048
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 12145,
+                    "wins": 6174
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 14186,
+                    "wins": 7471
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 12120,
+                    "wins": 6263
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 12282,
+                    "wins": 6289
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 12318,
+                    "wins": 6335
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 13896,
+                    "wins": 7245
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 13834,
+                    "wins": 7143
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 12372,
+                    "wins": 6429
+                }
+            ],
+            "hero_id": 1039
+        },
+        {
+            "total_matches": 117662,
+            "maps": [
+                {
+                    "map_id": 1236,
+                    "matches": 13130,
+                    "wins": 6163
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 12650,
+                    "wins": 5927
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 12541,
+                    "wins": 6015
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 2095,
+                    "wins": 999
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 12802,
+                    "wins": 5952
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 13671,
+                    "wins": 6475
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 12664,
+                    "wins": 6102
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 13134,
+                    "wins": 6212
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 12251,
+                    "wins": 5879
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 12724,
+                    "wins": 6176
+                }
+            ],
+            "hero_id": 1045
+        },
+        {
+            "total_matches": 33794,
+            "maps": [
+                {
+                    "map_id": 1290,
+                    "matches": 3657,
+                    "wins": 1887
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 3843,
+                    "wins": 2058
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 3813,
+                    "wins": 1944
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 3704,
+                    "wins": 1907
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 3746,
+                    "wins": 1976
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 3481,
+                    "wins": 1856
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 3518,
+                    "wins": 1803
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 3686,
+                    "wins": 1949
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 758,
+                    "wins": 396
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 3588,
+                    "wins": 1900
+                }
+            ],
+            "hero_id": 1034
+        },
+        {
+            "total_matches": 51832,
+            "maps": [
+                {
+                    "map_id": 1267,
+                    "matches": 5252,
+                    "wins": 2768
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 5862,
+                    "wins": 3103
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 962,
+                    "wins": 505
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 6744,
+                    "wins": 3626
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 5264,
+                    "wins": 2873
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 5689,
+                    "wins": 3034
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 5475,
+                    "wins": 2941
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 6031,
+                    "wins": 3180
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 5570,
+                    "wins": 2962
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 4983,
+                    "wins": 2542
+                }
+            ],
+            "hero_id": 1026
+        },
+        {
+            "total_matches": 11,
+            "maps": [
+                {
+                    "map_id": 1236,
+                    "matches": 2,
+                    "wins": 0
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 1,
+                    "wins": 0
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 2,
+                    "wins": 0
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 1,
+                    "wins": 0
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 1,
+                    "wins": 0
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 2,
+                    "wins": 0
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1,
+                    "wins": 0
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 1,
+                    "wins": 0
+                }
+            ],
+            "hero_id": null
+        },
+        {
+            "total_matches": 65817,
+            "maps": [
+                {
+                    "map_id": 1291,
+                    "matches": 6821,
+                    "wins": 3368
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 7031,
+                    "wins": 3441
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 7344,
+                    "wins": 3654
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 7510,
+                    "wins": 3745
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 7605,
+                    "wins": 3702
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 6590,
+                    "wins": 3151
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 7450,
+                    "wins": 3630
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1899,
+                    "wins": 953
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 7333,
+                    "wins": 3697
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 6234,
+                    "wins": 3094
+                }
+            ],
+            "hero_id": 1024
+        },
+        {
+            "total_matches": 96361,
+            "maps": [
+                {
+                    "map_id": 1231,
+                    "matches": 11375,
+                    "wins": 5163
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 12550,
+                    "wins": 5795
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 11412,
+                    "wins": 5125
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 8840,
+                    "wins": 3891
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1715,
+                    "wins": 774
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 10452,
+                    "wins": 4551
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 11454,
+                    "wins": 5395
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 9837,
+                    "wins": 4487
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 8738,
+                    "wins": 3827
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 9988,
+                    "wins": 4545
+                }
+            ],
+            "hero_id": 1030
+        },
+        {
+            "total_matches": 119978,
+            "maps": [
+                {
+                    "map_id": 1230,
+                    "matches": 13038,
+                    "wins": 6554
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 12798,
+                    "wins": 6405
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 13510,
+                    "wins": 6722
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 13758,
+                    "wins": 7007
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 12707,
+                    "wins": 6248
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 13124,
+                    "wins": 6575
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 13316,
+                    "wins": 6710
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 12749,
+                    "wins": 6266
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 12602,
+                    "wins": 6311
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 2376,
+                    "wins": 1246
+                }
+            ],
+            "hero_id": 1027
+        },
+        {
+            "total_matches": 215300,
+            "maps": [
+                {
+                    "map_id": 1236,
+                    "matches": 22918,
+                    "wins": 11030
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 23541,
+                    "wins": 11271
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 23422,
+                    "wins": 11178
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 23618,
+                    "wins": 11099
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 23896,
+                    "wins": 11188
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 23707,
+                    "wins": 11295
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 4322,
+                    "wins": 2004
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 23617,
+                    "wins": 11107
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 23366,
+                    "wins": 11108
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 22893,
+                    "wins": 10916
+                }
+            ],
+            "hero_id": 1031
+        },
+        {
+            "total_matches": 63903,
+            "maps": [
+                {
+                    "map_id": 1245,
+                    "matches": 7380,
+                    "wins": 3846
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 7346,
+                    "wins": 3761
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 7089,
+                    "wins": 3540
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1417,
+                    "wins": 710
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 6620,
+                    "wins": 3511
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 6001,
+                    "wins": 3102
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 7323,
+                    "wins": 3746
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 6782,
+                    "wins": 3376
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 7642,
+                    "wins": 3862
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 6303,
+                    "wins": 3283
+                }
+            ],
+            "hero_id": 1036
+        },
+        {
+            "total_matches": 355479,
+            "maps": [
+                {
+                    "map_id": 1292,
+                    "matches": 7725,
+                    "wins": 3576
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 38656,
+                    "wins": 18597
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 38491,
+                    "wins": 18749
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 38870,
+                    "wins": 19027
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 39158,
+                    "wins": 18853
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 38030,
+                    "wins": 18707
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 38399,
+                    "wins": 18739
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 38877,
+                    "wins": 18970
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 38838,
+                    "wins": 18681
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 38435,
+                    "wins": 18787
+                }
+            ],
+            "hero_id": 1025
+        },
+        {
+            "total_matches": 39158,
+            "maps": [
+                {
+                    "map_id": 1245,
+                    "matches": 4025,
+                    "wins": 2111
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 3923,
+                    "wins": 2001
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 4238,
+                    "wins": 2190
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 4031,
+                    "wins": 2124
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 4024,
+                    "wins": 2001
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 4066,
+                    "wins": 2101
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 4735,
+                    "wins": 2477
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 840,
+                    "wins": 430
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 4591,
+                    "wins": 2409
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 4685,
+                    "wins": 2519
+                }
+            ],
+            "hero_id": 1040
+        },
+        {
+            "total_matches": 28817,
+            "maps": [
+                {
+                    "map_id": 1231,
+                    "matches": 3128,
+                    "wins": 1532
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 3058,
+                    "wins": 1486
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 3074,
+                    "wins": 1490
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 3163,
+                    "wins": 1603
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 2994,
+                    "wins": 1461
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 3143,
+                    "wins": 1559
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 3137,
+                    "wins": 1519
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1019,
+                    "wins": 524
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 3084,
+                    "wins": 1570
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 3017,
+                    "wins": 1450
+                }
+            ],
+            "hero_id": 1046
+        },
+        {
+            "total_matches": 39474,
+            "maps": [
+                {
+                    "map_id": 1290,
+                    "matches": 3021,
+                    "wins": 1214
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 3721,
+                    "wins": 1703
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 5180,
+                    "wins": 2482
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 5008,
+                    "wins": 2398
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 5115,
+                    "wins": 2434
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 5048,
+                    "wins": 2380
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 782,
+                    "wins": 358
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 4027,
+                    "wins": 1822
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 3313,
+                    "wins": 1457
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 4259,
+                    "wins": 1924
+                }
+            ],
+            "hero_id": 1047
+        },
+        {
+            "total_matches": 216450,
+            "maps": [
+                {
+                    "map_id": 1245,
+                    "matches": 23433,
+                    "wins": 11164
+                },
+                {
+                    "map_id": 1230,
+                    "matches": 24429,
+                    "wins": 11631
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 21834,
+                    "wins": 10509
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 24376,
+                    "wins": 11530
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 22395,
+                    "wins": 10758
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 24560,
+                    "wins": 11844
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 24032,
+                    "wins": 11426
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 22002,
+                    "wins": 10686
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 4177,
+                    "wins": 1970
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 25212,
+                    "wins": 12128
+                }
+            ],
+            "hero_id": 1037
+        },
+        {
+            "total_matches": 66510,
+            "maps": [
+                {
+                    "map_id": 1230,
+                    "matches": 7152,
+                    "wins": 3698
+                },
+                {
+                    "map_id": 1288,
+                    "matches": 7202,
+                    "wins": 3740
+                },
+                {
+                    "map_id": 1267,
+                    "matches": 7290,
+                    "wins": 3628
+                },
+                {
+                    "map_id": 1292,
+                    "matches": 1328,
+                    "wins": 701
+                },
+                {
+                    "map_id": 1272,
+                    "matches": 7693,
+                    "wins": 3956
+                },
+                {
+                    "map_id": 1290,
+                    "matches": 7079,
+                    "wins": 3514
+                },
+                {
+                    "map_id": 1236,
+                    "matches": 7658,
+                    "wins": 3969
+                },
+                {
+                    "map_id": 1245,
+                    "matches": 6829,
+                    "wins": 3476
+                },
+                {
+                    "map_id": 1231,
+                    "matches": 7137,
+                    "wins": 3616
+                },
+                {
+                    "map_id": 1291,
+                    "matches": 7142,
+                    "wins": 3615
+                }
+            ],
+            "hero_id": 1020
+        }
+    ],
+    "teamups": [
+        {
+            "teamups": {
+                "total_matches": 4758.0,
+                "2011": {
+                    "matches": 186,
+                    "wins": 98
+                },
+                "2040": {
+                    "matches": 2380,
+                    "wins": 2226
+                },
+                "1028": {
+                    "matches": 46,
+                    "wins": 18
+                },
+                "2007": {
+                    "matches": 246,
+                    "wins": 91
+                },
+                "1027": {
+                    "matches": 63,
+                    "wins": 55
+                },
+                "2030": {
+                    "matches": 594,
+                    "wins": 454
+                },
+                "2004": {
+                    "matches": 77,
+                    "wins": 37
+                },
+                "2012": {
+                    "matches": 466,
+                    "wins": 332
+                },
+                "2042": {
+                    "matches": 2472,
+                    "wins": 2204
+                },
+                "2001": {
+                    "matches": 62,
+                    "wins": 41
+                },
+                "2041": {
+                    "matches": 230,
+                    "wins": 158
+                },
+                "2013": {
+                    "matches": 178,
+                    "wins": 94
+                },
+                "2008": {
+                    "matches": 30,
+                    "wins": 27
+                },
+                "2039": {
+                    "matches": 367,
+                    "wins": 334
+                },
+                "2005": {
+                    "matches": 52,
+                    "wins": 19
+                },
+                "1026": {
+                    "matches": 216,
+                    "wins": 206
+                },
+                "2006": {
+                    "matches": 51,
+                    "wins": 26
+                },
+                "1029": {
+                    "matches": 28,
+                    "wins": 11
+                },
+                "2003": {
+                    "matches": 29,
+                    "wins": 16
+                },
+                "2014": {
+                    "matches": 1,
+                    "wins": 1
+                }
+            },
+            "rank": "0"
+        },
+        {
+            "teamups": {
+                "total_matches": 63880.0,
+                "2040": {
+                    "matches": 41787,
+                    "wins": 22644
+                },
+                "2042": {
+                    "matches": 51489,
+                    "wins": 28890
+                },
+                "1026": {
+                    "matches": 6562,
+                    "wins": 3688
+                },
+                "2011": {
+                    "matches": 622,
+                    "wins": 323
+                },
+                "2041": {
+                    "matches": 5469,
+                    "wins": 2827
+                },
+                "2030": {
+                    "matches": 12885,
+                    "wins": 7422
+                },
+                "2006": {
+                    "matches": 634,
+                    "wins": 364
+                },
+                "1028": {
+                    "matches": 558,
+                    "wins": 255
+                },
+                "2012": {
+                    "matches": 5325,
+                    "wins": 2795
+                },
+                "2039": {
+                    "matches": 11752,
+                    "wins": 6672
+                },
+                "2013": {
+                    "matches": 2684,
+                    "wins": 1518
+                },
+                "1029": {
+                    "matches": 160,
+                    "wins": 113
+                },
+                "2007": {
+                    "matches": 2939,
+                    "wins": 1819
+                },
+                "1027": {
+                    "matches": 1088,
+                    "wins": 674
+                },
+                "2001": {
+                    "matches": 563,
+                    "wins": 422
+                },
+                "2003": {
+                    "matches": 168,
+                    "wins": 97
+                },
+                "2008": {
+                    "matches": 297,
+                    "wins": 199
+                },
+                "2005": {
+                    "matches": 364,
+                    "wins": 247
+                },
+                "2014": {
+                    "matches": 105,
+                    "wins": 49
+                },
+                "2004": {
+                    "matches": 259,
+                    "wins": 147
+                }
+            },
+            "rank": "1"
+        },
+        {
+            "teamups": {
+                "total_matches": 3596.0,
+                "2042": {
+                    "matches": 1327,
+                    "wins": 630
+                },
+                "2030": {
+                    "matches": 292,
+                    "wins": 149
+                },
+                "2040": {
+                    "matches": 877,
+                    "wins": 385
+                },
+                "1027": {
+                    "matches": 143,
+                    "wins": 75
+                },
+                "2007": {
+                    "matches": 436,
+                    "wins": 242
+                },
+                "2012": {
+                    "matches": 870,
+                    "wins": 392
+                },
+                "2013": {
+                    "matches": 123,
+                    "wins": 62
+                },
+                "2003": {
+                    "matches": 23,
+                    "wins": 13
+                },
+                "2004": {
+                    "matches": 48,
+                    "wins": 25
+                },
+                "1026": {
+                    "matches": 131,
+                    "wins": 74
+                },
+                "2039": {
+                    "matches": 309,
+                    "wins": 160
+                },
+                "2005": {
+                    "matches": 33,
+                    "wins": 22
+                },
+                "2008": {
+                    "matches": 48,
+                    "wins": 33
+                },
+                "2041": {
+                    "matches": 103,
+                    "wins": 45
+                },
+                "1029": {
+                    "matches": 11,
+                    "wins": 7
+                },
+                "2001": {
+                    "matches": 20,
+                    "wins": 9
+                },
+                "2011": {
+                    "matches": 21,
+                    "wins": 9
+                },
+                "2006": {
+                    "matches": 57,
+                    "wins": 28
+                },
+                "2014": {
+                    "matches": 4,
+                    "wins": 2
+                },
+                "1028": {
+                    "matches": 9,
+                    "wins": 5
+                }
+            },
+            "rank": "2"
+        },
+        {
+            "teamups": {
+                "total_matches": 6799.5,
+                "2011": {
+                    "matches": 56,
+                    "wins": 24
+                },
+                "2041": {
+                    "matches": 249,
+                    "wins": 120
+                },
+                "2042": {
+                    "matches": 2847,
+                    "wins": 1363
+                },
+                "2039": {
+                    "matches": 600,
+                    "wins": 303
+                },
+                "2040": {
+                    "matches": 1810,
+                    "wins": 832
+                },
+                "2005": {
+                    "matches": 65,
+                    "wins": 41
+                },
+                "2030": {
+                    "matches": 546,
+                    "wins": 288
+                },
+                "2012": {
+                    "matches": 1787,
+                    "wins": 831
+                },
+                "2007": {
+                    "matches": 804,
+                    "wins": 430
+                },
+                "2013": {
+                    "matches": 231,
+                    "wins": 120
+                },
+                "1026": {
+                    "matches": 253,
+                    "wins": 129
+                },
+                "1027": {
+                    "matches": 260,
+                    "wins": 139
+                },
+                "2004": {
+                    "matches": 66,
+                    "wins": 42
+                },
+                "2006": {
+                    "matches": 125,
+                    "wins": 56
+                },
+                "2003": {
+                    "matches": 88,
+                    "wins": 54
+                },
+                "2008": {
+                    "matches": 76,
+                    "wins": 44
+                },
+                "1029": {
+                    "matches": 33,
+                    "wins": 19
+                },
+                "1028": {
+                    "matches": 17,
+                    "wins": 9
+                },
+                "2001": {
+                    "matches": 42,
+                    "wins": 29
+                },
+                "2014": {
+                    "matches": 3,
+                    "wins": 2
+                }
+            },
+            "rank": "3"
+        },
+        {
+            "teamups": {
+                "total_matches": 16126.5,
+                "2040": {
+                    "matches": 3688,
+                    "wins": 1705
+                },
+                "2042": {
+                    "matches": 6561,
+                    "wins": 3235
+                },
+                "2004": {
+                    "matches": 107,
+                    "wins": 60
+                },
+                "2003": {
+                    "matches": 336,
+                    "wins": 203
+                },
+                "2008": {
+                    "matches": 188,
+                    "wins": 109
+                },
+                "2012": {
+                    "matches": 4207,
+                    "wins": 1885
+                },
+                "2039": {
+                    "matches": 1593,
+                    "wins": 793
+                },
+                "2007": {
+                    "matches": 1928,
+                    "wins": 1061
+                },
+                "2030": {
+                    "matches": 1235,
+                    "wins": 651
+                },
+                "1027": {
+                    "matches": 815,
+                    "wins": 490
+                },
+                "1026": {
+                    "matches": 457,
+                    "wins": 238
+                },
+                "2006": {
+                    "matches": 248,
+                    "wins": 130
+                },
+                "2013": {
+                    "matches": 531,
+                    "wins": 257
+                },
+                "2041": {
+                    "matches": 668,
+                    "wins": 318
+                },
+                "2005": {
+                    "matches": 198,
+                    "wins": 123
+                },
+                "1029": {
+                    "matches": 132,
+                    "wins": 78
+                },
+                "2011": {
+                    "matches": 145,
+                    "wins": 75
+                },
+                "1028": {
+                    "matches": 27,
+                    "wins": 12
+                },
+                "2001": {
+                    "matches": 60,
+                    "wins": 44
+                },
+                "2014": {
+                    "matches": 8,
+                    "wins": 5
+                }
+            },
+            "rank": "4"
+        },
+        {
+            "teamups": {
+                "total_matches": 28153.5,
+                "2042": {
+                    "matches": 12145,
+                    "wins": 6053
+                },
+                "2013": {
+                    "matches": 1140,
+                    "wins": 576
+                },
+                "2012": {
+                    "matches": 5921,
+                    "wins": 2688
+                },
+                "1027": {
+                    "matches": 1891,
+                    "wins": 1057
+                },
+                "2007": {
+                    "matches": 3367,
+                    "wins": 1755
+                },
+                "2011": {
+                    "matches": 112,
+                    "wins": 58
+                },
+                "2030": {
+                    "matches": 2297,
+                    "wins": 1176
+                },
+                "2039": {
+                    "matches": 1324,
+                    "wins": 685
+                },
+                "2041": {
+                    "matches": 952,
+                    "wins": 484
+                },
+                "2040": {
+                    "matches": 5170,
+                    "wins": 2348
+                },
+                "2005": {
+                    "matches": 464,
+                    "wins": 285
+                },
+                "2003": {
+                    "matches": 754,
+                    "wins": 438
+                },
+                "2006": {
+                    "matches": 345,
+                    "wins": 192
+                },
+                "1026": {
+                    "matches": 617,
+                    "wins": 309
+                },
+                "2008": {
+                    "matches": 228,
+                    "wins": 132
+                },
+                "2001": {
+                    "matches": 132,
+                    "wins": 90
+                },
+                "1029": {
+                    "matches": 107,
+                    "wins": 68
+                },
+                "1028": {
+                    "matches": 64,
+                    "wins": 34
+                },
+                "2004": {
+                    "matches": 129,
+                    "wins": 53
+                },
+                "2014": {
+                    "matches": 37,
+                    "wins": 25
+                }
+            },
+            "rank": "5"
+        },
+        {
+            "teamups": {
+                "total_matches": 29637.0,
+                "2042": {
+                    "matches": 13772,
+                    "wins": 6947
+                },
+                "2001": {
+                    "matches": 262,
+                    "wins": 184
+                },
+                "2012": {
+                    "matches": 3814,
+                    "wins": 1623
+                },
+                "2007": {
+                    "matches": 2730,
+                    "wins": 1410
+                },
+                "2013": {
+                    "matches": 1534,
+                    "wins": 788
+                },
+                "2030": {
+                    "matches": 2436,
+                    "wins": 1275
+                },
+                "1027": {
+                    "matches": 2064,
+                    "wins": 1168
+                },
+                "2040": {
+                    "matches": 4714,
+                    "wins": 2114
+                },
+                "2041": {
+                    "matches": 1125,
+                    "wins": 589
+                },
+                "1029": {
+                    "matches": 83,
+                    "wins": 50
+                },
+                "2039": {
+                    "matches": 1029,
+                    "wins": 506
+                },
+                "2003": {
+                    "matches": 730,
+                    "wins": 407
+                },
+                "2005": {
+                    "matches": 573,
+                    "wins": 359
+                },
+                "1028": {
+                    "matches": 68,
+                    "wins": 30
+                },
+                "2008": {
+                    "matches": 102,
+                    "wins": 58
+                },
+                "1026": {
+                    "matches": 461,
+                    "wins": 263
+                },
+                "2011": {
+                    "matches": 133,
+                    "wins": 70
+                },
+                "2006": {
+                    "matches": 360,
+                    "wins": 180
+                },
+                "2004": {
+                    "matches": 106,
+                    "wins": 59
+                },
+                "2014": {
+                    "matches": 44,
+                    "wins": 23
+                }
+            },
+            "rank": "6"
+        },
+        {
+            "teamups": {
+                "total_matches": 8821.0,
+                "2003": {
+                    "matches": 178,
+                    "wins": 108
+                },
+                "2042": {
+                    "matches": 4014,
+                    "wins": 2034
+                },
+                "2013": {
+                    "matches": 543,
+                    "wins": 283
+                },
+                "1027": {
+                    "matches": 588,
+                    "wins": 333
+                },
+                "2001": {
+                    "matches": 130,
+                    "wins": 83
+                },
+                "2012": {
+                    "matches": 517,
+                    "wins": 196
+                },
+                "2007": {
+                    "matches": 533,
+                    "wins": 273
+                },
+                "2040": {
+                    "matches": 1070,
+                    "wins": 477
+                },
+                "2041": {
+                    "matches": 403,
+                    "wins": 214
+                },
+                "2030": {
+                    "matches": 665,
+                    "wins": 331
+                },
+                "2039": {
+                    "matches": 321,
+                    "wins": 155
+                },
+                "2006": {
+                    "matches": 168,
+                    "wins": 87
+                },
+                "1028": {
+                    "matches": 39,
+                    "wins": 13
+                },
+                "2005": {
+                    "matches": 174,
+                    "wins": 93
+                },
+                "2011": {
+                    "matches": 63,
+                    "wins": 34
+                },
+                "1026": {
+                    "matches": 113,
+                    "wins": 63
+                },
+                "2014": {
+                    "matches": 12,
+                    "wins": 4
+                },
+                "2004": {
+                    "matches": 15,
+                    "wins": 6
+                },
+                "2008": {
+                    "matches": 21,
+                    "wins": 16
+                },
+                "1029": {
+                    "matches": 13,
+                    "wins": 9
+                }
+            },
+            "rank": "7"
+        },
+        {
+            "teamups": {
+                "total_matches": 962.0,
+                "2030": {
+                    "matches": 48,
+                    "wins": 25
+                },
+                "2042": {
+                    "matches": 466,
+                    "wins": 225
+                },
+                "2041": {
+                    "matches": 80,
+                    "wins": 47
+                },
+                "2011": {
+                    "matches": 25,
+                    "wins": 14
+                },
+                "2013": {
+                    "matches": 78,
+                    "wins": 41
+                },
+                "2007": {
+                    "matches": 35,
+                    "wins": 18
+                },
+                "1028": {
+                    "matches": 2,
+                    "wins": 0
+                },
+                "2040": {
+                    "matches": 114,
+                    "wins": 54
+                },
+                "2012": {
+                    "matches": 20,
+                    "wins": 10
+                },
+                "1027": {
+                    "matches": 27,
+                    "wins": 13
+                },
+                "2001": {
+                    "matches": 30,
+                    "wins": 15
+                },
+                "2039": {
+                    "matches": 41,
+                    "wins": 24
+                },
+                "2006": {
+                    "matches": 10,
+                    "wins": 5
+                },
+                "2005": {
+                    "matches": 15,
+                    "wins": 10
+                },
+                "1026": {
+                    "matches": 6,
+                    "wins": 3
+                },
+                "2003": {
+                    "matches": 10,
+                    "wins": 8
+                },
+                "2014": {
+                    "matches": 2,
+                    "wins": 2
+                }
+            },
+            "rank": "8"
+        }
+    ],
+    "timestamp": 1740238921
+}
