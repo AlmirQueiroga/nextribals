@@ -167,4 +167,7 @@ export const GameStatusTable = styled.table`
       padding-left: 3em;
     }
   }
+  tbody {
+    width: 100%;
+  }
 `;

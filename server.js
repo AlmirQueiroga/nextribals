@@ -44,35 +44,28 @@ app.prepare().then(() => {
         for (const time of gerarCombinacoes(herois, numeroDeHeroisNoTime)) {
             const pontuacao = calcularPontuacaoTime(time, mapa);
             const resultado = {
-                herois: time, // Exemplo de nomeação dos heróis
+                herois: time,
                 // tipo: 'time',
                 // mapa,
                 pontuacao,
-                // sinergia: pontuacao * 0.8, // Exemplo de cálculo de sinergia
-                // eficacia: pontuacao * 0.9, // Exemplo de cálculo de eficácia
             };
 
-            // Envia o resultado como um chunk
             res.write(JSON.stringify(resultado) + '\n');
         }
 
-        // Finaliza a resposta
         res.end();
     });
 
-    // Todas as outras rotas são manipuladas pelo Next.js
     server.all('*', (req, res) => {
         return handle(req, res);
     });
 
-    // Inicia o servidor
     server.listen(3001, (err) => {
         if (err) throw err;
         console.log('> Servidor Express pronto em http://localhost:3001');
     });
 });
 
-// Função para calcular a pontuação de um time
 function calcularPontuacaoTime(time, mapa) {
     let pontuacao = 0;
     for (const heroId of time) {

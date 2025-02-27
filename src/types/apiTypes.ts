@@ -1,4 +1,4 @@
-import { HeroDict } from "./types";
+import { CompList, HeroDict } from "./types";
 
 export type MapsDict = {
     [mapId : string]: HeroDict
@@ -23,4 +23,10 @@ export type PlayerHero = {
   hero_id: string;
   play_time: number;
   session_hit_rate: string;
+}
+
+export interface WorkerMessage {
+  type: 'comp' | 'done' | 'error';
+  data?: CompList[];
+  error?: string;
 }
