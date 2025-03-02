@@ -1,4 +1,4 @@
-import { CompList } from "@/types/types";
+import { Classe, ClassType, CompList, HeroID } from "@/types/types";
 import { encodeBase64 } from "@/utils";
 
 interface WorkerMessage {
@@ -7,8 +7,8 @@ interface WorkerMessage {
     error?: string;
 }
 
-self.onmessage = async (event: MessageEvent<{ mapa: any; numeroDeHeroisNoTime: number; tipo: string }>) => {
-    const { mapa, numeroDeHeroisNoTime, tipo } = event.data;
+self.onmessage = async (event: MessageEvent<{ mapa: any; numeroDeHeroisNoTime: number; tipo: string; formacoes: string[], classeHeroi: ClassType }>) => {
+    const { mapa, numeroDeHeroisNoTime, tipo, formacoes, classeHeroi } = event.data;
 
     try {
         const response = await fetch('http://localhost:3001/api/calcularTimes', {
@@ -16,7 +16,7 @@ self.onmessage = async (event: MessageEvent<{ mapa: any; numeroDeHeroisNoTime: n
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ mapa, numeroDeHeroisNoTime }),
+            body: JSON.stringify({ mapa, numeroDeHeroisNoTime, formacoes, classeHeroi }),
         });
 
         if (!response.ok) {
@@ -46,6 +46,8 @@ self.onmessage = async (event: MessageEvent<{ mapa: any; numeroDeHeroisNoTime: n
                             tipo,
                             mapa,
                         };
+
+                        //self.postMessage({ type: 'comp', data: [comp] });
 
                         batch.push(comp);
 

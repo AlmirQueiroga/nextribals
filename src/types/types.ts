@@ -65,6 +65,16 @@ export interface Mapa {
     countered?: Heroi[];
   }
 
+  export type ClassType = {
+     [id: string]: string 
+  }
+
+  export type ClassComp = {
+    'Vanguard': number,
+    'Duelist': number,
+    'Strategist': number,
+  }
+
   export enum Classe {
     Vanguard = 'Vanguard',
     Duelist = 'Duelist',

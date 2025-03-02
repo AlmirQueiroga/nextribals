@@ -1,5 +1,5 @@
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { CompList, Heroi, Mapa } from '@/types/types';
+import { ClassType, CompList, Heroi, Mapa } from '@/types/types';
 import { GameContext } from '@/context/context';
 import { WorkerMessage } from '@/types/apiTypes';
 import { FixedSizeList as List } from 'react-window';
@@ -43,13 +43,18 @@ const CompsPage: React.FC = () => {
     useEffect(() => {
         if (mapa && mapa.stats) {
             setComps([]); 
-
+            const classeHeroi = state.herois.reduce<ClassType>((acc, h) => {
+                acc[h.id] = h.role as string;
+                return acc;
+              }, {});
             const worker = new Worker(new URL('./worker.ts', import.meta.url));
 
             worker.postMessage({
                 mapa,
                 numeroDeHeroisNoTime: 6,
                 tipo,
+                formacoes: state.formacao,
+                classeHeroi
             });
 
             
@@ -58,7 +63,7 @@ const CompsPage: React.FC = () => {
 
                 if (type === 'comp' && data) {
                     //const decodedData = JSON.parse(decodeBase64(data)) as CompList;
-                    
+                    console.log("AAAAAAAAAAA", data)
                     handleData(data);
                 } else if (type === 'done') {
                     console.log('Processamento concluído');
@@ -76,7 +81,8 @@ const CompsPage: React.FC = () => {
        
 
     const handleData = useCallback((comp:CompList[]) => {
-        setComps((prev) => prev.concat(comp));
+        const OrgComps = comps.concat(comp).sort((a, b) => b.pontuacao - a.pontuacao)
+        setComps(OrgComps);
     }, []);
 
     const loadMore = () => {
@@ -148,12 +154,12 @@ const CompsPage: React.FC = () => {
                         required
                     >
                         <option value="">Selecione um submapa</option>
-                        {mapa.sub_map && 
+                        {/* {mapa.sub_map && 
                         mapa.sub_map.map((sub, index) => (
                             sub.name &&<option key={index} value={sub.id}>
                             {sub.name}
                             </option>                      
-                        ))}
+                        ))} */}
                     </select>
                     )
                     :
