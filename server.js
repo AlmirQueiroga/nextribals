@@ -50,7 +50,7 @@ app.prepare().then(() => {
                 const part = stats.partidas;
 
                 const taxaVitoria = vic / part;
-                const lowerBound = wilsonLower(taxaVitoria, total);
+                const lowerBound = wilsonLower(taxaVitoria, part);
 
                 return lowerBound* 100;
             }
@@ -69,7 +69,7 @@ app.prepare().then(() => {
                 const part = stats.partidas;
                 
                 const taxaVitoria = vic / part;
-                const lowerBound = wilsonLower(taxaVitoria, total);
+                const lowerBound = wilsonLower(taxaVitoria, part);
 
                 return lowerBound * 100;
             }
