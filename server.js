@@ -95,98 +95,122 @@ app.prepare().then(() => {
             return pontuacao;
         }
 
-
-        const formacoesValidas = formacoes.map((formacao) => {
-            const [vanguard, duelist, strategist] = formacao.split(' - ').map(Number);
-            return { "Vanguard": vanguard, "Duelist": duelist, "Strategist": strategist };
-        });
-
-
-        function allowedRole(team) {
-            for (const pos of formacoesValidas) {
-                if (team["Vanguard"] <= pos["Vanguard"] && team["Duelist"] <= pos["Duelist"] && team["Strategist"] <= pos["Strategist"]) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        const heroisOrdenados = herois.sort((a, b) => calcularPontuacaoHeroi(b) - calcularPontuacaoHeroi(a));
-
-        async function* gerarCombinacoes(tamanho) {
-            function* combinar(
-                lista,
-                comeco,
-                combinacaoAtual,
-                contadoresClasses,
-                pontuacaoAtual,
-            ) {
-                if (combinacaoAtual.length == tamanho) {
-                    yield { herois: [...combinacaoAtual], pontuacao: pontuacaoAtual };
-                    return;
-                }
-        
-                const listaRestante = lista.slice(comeco);
-                
-                listaRestante.sort((a, b) => 
-                    calcularPontuacaoAliadoDisponivel(combinacaoAtual, b) - 
-                    calcularPontuacaoAliadoDisponivel(combinacaoAtual, a)
-                );
-        
-                let haNumerosValidos = false;
-        
-                for (let i = 0; i < listaRestante.length; i++) {
-                    const id = listaRestante[i];
-                    const novaClasse = classeHeroi[id];
-                    const novosContadores = { 
-                        ...contadoresClasses, 
-                        [novaClasse]: contadoresClasses[novaClasse] + 1 
-                    };
-        
-                    if (allowedRole(novosContadores)) {
-                        haNumerosValidos = true;
-                        combinacaoAtual.push(id);
-                        
-                        const valorHeroi = calcularPontuacaoAliadoDisponivel(combinacaoAtual, id);
-                        const novaPontuacao = pontuacaoAtual + valorHeroi;
-        
-                        const indiceOriginal = lista.indexOf(id, comeco);
-        
-                        yield* combinar(
-                            lista,
-                            indiceOriginal + 1,
-                            combinacaoAtual,
-                            novosContadores,
-                            novaPontuacao
-                        );
-        
-                        combinacaoAtual.pop();
-                        novosContadores[novaClasse]--;
-        
-                        if (combinacaoAtual.length % 10 == 0) {
-                            yield;
-                        }
-                    }
-                }
-        
-                if (!haNumerosValidos) return;
-            }
-
-            for (const time of combinar(heroisOrdenados,0,[],{ "Vanguard": 0, "Duelist": 0, "Strategist": 0 },0)) {
-                yield time; 
-                await new Promise(resolve => setImmediate(resolve));
-            }
-        
+        const calcularPontuacaoContraInimigo = (heroiId, inimigoId) => {
+            const stats = mapa.stats.heroes[heroiId]?.inimigos?.[inimigoId];
+            if (!stats?.partidas) return 0;
+    
+            const vic = stats.vitorias || 0;
+            const part = stats.partidas;
+            const taxa = vic / part;
             
+            // Fórmula Wilson Score Balanceada
+            const z = 1.96;
+            const numerador = vic + z*z/2;
+            const denominador = part + z*z;
+            const taxaAjustada = numerador / denominador;
+            const desvioPadrao = Math.sqrt((taxa * (1 - taxa) + z*z/(4*part)) / denominador);
+            
+            return Math.max(0, (taxaAjustada - z * desvioPadrao)) * 100;
+        };
+    
+        // Função para calcular o mapa completo de inimigos de um time
+        const calcularMapaInimigosTime = (time) => {
+            const mapaInimigos = {};
+    
+            for (const inimigoId of Object.keys(mapa.stats.heroes)) {
+                let pontuacaoTotal = 0;
+                
+                for (const heroiId of time) {
+                    pontuacaoTotal += calcularPontuacaoContraInimigo(heroiId, inimigoId);
+                }
+                
+                // Média simples entre os heróis do time
+                mapaInimigos[inimigoId] = pontuacaoTotal / time.length;
+            }
+    
+            return mapaInimigos;
+        };
+
+        const formacoesValidas = formacoes.map((formacao) => ({
+            "Vanguard": +formacao.split(' - ')[0],
+            "Duelist": +formacao.split(' - ')[1],
+            "Strategist": +formacao.split(' - ')[2]
+        }));
+    
+        function allowedRole(contadores) {
+            return formacoesValidas.some(pos => 
+                contadores.Vanguard <= pos.Vanguard &&
+                contadores.Duelist <= pos.Duelist &&
+                contadores.Strategist <= pos.Strategist
+            );
         }
-        
+    
+        async function* gerarCombinacoes(tamanho) {
+            const heroisComPontuacao = herois.map(id => ({
+                id,
+                score: calcularPontuacaoHeroi(id),
+            })).sort((a, b) => b.score - a.score);
+    
+            // Usamos um heap máximo para eficiência
+            const queue = new MaxHeap((a, b) => a.upperBound - b.upperBound);
+            queue.insert({
+                current: [],
+                index: 0,
+                contadores: { Vanguard: 0, Duelist: 0, Strategist: 0 },
+                pontuacao: 0,
+                upperBound: heroisComPontuacao
+                    .slice(0, tamanho)
+                    .reduce((sum, h) => sum + h.score, 0)
+            });
+    
+            let count = 0;
+            
+            while (!queue.isEmpty()) {
+                const state = queue.extract();
+                
+                if (state.current.length === tamanho) {
+                    yield { herois: state.current, pontuacao: state.pontuacao };
+                    if (++count % 10 === 0) await new Promise(resolve => setImmediate(resolve));
+                    continue;
+                }
+    
+                const remaining = tamanho - state.current.length;
+                const startIndex = state.index;
+                
+                for (let i = startIndex; i < heroisComPontuacao.length; i++) {
+                    const hero = heroisComPontuacao[i];
+                    const classe = classeHeroi[hero.id];
+                    
+                    const novosContadores = {
+                        ...state.contadores,
+                        [classe]: (state.contadores[classe] || 0) + 1
+                    };
+                    
+                    if (!allowedRole(novosContadores)) continue;
+    
+                    const pontuacaoReal = calcularPontuacaoAliadoDisponivel(state.current, hero.id);
+                    const novaPontuacao = state.pontuacao + pontuacaoReal;
+
+                    const remainingHerois = heroisComPontuacao
+                        .slice(i + 1, i + 1 + remaining - 1);
+                    const upperBound = novaPontuacao + 
+                        remainingHerois.reduce((sum, h) => sum + h.score, 0);
+    
+                    queue.insert({
+                        current: [...state.current, hero.id],
+                        index: i + 1,
+                        contadores: novosContadores,
+                        pontuacao: novaPontuacao,
+                        upperBound: upperBound
+                    });
+                }
+            }
+        }
+    
         try {
             const generator = gerarCombinacoes(numeroDeHeroisNoTime);
             for await (const time of generator) {
-                if (!time?.herois) continue;
-                const resultado = { herois: time.herois, pontuacao: time.pontuacao };
-                console.log("eeeeeeeeeeeee", resultado);
-                res.write(JSON.stringify(resultado) + '\n');
+                res.write(JSON.stringify(time) + '\n');
             }
             res.end();
         } catch (error) {
@@ -204,3 +228,73 @@ app.prepare().then(() => {
         console.log('> Servidor Express pronto em http://localhost:3001');
     });
 });
+
+
+class MaxHeap {
+    constructor(compareFn) {
+        this.heap = [];
+        this.compare = compareFn || ((a, b) => a - b);
+    }
+
+    insert(value) {
+        this.heap.push(value);
+        this.bubbleUp(this.heap.length - 1);
+    }
+
+    extract() {
+        const max = this.heap[0];
+        const end = this.heap.pop();
+        if (this.heap.length > 0) {
+            this.heap[0] = end;
+            this.sinkDown(0);
+        }
+        return max;
+    }
+
+    isEmpty() {
+        return this.heap.length === 0;
+    }
+
+    bubbleUp(index) {
+        const element = this.heap[index];
+        while (index > 0) {
+            const parentIndex = Math.floor((index - 1) / 2);
+            const parent = this.heap[parentIndex];
+            if (this.compare(element, parent) <= 0) break;
+            this.heap[index] = parent;
+            index = parentIndex;
+        }
+        this.heap[index] = element;
+    }
+
+    sinkDown(index) {
+        const length = this.heap.length;
+        const element = this.heap[index];
+        
+        while (true) {
+            let leftChildIndex = 2 * index + 1;
+            let rightChildIndex = 2 * index + 2;
+            let swap = null;
+            
+            if (leftChildIndex < length) {
+                if (this.compare(this.heap[leftChildIndex], element) > 0) {
+                    swap = leftChildIndex;
+                }
+            }
+            
+            if (rightChildIndex < length) {
+                if (
+                    (swap === null && this.compare(this.heap[rightChildIndex], element) > 0) ||
+                    (swap !== null && this.compare(this.heap[rightChildIndex], this.heap[leftChildIndex]) > 0)
+                ) {
+                    swap = rightChildIndex;
+                }
+            }
+            
+            if (swap === null) break;
+            this.heap[index] = this.heap[swap];
+            index = swap;
+        }
+        this.heap[index] = element;
+    }
+}

@@ -43,22 +43,18 @@ self.onmessage = async (event: MessageEvent<{ mapa: any; numeroDeHeroisNoTime: n
                         const comp: CompList = {
                             herois: resultado.herois,
                             pontuacao: resultado.pontuacao,
+                            inimigos: resultado.points_inimigos,
                             tipo,
                             mapa,
                         };
 
-                        //self.postMessage({ type: 'comp', data: [comp] });
-
                         batch.push(comp);
 
-                        if (batch.length >= 500) {
+                        if (batch.length >= 1500) {
                             self.postMessage({ type: 'comp', data: batch } as WorkerMessage);
                             batch = [];
                         }
 
-                        // const encodedData = encodeBase64(JSON.stringify(comp));
-                        // const dataObj:WorkerMessage = { type: 'comp', data: encodedData }
-                        // self.postMessage(dataObj);
                     } catch (error) {
                         console.error('Erro ao processar JSON:', error);
                     }

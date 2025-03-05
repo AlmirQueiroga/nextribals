@@ -69,6 +69,10 @@ export interface Mapa {
      [id: string]: string 
   }
 
+  export type PointsType = {
+    [id: HeroID]: number 
+ }
+
   export type ClassComp = {
     'Vanguard': number,
     'Duelist': number,
@@ -92,6 +96,7 @@ export interface Mapa {
     herois: string[];
     tipo: string;
     mapa: Mapa;
+    inimigos: PointsType;
     pontuacao:number;
     posicao?: string;
     submapa?: string;

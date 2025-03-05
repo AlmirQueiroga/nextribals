@@ -5,23 +5,6 @@ import { WorkerMessage } from '@/types/apiTypes';
 import { FixedSizeList as List } from 'react-window';
 import { Cell, VirtualHeader, RowWrapper, TableWrapper, HeaderCell, LoadMoreButton } from './style';
 
-// const HeroNames = ({ heroIds, herois }: { heroIds: string[]; herois: Heroi[] }) => {
-//     const names = useMemo(() => {
-//         return heroIds.map((hid) => {
-//             const hero = herois.find((h) => h.id == hid);
-//             return hero?.name || `Hero ${hid} desconhecido`;
-//         });
-//     }, [heroIds, herois]);
-
-//     return (
-//         <>
-//             {names.map((name, index) => (
-//                 <td key={index}>{name}</td>
-//             ))}
-//         </>
-//     );
-// };
-
 const CompsPage: React.FC = () => {
 
     const { state } = useContext(GameContext);
@@ -62,8 +45,7 @@ const CompsPage: React.FC = () => {
                 const { type, data, error } = event.data;
 
                 if (type === 'comp' && data) {
-                    //const decodedData = JSON.parse(decodeBase64(data)) as CompList;
-                    console.log("AAAAAAAAAAA", data)
+
                     handleData(data);
                 } else if (type === 'done') {
                     console.log('Processamento concluído');
@@ -81,8 +63,7 @@ const CompsPage: React.FC = () => {
        
 
     const handleData = useCallback((comp:CompList[]) => {
-        const OrgComps = comps.concat(comp).sort((a, b) => b.pontuacao - a.pontuacao)
-        setComps(OrgComps);
+        setComps((prev) => [...prev, ...comp]);
     }, []);
 
     const loadMore = () => {
@@ -90,7 +71,7 @@ const CompsPage: React.FC = () => {
       };
 
     const Row = ({ index, style }: { index: number; style: React.CSSProperties }) => {
-        if (index === visibleItems) {
+        if (index === visibleItems-1) {
             return (
               <div style={style}>
                 <LoadMoreButton onClick={loadMore} disabled={visibleItems >= comps.length}>
@@ -154,12 +135,6 @@ const CompsPage: React.FC = () => {
                         required
                     >
                         <option value="">Selecione um submapa</option>
-                        {/* {mapa.sub_map && 
-                        mapa.sub_map.map((sub, index) => (
-                            sub.name &&<option key={index} value={sub.id}>
-                            {sub.name}
-                            </option>                      
-                        ))} */}
                     </select>
                     )
                     :
@@ -216,28 +191,6 @@ const CompsPage: React.FC = () => {
                 </List>
 
             </TableWrapper>
-
-        {/* <GameStatusTable>
-            <thead> 
-                <tr>
-                    <th>Person 1</th>
-                    <th>Person 2</th>
-                    <th>Person 3</th>
-                    <th>Person 4</th>
-                    <th>Person 5</th>
-                    <th>Person 6</th>
-                </tr>
-            </thead>
-            <tbody>
-                {comps.map((c, index) => (
-                    c.herois &&
-                    <tr key={index}>
-                        <HeroNames heroIds={c.herois} herois={state.herois} />
-                    </tr>
-                ))}
-                
-            </tbody>
-        </GameStatusTable> */}
         
         </div>
             
