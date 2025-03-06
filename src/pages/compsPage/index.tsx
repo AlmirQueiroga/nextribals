@@ -1,9 +1,10 @@
-import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react';
+import React, { memo, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { ClassType, CompList, Heroi, Mapa } from '@/types/types';
 import { GameContext } from '@/context/context';
 import { WorkerMessage } from '@/types/apiTypes';
 import { FixedSizeList as List } from 'react-window';
 import { Cell, VirtualHeader, RowWrapper, TableWrapper, HeaderCell, LoadMoreButton } from './style';
+import { FilterInput, SelectMulti, SelectedItemsContainer, SelectedItem, RemoveButton } from '@/styles';
 
 const CompsPage: React.FC = () => {
 
@@ -16,12 +17,72 @@ const CompsPage: React.FC = () => {
     const [pos, setPos] = useState<string>('');
     const [visibleItems, setVisibleItems] = useState(100);
 
+    const [inimigosSelected, setInimigosSelected] = useState<Heroi[]>([]);
+    const [inimigosFilter, setInimigosFilter] = useState<string>('');
+
+    const handleInimigosSelect = (e: React.ChangeEvent<HTMLSelectElement>) => {
+        const selectedOptions = Array.from(e.target.selectedOptions).map(
+            (option) => state.herois.find((h) => h.id == option.value)!
+            ).filter((heroi) => !inimigosSelected.some((h) => h.id == heroi.id));
+            
+        setInimigosSelected((prev) => (selectedOptions.concat(prev)));
+    };
+
+    const filteredInimigos = state.herois.filter((heroi) =>
+        heroi.name.toLowerCase().includes(inimigosFilter.toLowerCase())
+    );
+
+    const removeInimigo = (heroi: Heroi) => {
+        setInimigosSelected(inimigosSelected.filter((h) => h.id !== heroi.id));
+    };
     function useHeroNameById(id: string, herois: Heroi[]): string {
         return useMemo(() => {
             const hero = herois.find((h) => h.id == id);
             return hero?.name || `Hero ${id} desconhecido`;
         }, [id, herois]);
     }
+
+    const pontuacaoWIni = useCallback((pontuacao: number, team: string[]) => {
+        let pontAlterada = pontuacao
+        for(const teamember of team){
+            for(const ini of inimigosSelected){
+                pontAlterada += calcularPontuacaoContraInimigo(teamember, ini.id);
+            }
+        }
+        return pontAlterada;
+    }, [inimigosSelected, mapa]);
+
+    const calcularPontuacaoContraInimigo = (heroiId:string, inimigoId: string) => {
+        try {
+            const stats = mapa?.stats?.heroes[heroiId]?.inimigos?.[inimigoId];
+            if (!stats?.partidas || stats.partidas === 0) return 0;
+
+            const vic = stats.vitorias || 0;
+            const part = stats.partidas;
+            
+            const z = 1.96;
+            const p = vic / part;
+            const adjustment = (z * z) / (2 * part);
+            const center = p + adjustment;
+            const spread = z * Math.sqrt((p * (1 - p) + adjustment) / part);
+            
+            return Math.max(0, center - spread) * 100;
+        } catch (error) {
+            console.error(`Erro cálculo inimigo ${inimigoId} para herói ${heroiId}:`, error);
+            return 0;
+        }
+    };
+
+    const sortedComps = useMemo(() => {
+        if (inimigosSelected.length === 0) {
+            return comps;
+        } else {
+            return comps.map(comp => ({
+                ...comp,
+                adjusted: pontuacaoWIni(comp.pontuacao, comp.herois)
+            })).sort((a, b) => b.adjusted - a.adjusted);
+        }
+    }, [comps, inimigosSelected, pontuacaoWIni]);
 
     useEffect(() => {
         if (mapa && mapa.stats) {
@@ -50,6 +111,7 @@ const CompsPage: React.FC = () => {
                 } else if (type === 'done') {
                     console.log('Processamento concluído');
                     worker.terminate();
+                    setComps(prev => [...prev].sort((a, b) => b.pontuacao - a.pontuacao));
                 } else if (type === 'error' && error) {
                     console.log("Erro worker funcionamento");
                     worker.terminate();
@@ -70,32 +132,40 @@ const CompsPage: React.FC = () => {
         setVisibleItems(prev => prev + 100);
       };
 
-    const Row = ({ index, style }: { index: number; style: React.CSSProperties }) => {
+    const Row = memo(({ index, style, data }: { index: number; style: React.CSSProperties, data: typeof sortedComps }) => {
+        const team = data[index];
+
         if (index === visibleItems-1) {
             return (
               <div style={style}>
-                <LoadMoreButton onClick={loadMore} disabled={visibleItems >= comps.length}>
-                  {visibleItems >= comps.length ? 'Todos os itens carregados' : 'Carregar Mais'}
+                <LoadMoreButton onClick={loadMore} disabled={visibleItems >= data.length}>
+                  {visibleItems >= data.length ? 'Todos os itens carregados' : 'Carregar Mais'}
                 </LoadMoreButton>
               </div>
             );
         }
 
         return (
+            team &&
             <RowWrapper style={style}>
-                {comps.length > 0 && comps[index].herois.map((heroi, i) => (
+                {team.herois.map((heroi, i) => (
                     <Cell key={i}>
-                    {useHeroNameById(heroi, state.herois)}
+                        {useHeroNameById(heroi, state.herois)}
                     </Cell>
                 ))}
+                <Cell>
+                    {inimigosSelected.length > 0 ? (team as any).adjusted : team.pontuacao}
+                </Cell>
+                
             </RowWrapper>
         )
-    };
+    });
 
 
 
     return (
         <div>
+
             <select
                 value={tipo}
                 onChange={(e) => {setTipo(e.target.value); setPos(''); setSub('');}}
@@ -157,6 +227,39 @@ const CompsPage: React.FC = () => {
                 }
                 </>
             }
+
+            <div style={{minWidth: "20rem"}} >
+                <h3>Inimigos:</h3>
+                <FilterInput
+                    type="text"
+                    value={inimigosFilter}
+                    onChange={(e) => setInimigosFilter(e.target.value)}
+                    placeholder="Hero"
+                />
+                <SelectMulti
+                    multiple
+                    value={inimigosSelected.map((ini) => ini.id)}
+                    onChange={handleInimigosSelect}
+                >
+                    {filteredInimigos.map((heroi) => (
+                    <option key={heroi.id} value={heroi.id}>
+                        {heroi.name}
+                    </option>
+                    ))}
+                </SelectMulti>
+                <SelectedItemsContainer>
+                    {inimigosSelected.map((heroi) => (
+                    <SelectedItem key={heroi.id}>
+                        {heroi.name}
+                        
+                        <RemoveButton type="button" onClick={() => removeInimigo(heroi)}>
+                            X
+                        </RemoveButton>
+                        
+                    </SelectedItem>
+                    ))}
+                </SelectedItemsContainer>
+                </div>
             
             <TableWrapper>
             
@@ -179,6 +282,9 @@ const CompsPage: React.FC = () => {
                     <HeaderCell>
                         Person 6
                     </HeaderCell >
+                    <HeaderCell>
+                        Points
+                    </HeaderCell >
                 </VirtualHeader>
 
                 <List
@@ -186,6 +292,7 @@ const CompsPage: React.FC = () => {
                     itemCount={visibleItems}
                     itemSize={75}
                     width={(window.innerWidth - 15)}
+                    itemData={sortedComps}
                 >
                     {Row}
                 </List>

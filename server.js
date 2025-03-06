@@ -15,7 +15,8 @@ app.prepare().then(() => {
         allowedHeaders: ['Content-Type'],
     }));
 
-    server.use(express.json());
+    server.use(express.json({ limit: '50mb' }));
+    server.use(express.urlencoded({ extended: true }));
 
     server.post('/api/calcularTimes', async (req, res) => {
         const {mapa, numeroDeHeroisNoTime, formacoes, classeHeroi} = req.body;
@@ -95,41 +96,49 @@ app.prepare().then(() => {
             return pontuacao;
         }
 
-        const calcularPontuacaoContraInimigo = (heroiId, inimigoId) => {
-            const stats = mapa.stats.heroes[heroiId]?.inimigos?.[inimigoId];
-            if (!stats?.partidas) return 0;
+        // const calcularPontuacaoContraInimigo = (heroiId, inimigoId) => {
+        //     try {
+        //         const stats = mapa.stats.heroes[heroiId]?.inimigos?.[inimigoId];
+        //         if (!stats?.partidas || stats.partidas === 0) return 0;
     
-            const vic = stats.vitorias || 0;
-            const part = stats.partidas;
-            const taxa = vic / part;
-            
-            // Fórmula Wilson Score Balanceada
-            const z = 1.96;
-            const numerador = vic + z*z/2;
-            const denominador = part + z*z;
-            const taxaAjustada = numerador / denominador;
-            const desvioPadrao = Math.sqrt((taxa * (1 - taxa) + z*z/(4*part)) / denominador);
-            
-            return Math.max(0, (taxaAjustada - z * desvioPadrao)) * 100;
-        };
-    
-        // Função para calcular o mapa completo de inimigos de um time
-        const calcularMapaInimigosTime = (time) => {
-            const mapaInimigos = {};
-    
-            for (const inimigoId of Object.keys(mapa.stats.heroes)) {
-                let pontuacaoTotal = 0;
+        //         const vic = stats.vitorias || 0;
+        //         const part = stats.partidas;
                 
-                for (const heroiId of time) {
-                    pontuacaoTotal += calcularPontuacaoContraInimigo(heroiId, inimigoId);
-                }
+        //         // Fórmula Wilson Score para intervalo de confiança
+        //         const z = 1.96;
+        //         const p = vic / part;
+        //         const adjustment = (z * z) / (2 * part);
+        //         const center = p + adjustment;
+        //         const spread = z * Math.sqrt((p * (1 - p) + adjustment) / part);
                 
-                // Média simples entre os heróis do time
-                mapaInimigos[inimigoId] = pontuacaoTotal / time.length;
-            }
+        //         return Math.max(0, center - spread) * 100;
+        //     } catch (error) {
+        //         console.error(`Erro cálculo inimigo ${inimigoId} para herói ${heroiId}:`, error);
+        //         return 0;
+        //     }
+        // };
     
-            return mapaInimigos;
-        };
+        // // 2. Função para cálculo do mapa de inimigos com cache
+        // const calcularMapaInimigosTime = (time) => {
+        //     const mapaInimigos = {};
+        //     const inimigosIds = Object.keys(mapa.stats.heroes);
+    
+        //     for (const inimigoId of inimigosIds) {
+        //         let total = 0;
+        //         let validHeroes = 0;
+                
+        //         for (const heroiId of time) {
+        //             if (mapa.stats.heroes[heroiId]) {
+        //                 total += calcularPontuacaoContraInimigo(heroiId, inimigoId);
+        //                 validHeroes++;
+        //             }
+        //         }
+                
+        //         mapaInimigos[inimigoId] = validHeroes > 0 ? total / validHeroes : 0;
+        //     }
+    
+        //     return mapaInimigos;
+        // };
 
         const formacoesValidas = formacoes.map((formacao) => ({
             "Vanguard": +formacao.split(' - ')[0],
@@ -169,7 +178,7 @@ app.prepare().then(() => {
                 const state = queue.extract();
                 
                 if (state.current.length === tamanho) {
-                    yield { herois: state.current, pontuacao: state.pontuacao };
+                    yield { herois: state.current, pontuacao: state.pontuacao, /*points_inimigos: calcularMapaInimigosTime(state.current)*/ };
                     if (++count % 10 === 0) await new Promise(resolve => setImmediate(resolve));
                     continue;
                 }
